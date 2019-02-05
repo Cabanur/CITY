@@ -13,7 +13,4 @@ public class S_Sprite{
         this.spriteChoordX = spriteChoordX;
         this.spriteChoordY = spriteChoordY;
     }
-
-
-
 }

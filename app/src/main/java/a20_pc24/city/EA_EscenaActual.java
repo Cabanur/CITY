@@ -6,21 +6,14 @@ import android.graphics.Canvas;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-/*
-   View decorView = getWindow().getDecorView();
-        int opciones = View.SYSTEM_UI_FLAG_FULLSCREEN        // pone la pantalla en modo pantalla completa ocultando elementos no criticos como la barra de estado.
-                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION  // oculta la barra de navegación
-                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_IMMERSIVE
-                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
-        decorView.setSystemUiVisibility(opciones);
-		getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        PruebaSurfaceView pantallaInicio = new PruebaSurfaceView(this);
-        pantallaInicio.setKeepScreenOn(true);
-*/
+/*  Muestra la escena actual, en referencia a la UI, puede ser:
+ *  - Ayuda
+ *  - Juego
+ *  - Menu
+ *  - Opciones
+ *  - Récords
+ */
 
 public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callback{
     private SurfaceHolder surfaceHolder;      // Interfaz abstracta para manejar la superficie de dibujado
