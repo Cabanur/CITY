@@ -15,16 +15,8 @@ public class EeJuego extends EE_EsquemaEscena {
     public EeJuego(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
 
-        AssetManager assManager = cntx.getAssets();
-
 //        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.b);
-        try {
-            InputStream is = cntx.getAssets().open("cityscape/a.png");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        fondo = BitmapFactory.;
+        fondo = _Useful.getBitmapFromAsset(this.cntx,"cityscape/a.png");
         fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
     }
 
