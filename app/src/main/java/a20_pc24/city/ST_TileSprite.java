@@ -1,4 +1,4 @@
 package a20_pc24.city;
 
-public class ST_TileSprite {
+public class ST_TileSprite extends S_Sprite {
 }

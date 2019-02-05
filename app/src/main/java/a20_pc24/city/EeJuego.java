@@ -3,10 +3,12 @@ package a20_pc24.city;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.util.Log;
 import android.view.MotionEvent;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 public class EeJuego extends EE_EsquemaEscena {
@@ -16,9 +18,13 @@ public class EeJuego extends EE_EsquemaEscena {
         AssetManager assManager = cntx.getAssets();
 
 //        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.b);
-        InputStream is = cntx.getAssets().open("cityscape/a.png");
+        try {
+            InputStream is = cntx.getAssets().open("cityscape/a.png");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        fondo = null;
+        fondo = BitmapFactory.;
         fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
     }
 
