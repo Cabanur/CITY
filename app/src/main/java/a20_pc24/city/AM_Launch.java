@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-public class Launch extends AppCompatActivity {
+public class AM_Launch extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class Launch extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         decorView.setSystemUiVisibility(opciones);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        Juego juego = new Juego(this);
+        EA_EscenaActual juego = new EA_EscenaActual(this);
         juego.setKeepScreenOn(true);
 
         setContentView(juego);

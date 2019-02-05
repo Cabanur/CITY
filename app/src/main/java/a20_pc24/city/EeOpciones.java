@@ -1,5 +1,6 @@
 package a20_pc24.city;
 
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -7,10 +8,10 @@ import android.graphics.Canvas;
 import android.util.Log;
 import android.view.MotionEvent;
 
-public class Ayuda extends Escena {
-    public Ayuda(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
+public class EeOpciones extends EE_EsquemaEscena {
+    public EeOpciones(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
-        fondo = BitmapFactory.decodeResource(cntx.getResources(), R.drawable.c);
+        fondo = BitmapFactory.decodeResource(cntx.getResources(), R.drawable.d);
         fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
     }
 
@@ -18,6 +19,7 @@ public class Ayuda extends Escena {
         try {
             c.drawBitmap(fondo, 0, 0, null);
             super.dibujar(c);
+
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
 
@@ -70,6 +72,5 @@ public class Ayuda extends Escena {
 
         return getIdEscena();
     }
-
 }
 

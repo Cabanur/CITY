@@ -2,15 +2,10 @@ package a20_pc24.city;
 
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.WindowManager;
 /*
    View decorView = getWindow().getDecorView();
         int opciones = View.SYSTEM_UI_FLAG_FULLSCREEN        // pone la pantalla en modo pantalla completa ocultando elementos no criticos como la barra de estado.
@@ -27,7 +22,7 @@ import android.view.WindowManager;
         pantallaInicio.setKeepScreenOn(true);
 */
 
-public class Juego  extends SurfaceView implements SurfaceHolder.Callback{
+public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callback{
     private SurfaceHolder surfaceHolder;      // Interfaz abstracta para manejar la superficie de dibujado
     private Context context;                  // Contexto de la aplicación
 
@@ -35,10 +30,10 @@ public class Juego  extends SurfaceView implements SurfaceHolder.Callback{
     private int altoPantalla=1;               // Alto de la pantalla, su valor se actualiza en el método surfaceChanged
     private Hilo hilo;                        // Hilo encargado de dibujar y actualizar la física
     private boolean funcionando = false;      // Control del hilo
-    Escena escenaActual;
+    EE_EsquemaEscena escenaActual;
 
 
-    public Juego(Context context) {
+    public EA_EscenaActual(Context context) {
         super(context);
         this.surfaceHolder = getHolder();       // Se obtiene el holder
         this.surfaceHolder.addCallback(this);   // Se indica donde van las funciones callback
@@ -69,19 +64,19 @@ public class Juego  extends SurfaceView implements SurfaceHolder.Callback{
             if(nuevaEscena!=escenaActual.getIdEscena()){
                 switch (nuevaEscena){
                     case 0:
-                        escenaActual=new Menu(context,nuevaEscena,anchoPantalla,altoPantalla);
+                        escenaActual=new EeMenu(context,nuevaEscena,anchoPantalla,altoPantalla);
                         break;
                     case 1:
-                        escenaActual=new Game(context,nuevaEscena,anchoPantalla,altoPantalla);
+                        escenaActual=new EeJuego(context,nuevaEscena,anchoPantalla,altoPantalla);
                         break;
                     case 97:
-                        escenaActual=new Opciones(context,nuevaEscena,anchoPantalla,altoPantalla);
+                        escenaActual=new EeOpciones(context,nuevaEscena,anchoPantalla,altoPantalla);
                         break;
                     case 98:
-                        escenaActual=new Records(context,nuevaEscena,anchoPantalla,altoPantalla);
+                        escenaActual=new EeRecords(context,nuevaEscena,anchoPantalla,altoPantalla);
                         break;
                     case 99:
-                        escenaActual=new Ayuda(context,nuevaEscena,anchoPantalla,altoPantalla);
+                        escenaActual=new EeAyuda(context,nuevaEscena,anchoPantalla,altoPantalla);
                         break;
                 }
             }
@@ -113,7 +108,7 @@ public class Juego  extends SurfaceView implements SurfaceHolder.Callback{
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
         anchoPantalla = width;               // se establece el nuevo ancho de pantalla
         altoPantalla = height;               // se establece el nuevo alto de pantalla
-        escenaActual = new Menu(context, 0, anchoPantalla, altoPantalla);
+        escenaActual = new EeMenu(context, 0, anchoPantalla, altoPantalla);
 
         hilo.setSurfaceSize(width,height);   // se establece el nuevo ancho y alto de pantalla en el hilo
         hilo. setFuncionando(true);

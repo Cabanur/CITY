@@ -4,28 +4,26 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Rect;
 import android.util.Log;
 import android.view.MotionEvent;
 
-public class Game extends Escena {
-    public Game(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
+public class EeRecords extends EE_EsquemaEscena {
+
+    public EeRecords(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
-//        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.b);
-        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.b);
+        fondo = BitmapFactory.decodeResource(cntx.getResources(), R.drawable.e);
         fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
     }
 
     public void dibujar(Canvas c) {
-        try{
-            c.drawBitmap(fondo,0,0,null);
+        try {
+            c.drawBitmap(fondo, 0, 0, null);
             super.dibujar(c);
-
 
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             Log.i("Error al dibujar", e.getLocalizedMessage());
         }
 
@@ -63,7 +61,8 @@ public class Game extends Escena {
             case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos
 
                 break;
-            default:  Log.i("Otra acción", "Acción no definida: "+accion);
+            default:
+                Log.i("Otra acción", "Acción no definida: " + accion);
         }
 
         int idPadre = super.onTouchEvent(event);
@@ -74,4 +73,3 @@ public class Game extends Escena {
         return getIdEscena();
     }
 }
-

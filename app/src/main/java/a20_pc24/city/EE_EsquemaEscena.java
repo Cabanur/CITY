@@ -9,7 +9,7 @@ import android.graphics.Rect;
 import android.util.Log;
 import android.view.MotionEvent;
 
-public class Escena {
+public class EE_EsquemaEscena {
 
     Context cntx;
     private int idEscena;
@@ -18,7 +18,7 @@ public class Escena {
     Paint pTexto, pTexto2, pBoton, pBoton2;
     Rect backToPrincipal;
 
-    public Escena(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
+    public EE_EsquemaEscena(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         this.cntx = cntx;
         this.idEscena = idEscena;
         this.anchoPantalla = anchoPantalla;
