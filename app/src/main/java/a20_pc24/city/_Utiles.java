@@ -8,7 +8,7 @@ import android.graphics.BitmapFactory;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class _Useful {
+public class _Utiles {
 
     /**
      * Este método nos permite coger una imagen o sonido de la carpeta Assets
@@ -35,5 +35,8 @@ public class _Useful {
     //Origen: https://stackoverflow.com/questions/8501309/android-get-bitmap-or-sound-from-assets
 
 
-    //https://gamedevelopment.tutsplus.com/tutorials/an-introduction-to-creating-a-tile-map-engine--gamedev-10900
+    //EXIT APPLICATION: https://stackoverflow.com/questions/6330200/how-to-quit-android-application-programmatically
+    //IDEAS:
+    //fling: https://code.tutsplus.com/tutorials/adding-physics-based-animations-to-android-apps--cms-29053
+    //https://www.udemy.com/libgdx-game-development-masterclass/
 }
