@@ -2,13 +2,15 @@ package a20_pc24.city;
 
 import java.util.ArrayList;
 
-public class eejuego_PantallaMapeada {
+public abstract class eejuego_PantallaMapeada {
+//Clase que únicamente define el comportamiento general de las clases de los mapas
 
     private double tamanyoX;
     private double tamanyoY;
     private ArrayList<S_Sprite> elementosMapa;
 
     /**
+     * A pesar de que nunca instanciemos una clase abstracta, este constructor es la base del de los hijos
      *
      * @param tamanyoX
      * @param tamanyoY
@@ -49,5 +51,7 @@ public class eejuego_PantallaMapeada {
         return elementosMapa;
     }
 
+    abstract void dibujaMapa();
 
+    abstract void actualizarMapa();
 }

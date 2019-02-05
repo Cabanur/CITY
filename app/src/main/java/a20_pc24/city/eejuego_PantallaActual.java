@@ -1,6 +1,11 @@
 package a20_pc24.city;
 
-public class eejuego_PantallaActual {
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+
+public class eejuego_PantallaActual extends SurfaceView implements SurfaceHolder.Callback{
 
     /*  Muestra la pantalla de juego actual, en referencia al juego, puede ser:
      *  - CallePrincipal
@@ -11,7 +16,25 @@ public class eejuego_PantallaActual {
      *  - EdificioP3
      *  - EdificioP4
      *  - EdificioP4Tejado
-     *  - MenuInterno
+     *  - MenuInterno y todos sus submenus
      */
 
+    public eejuego_PantallaActual(Context context) {
+        super(context);
+    }
+
+    @Override
+    public void surfaceCreated(SurfaceHolder holder) {
+
+    }
+
+    @Override
+    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+
+    }
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder holder) {
+
+    }
 }

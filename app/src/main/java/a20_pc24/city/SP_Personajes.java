@@ -4,10 +4,7 @@ import android.graphics.Bitmap;
 
 public class SP_Personajes extends S_Sprite {
 
-    boolean canMove;
-
-    public SP_Personajes(Bitmap spriteIMG, double spriteChoordX, double spriteChoordY) {
-        super(spriteIMG, spriteChoordX, spriteChoordY);
-        this.canMove=false;
+    public SP_Personajes(Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado) {
+        super(spriteIMG, spriteChoordX, spriteChoordY, colisionable, animado);
     }
 }

@@ -5,13 +5,22 @@ import android.graphics.Bitmap;
 
 public class ST_TileSprite extends S_Sprite {
 
-    public enum TileTipo{SUELO,CIELO,PARED}
-    TileTipo tileTipo;
+    private enum TileTipo{SUELO,CIELO,PARED}
+    private TileTipo tileTipo;
 
-    public ST_TileSprite(Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, TileTipo tileTipo) {
-        super(spriteIMG, spriteChoordX, spriteChoordY);
-        //Es importante recordar que los tiles
+    public ST_TileSprite(Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo) {
+        super(spriteIMG, spriteChoordX, spriteChoordY, colisionable, animado);
+        this.tileTipo = tileTipo;
+        //Es importante recordar que los tiles siempre son cuadrados
+    }
 
-        this.tileTipo=tileTipo;
+    @Override
+    public void cuadroCoolision() {
+        super.cuadroCoolision();
+    }
+
+    @Override
+    public void animacion() {
+        super.animacion();
     }
 }
