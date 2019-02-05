@@ -1,5 +1,7 @@
 package a20_pc24.city;
 
+import android.graphics.Bitmap;
+
 import java.util.ArrayList;
 
 public abstract class eejuego_PantallaMapeada {
@@ -8,6 +10,7 @@ public abstract class eejuego_PantallaMapeada {
     private double tamanyoX;
     private double tamanyoY;
     private ArrayList<S_Sprite> elementosMapa;
+    private Bitmap mapaMonyado;
 
     /**
      * A pesar de que nunca instanciemos una clase abstracta, este constructor es la base del de los hijos

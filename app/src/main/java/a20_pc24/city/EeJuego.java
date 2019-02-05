@@ -11,15 +11,15 @@ public class EeJuego extends EE_EsquemaEscena {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
 
 //        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.b);
-        fondo = _Utiles.getBitmapFromAsset(this.cntx,"cityscape/a.png");
-        fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
+//        fondo = _Utiles.getBitmapFromAsset(this.cntx,"cityscape/a.png");
+//        fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
     }
 
     public void dibujar(Canvas c) {
         try{
             c.drawBitmap(fondo,0,0,null);
             super.dibujar(c);
-
+            //Llamamos a super para poner el botón de salir
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
 
