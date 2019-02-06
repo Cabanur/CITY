@@ -4,6 +4,8 @@ import android.graphics.Bitmap;
 
 import java.util.ArrayList;
 
+import a20_pc24.city.sprites.S_Sprite;
+
 public abstract class eejuego_PantallaMapeada {
 //Clase que únicamente define el comportamiento general de las clases de los mapas
 

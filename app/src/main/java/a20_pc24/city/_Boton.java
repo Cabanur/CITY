@@ -5,13 +5,15 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.view.MotionEvent;
 
 public class _Boton {
 
     RectF baseBotonRect;
     Paint paintBoton;
     Paint paintBotonText;
-    Rect botonBorde;
+    RectF botonBorde;
+    Paint paintBotonBorde;
     boolean tieneBorde;
     int destinoBoton;
 
@@ -32,15 +34,5 @@ public class _Boton {
             c.drawRect(this.baseBotonRect,paintBoton);
         }
     }
-
-    public int onTouchEvent(){
-        switch(destinoBoton){
-            case 0:
-                break;
-            case 1:
-                break;
-            default:
-                break;
-        }
-    }
+    //
 }

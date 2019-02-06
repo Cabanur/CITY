@@ -8,6 +8,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
 import android.view.MotionEvent;
 
+import a20_pc24.city.sprites.ST_TileSprite;
+
 public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
     Rect boundsRect;

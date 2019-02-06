@@ -1,14 +1,10 @@
-package a20_pc24.city;
+package a20_pc24.city.sprites;
 
 import android.graphics.Bitmap;
 
-public class SpNpc extends SP_Personajes {
-
-    private boolean movil;
-
-    public SpNpc(Bitmap spriteIMG, double spriteLargariaX, double spriteAlturaY, boolean colisionable, boolean animado, boolean movil) {
+public class SpPersonajePrincipal extends SP_Personajes {
+    public SpPersonajePrincipal(Bitmap spriteIMG, double spriteLargariaX, double spriteAlturaY, boolean colisionable, boolean animado) {
         super(spriteIMG, spriteLargariaX, spriteAlturaY, colisionable, animado);
-        this.movil=movil;
     }
 
     @Override
