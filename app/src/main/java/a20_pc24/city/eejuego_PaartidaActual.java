@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-public class eejuego_PantallaActual extends SurfaceView implements SurfaceHolder.Callback{
+public class eejuego_PaartidaActual extends SurfaceView implements SurfaceHolder.Callback{
 
     /*  Muestra la pantalla de juego actual, en referencia al juego, puede ser:
      *  - CallePrincipal
@@ -19,7 +19,7 @@ public class eejuego_PantallaActual extends SurfaceView implements SurfaceHolder
      *  - MenuInterno y todos sus submenus
      */
 
-    public eejuego_PantallaActual(Context context) {
+    public eejuego_PaartidaActual(Context context) {
         super(context);
     }
 

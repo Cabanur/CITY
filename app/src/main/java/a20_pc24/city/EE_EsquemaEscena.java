@@ -83,7 +83,7 @@ public class EE_EsquemaEscena {
         this.fondo = fondo;
     }
 
-    //Rutina de dibujo en el lienzo de los elementos . Se llama desde el hilo
+    //Rutina de dibujo en el lienzo de los elementos. Se llama desde el hilo
     public void dibujar(Canvas c){
         try{
             if(idEscena!=0){

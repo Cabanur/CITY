@@ -3,21 +3,36 @@ package a20_pc24.city;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
 import android.view.MotionEvent;
 
-public class EeJuego extends EE_EsquemaEscena {
-    public EeJuego(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
-        super(cntx, idEscena, anchoPantalla, altoPantalla);
+public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
+    Rect boundsRect;
+    BitmapDrawable mosaicDefinerBD;
+    ST_TileSprite savedGamesBackgroundTile;
+
+    public EeJuego_aSeleccionPartida(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
+        super(cntx, idEscena, anchoPantalla, altoPantalla);
 //        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.b);
-//        fondo = _Utiles.getBitmapFromAsset(this.cntx,"cityscape/a.png");
 //        fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
+        fondo = _Utiles.getBitmapFromAsset(this.cntx,"cityscape/a.png");
+        fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
+
+        this.savedGamesBackgroundTile = new ST_TileSprite(fondo,64,64,false,false,ST_TileSprite.TileTipo.SUELO);
+                                    //Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo
     }
 
     public void dibujar(Canvas c) {
         try{
-            c.drawBitmap(fondo,0,0,null);
+            for(int i=0;i<getAltoPantalla();i+=64){
+                for(int j=0;j<getAnchoPantalla();j+=64){
+                    c.drawBitmap(savedGamesBackgroundTile.getSpriteIMG(),j,i,null);
+                }
+            }
+//            c.drawBitmap(fondo,0,0,null);
             super.dibujar(c);
             //Llamamos a super para poner el botón de salir
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
@@ -26,7 +41,6 @@ public class EeJuego extends EE_EsquemaEscena {
         }catch(Exception e){
             Log.i("Error al dibujar", e.getLocalizedMessage());
         }
-
     }
 
     public void actualizarFisica() {

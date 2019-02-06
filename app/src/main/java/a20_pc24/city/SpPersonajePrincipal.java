@@ -3,8 +3,8 @@ package a20_pc24.city;
 import android.graphics.Bitmap;
 
 public class SpPersonajePrincipal extends SP_Personajes {
-    public SpPersonajePrincipal(Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado) {
-        super(spriteIMG, spriteChoordX, spriteChoordY, colisionable, animado);
+    public SpPersonajePrincipal(Bitmap spriteIMG, double spriteLargariaX, double spriteAlturaY, boolean colisionable, boolean animado) {
+        super(spriteIMG, spriteLargariaX, spriteAlturaY, colisionable, animado);
     }
 
     @Override
