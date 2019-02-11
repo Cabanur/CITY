@@ -20,7 +20,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
 //        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.b);
 //        fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
-        fondo = _Utiles.getBitmapFromAsset(this.cntx,"cityscape/a.png");
+        fondo = _Utiles.getBitmapFromAsset(this.cntx,"menugraphics/savegame4smallcross.png");
         fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
 
         this.savedGamesBackgroundTile = new ST_TileSprite(fondo,64,64,false,false,ST_TileSprite.TileTipo.SUELO);
@@ -35,7 +35,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
                 }
             }
 //            c.drawBitmap(fondo,0,0,null);
-            super.dibujar(c);
+//            super.dibujar(c);
             //Llamamos a super para poner el botón de salir
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);

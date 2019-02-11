@@ -9,8 +9,8 @@ import android.graphics.Bitmap;
 
 
 public class SoSpriteEfectosClima extends SO_SpritesObjetoEnEscena{
-    public SoSpriteEfectosClima(Bitmap spriteIMG, double spriteLargariaX, double spriteLargariaY, boolean colisionable, boolean animado) {
-        super(spriteIMG, spriteLargariaX, spriteLargariaY, colisionable, animado);
+    public SoSpriteEfectosClima(Bitmap spriteIMG, boolean colisionable, boolean animado) {
+        super(spriteIMG, colisionable, animado);
     }
 
     @Override

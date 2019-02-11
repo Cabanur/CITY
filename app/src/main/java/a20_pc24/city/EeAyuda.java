@@ -29,7 +29,6 @@ public class EeAyuda extends EE_EsquemaEscena {
 
     public void actualizarFisica() {
 
-
     }
 
 

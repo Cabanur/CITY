@@ -10,21 +10,20 @@ public abstract class S_Sprite{
     private double size[];
     private boolean colisionable;
     private boolean animado;
+    //Los identificadores de los tiles están declarados como final en las clase abstracta _TILES
 
     /**
      * A pesar de ser una clase abstracta, declaro el constructor para que sea la base de los hijos
      *
      * @param spriteIMG
-     * @param spriteLargariaX
-     * @param spriteLargariaY
      * @param colisionable
      * @param animado
      */
 
-    public S_Sprite(Bitmap spriteIMG, double spriteLargariaX, double spriteLargariaY, boolean colisionable, boolean animado){
+    public S_Sprite(Bitmap spriteIMG, boolean colisionable, boolean animado){
         this.spriteIMG = spriteIMG;
-        this.spriteLargariaX = spriteLargariaX;
-        this.spriteLargariaY = spriteLargariaY;
+        this.spriteLargariaX = spriteIMG.getWidth();
+        this.spriteLargariaY = spriteIMG.getHeight();
         this.colisionable = colisionable;
         this.animado = animado;
         this.size = new double[]{spriteLargariaX, spriteLargariaY};
@@ -42,16 +41,8 @@ public abstract class S_Sprite{
         return spriteLargariaX;
     }
 
-    public void setspriteLargariaX(double spriteLargariaX) {
-        this.spriteLargariaX = spriteLargariaX;
-    }
-
     public double getspriteLargariaY() {
         return spriteLargariaY;
-    }
-
-    public void setspriteLargariaY(double spriteLargariaY) {
-        this.spriteLargariaY = spriteLargariaY;
     }
 
     public boolean isColisionable() {

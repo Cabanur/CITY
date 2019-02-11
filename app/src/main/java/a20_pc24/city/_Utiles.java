@@ -34,7 +34,6 @@ public class _Utiles {
     }
     //Origen: https://stackoverflow.com/questions/8501309/android-get-bitmap-or-sound-from-assets
 
-
     //EXIT APPLICATION: https://stackoverflow.com/questions/6330200/how-to-quit-android-application-programmatically
     //IDEAS:
     //fling: https://code.tutsplus.com/tutorials/adding-physics-based-animations-to-android-apps--cms-29053

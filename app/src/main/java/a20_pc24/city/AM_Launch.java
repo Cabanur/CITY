@@ -1,12 +1,17 @@
 package a20_pc24.city;
 
+import android.content.Context;
 import android.content.pm.ActivityInfo;
+import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 
 public class AM_Launch extends AppCompatActivity {
+//Activity main lanzamiento
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,25 @@ public class AM_Launch extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         decorView.setSystemUiVisibility(opciones);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        /*********************************************************************/
+        /***************determinando tamaño pantalla(DP)**********************/
+        /*********************************************************************/
+
+        _Dimensions determinarDimensiones=new _Dimensions();
+        determinarDimensiones.setDpi((double)this.getResources().getDisplayMetrics().densityDpi);
+
+        Display d = getWindowManager().getDefaultDisplay();
+        Point p = new Point();
+        d.getSize(p);
+        determinarDimensiones.setPxSizeY(p.y);
+        determinarDimensiones.setPxSizeX(p.x);
+
+        determinarDimensiones.setDPs();
+        /********************************************************************/
+        /********************************************************************/
+        /********************************************************************/
+
         EA_EscenaActual juego = new EA_EscenaActual(this);
         juego.setKeepScreenOn(true);
 

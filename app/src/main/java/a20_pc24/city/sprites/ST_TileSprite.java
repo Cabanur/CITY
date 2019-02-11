@@ -8,8 +8,8 @@ public class ST_TileSprite extends S_Sprite {
     public enum TileTipo{SUELO,CIELO,PARED}
     private TileTipo tileTipo;
 
-    public ST_TileSprite(Bitmap spriteIMG, double spriteLargariaX, double spriteAlturaY, boolean colisionable, boolean animado, TileTipo tileTipo) {
-        super(spriteIMG, spriteLargariaX, spriteAlturaY, colisionable, animado);
+    public ST_TileSprite(Bitmap spriteIMG, boolean colisionable, boolean animado, TileTipo tileTipo) {
+        super(spriteIMG, colisionable, animado);
         this.tileTipo = tileTipo;
         //Es importante recordar que los tiles siempre son cuadrados
     }

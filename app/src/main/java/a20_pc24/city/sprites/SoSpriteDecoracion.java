@@ -3,8 +3,8 @@ package a20_pc24.city.sprites;
 import android.graphics.Bitmap;
 
 public class SoSpriteDecoracion extends SO_SpritesObjetoEnEscena {
-    public SoSpriteDecoracion(Bitmap spriteIMG, double spriteLargariaX, double spriteLargariaY, boolean colisionable, boolean animado) {
-        super(spriteIMG, spriteLargariaX, spriteLargariaY, colisionable, animado);
+    public SoSpriteDecoracion(Bitmap spriteIMG, boolean colisionable, boolean animado) {
+        super(spriteIMG, colisionable, animado);
     }
 
     @Override

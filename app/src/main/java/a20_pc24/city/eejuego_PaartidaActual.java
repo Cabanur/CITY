@@ -17,7 +17,13 @@ public class eejuego_PaartidaActual extends SurfaceView implements SurfaceHolder
      *  - EdificioP4
      *  - EdificioP4Tejado
      *  - MenuInterno y todos sus submenus
+     *
+     *  La pantalla actual será creada y cargada al cargas la partida. Es necesario darle una ID a cada pantalla
+     *
+     *
      */
+
+
 
     public eejuego_PaartidaActual(Context context) {
         super(context);
