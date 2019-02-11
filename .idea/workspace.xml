@@ -11,8 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc202e9-a1f6-429d-b6bc-9d3a24c5d9b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/assets/menugraphics/savegame1circle.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Utiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Utiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/ST_TileSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/ST_TileSprite.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,13 +69,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3417" />
+          <entry key="java" value="3438" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3417" />
+          <entry key="JAVA" value="3438" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -104,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+            <state relative-caret-position="285">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/SpNpc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="200">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -149,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/ST_TileSprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+            <state relative-caret-position="86">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -204,8 +204,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Dimensions.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Timer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Utiles.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/ST_TileSprite.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/ST_TileSprite.java" />
       </list>
     </option>
   </component>
@@ -338,6 +338,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="a20_pc24.city" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\WINDUNNER\AndroidStudioProjects\CITY\app\src\main\assets\menugraphics" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -732,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/ST_TileSprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/SpPersonajePrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -746,10 +742,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/SP_Personajes.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/SpNpc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        <state relative-caret-position="200">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -760,20 +766,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/SP_Personajes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="114">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/SpNpc.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/ST_TileSprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="86">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
         </state>
       </provider>
     </entry>

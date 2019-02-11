@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 
 public class ST_TileSprite extends S_Sprite {
 
-    public enum TileAnim{NINGUNO,VERTICAL,HORIZONTAL,DIAGONAL}
+    public enum TileAnim{NINGUNO,ESTATICO,VERTICAL,HORIZONTAL,DIAGONAL}
     private TileAnim tileAnim;
 
     public ST_TileSprite(Bitmap spriteIMG, boolean colisionable, boolean animado, TileAnim tileAnim) {
