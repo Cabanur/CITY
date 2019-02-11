@@ -16,6 +16,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
     BitmapDrawable mosaicDefinerBD;
     ST_TileSprite savedGamesBackgroundTile1Spot;
     ST_TileSprite savedGamesBackgroundTile2Cross;
+    ST_TileSprite savedGamesBackgroundTile3Circle;
 
     public EeJuego_aSeleccionPartida(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
@@ -25,9 +26,9 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 //        fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
 //        this.savedGamesBackgroundTile1Spot = new ST_TileSprite(fondo,false,false,ST_TileSprite.TileTipo.SUELO);
                                     //Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo
-        _Tiles t = new _Tiles();
-        this.savedGamesBackgroundTile1Spot = t.MENU_SPOT;
-        this.savedGamesBackgroundTile2Cross = t.MENU_CROSS;
+        this.savedGamesBackgroundTile1Spot = _Tiles.MENU_SPOT;
+        this.savedGamesBackgroundTile2Cross = _Tiles.MENU_CROSS;
+        this.savedGamesBackgroundTile3Circle = _Tiles.MENU_CIRCLE;
     }
 
     public void dibujar(Canvas c) {
@@ -36,6 +37,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
                 for(int j=0;j<getAnchoPantalla();j+=64){
                     c.drawBitmap(this.savedGamesBackgroundTile1Spot.getSpriteIMG(),j,i,null);
                     c.drawBitmap(this.savedGamesBackgroundTile2Cross.getSpriteIMG(),j,i,null);
+                    c.drawBitmap(this.savedGamesBackgroundTile3Circle.getSpriteIMG(),j,i,null);
                 }
             }
 //            c.drawBitmap(fondo,0,0,null);

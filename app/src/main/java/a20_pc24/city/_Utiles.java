@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+import a20_pc24.city.sprites.ST_TileSprite;
+
 public class _Utiles {
 
     /**
@@ -95,7 +97,6 @@ public class _Utiles {
         }
         return temp;
     }
-
 
     //EXIT APPLICATION: https://stackoverflow.com/questions/6330200/how-to-quit-android-application-programmatically
     //IDEAS:

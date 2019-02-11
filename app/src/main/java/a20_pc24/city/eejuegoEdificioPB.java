@@ -1,10 +1,16 @@
 package a20_pc24.city;
 
+import android.graphics.Bitmap;
+
 public class eejuegoEdificioPB extends eejuego_PantallaMapeada {
-    public eejuegoEdificioPB(double tamanyoX, double tamanyoY) {
-        super(tamanyoX, tamanyoY);
+    public eejuegoEdificioPB(){;
     }
 
+
+    @Override
+    public Bitmap unificaMapa() {
+        return this.mapaMontado;
+    }
 
     @Override
     public void dibujaMapa(){}
@@ -13,5 +19,4 @@ public class eejuegoEdificioPB extends eejuego_PantallaMapeada {
     void actualizarMapa() {
 
     }
-
 }

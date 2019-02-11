@@ -10,23 +10,9 @@ import a20_pc24.city.sprites.S_Sprite;
 public abstract class eejuego_PantallaMapeada {
 //Clase que únicamente define el comportamiento general de las clases de los mapas
 
-    private double tamanyoX;
-    private double tamanyoY;
     private ArrayList<S_Sprite> elementosMapa;
     //Elementos mapa es el array que contiene todos los tiles que habrá en el mapa
-    private Bitmap mapaMontado;
-
-    /**
-     * A pesar de que nunca instanciemos una clase abstracta, este constructor es la base del de los hijos
-     *
-     * @param tamanyoX
-     * @param tamanyoY
-     */
-
-    public eejuego_PantallaMapeada(double tamanyoX, double tamanyoY) {
-        this.tamanyoX = tamanyoX;
-        this.tamanyoY = tamanyoY;
-    }
+    public Bitmap mapaMontado;
 
     /**
      * Asigna una colección de elementos al atributo elementosMapa
@@ -59,7 +45,7 @@ public abstract class eejuego_PantallaMapeada {
     }
 
     /**
-     *      Aquí se creará el Bitmap correspondiente al mapa a partir del array bidimensional correspondiente.
+     *      Aquí se creará el Bitmap del mapa a partir del array bidimensional correspondiente.
      *      El contenido serán los elementos de @param elementosMapa
      *      el array determinará las posiciones mediante sus índices [0,0],[0,1], etc.
      *      el contenido de las variables del array serán los tiles
@@ -69,7 +55,7 @@ public abstract class eejuego_PantallaMapeada {
      *
      * @return this.mapaMontado
      */
-    public Bitmap creaMapa(){
+    public Bitmap unificaMapa(){
         return this.mapaMontado;
     }
 

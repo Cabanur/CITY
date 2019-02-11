@@ -1,8 +1,15 @@
 package a20_pc24.city;
 
+import android.graphics.Bitmap;
+
 public class eejuegoEdificioSotano extends eejuego_PantallaMapeada {
-    public eejuegoEdificioSotano(double tamanyoX, double tamanyoY) {
-        super(tamanyoX, tamanyoY);
+    public eejuegoEdificioSotano() {
+
+    }
+
+    @Override
+    public Bitmap unificaMapa() {
+        return this.mapaMontado;
     }
 
     @Override
