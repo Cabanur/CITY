@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 
 public class ST_TileSprite extends S_Sprite {
 
-    public enum TileTipo{SUELO,CIELO,PARED}
+    public enum TileTipo{SUELO,CIELO,PARED,MENU}
     private TileTipo tileTipo;
 
     public ST_TileSprite(Bitmap spriteIMG, boolean colisionable, boolean animado, TileTipo tileTipo) {

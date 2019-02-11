@@ -70,7 +70,6 @@ public abstract class eejuego_PantallaMapeada {
      * @return this.mapaMontado
      */
     public Bitmap creaMapa(){
-
         return this.mapaMontado;
     }
 

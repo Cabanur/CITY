@@ -1,26 +1,19 @@
 package a20_pc24.city;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-
 import a20_pc24.city.sprites.ST_TileSprite;
 
 public class _Tiles {
 
-    private Context tilesContext;
+    public Context tilesContext;
     //CalleCiudad
-    public final ST_TileSprite CALLE_SUELO = new ST_TileSprite(_Utiles.getBitmapFromAsset(getTilesContext(),"cityscape/suelosimple.png"), false, false, ST_TileSprite.TileTipo.SUELO);
+    final ST_TileSprite CALLE_SUELO = new ST_TileSprite(_Utiles.getBitmapFromAsset("cityscape/suelosimple.png"), false, false, ST_TileSprite.TileTipo.SUELO);
 
-    //
-    public _Tiles(Context tilesContext){
-        this.tilesContext = tilesContext;
-    }
+    //Menu Tiles
+    final ST_TileSprite MENU_CROSS= new ST_TileSprite(_Utiles.getBitmapFromAsset("menugraphics/savegame4smallcross.png"), false, false, ST_TileSprite.TileTipo.MENU);
+    final ST_TileSprite MENU_SPOT= new ST_TileSprite(_Utiles.getBitmapFromAsset("menugraphics/savegame1spot.png"), false, true, ST_TileSprite.TileTipo.MENU);
 
-    public void setTilesContext(Context tilesContext){
-        this.tilesContext = tilesContext;
-    }
-
-    public Context getTilesContext(){
-        return this.tilesContext;
+    public _Tiles(){
+        this.tilesContext = _Context.getAppContext();
     }
 }

@@ -14,28 +14,32 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
     Rect boundsRect;
     BitmapDrawable mosaicDefinerBD;
-    ST_TileSprite savedGamesBackgroundTile;
+    ST_TileSprite savedGamesBackgroundTile1Spot;
+    ST_TileSprite savedGamesBackgroundTile2Cross;
 
     public EeJuego_aSeleccionPartida(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
 //        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.b);
 //        fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
-        fondo = _Utiles.getBitmapFromAsset(this.cntx,"menugraphics/savegame4smallcross.png");
-        fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
-
-        this.savedGamesBackgroundTile = new ST_TileSprite(fondo,64,64,false,false,ST_TileSprite.TileTipo.SUELO);
+//        fondo = _Utiles.getBitmapFromAsset(this.cntx,"menugraphics/savegame4smallcross.png");
+//        fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
+//        this.savedGamesBackgroundTile1Spot = new ST_TileSprite(fondo,false,false,ST_TileSprite.TileTipo.SUELO);
                                     //Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo
+        _Tiles t = new _Tiles();
+        this.savedGamesBackgroundTile1Spot = t.MENU_SPOT;
+        this.savedGamesBackgroundTile2Cross = t.MENU_CROSS;
     }
 
     public void dibujar(Canvas c) {
         try{
             for(int i=0;i<getAltoPantalla();i+=64){
                 for(int j=0;j<getAnchoPantalla();j+=64){
-                    c.drawBitmap(savedGamesBackgroundTile.getSpriteIMG(),j,i,null);
+                    c.drawBitmap(this.savedGamesBackgroundTile1Spot.getSpriteIMG(),j,i,null);
+                    c.drawBitmap(this.savedGamesBackgroundTile2Cross.getSpriteIMG(),j,i,null);
                 }
             }
 //            c.drawBitmap(fondo,0,0,null);
-//            super.dibujar(c);
+            super.dibujar(c);
             //Llamamos a super para poner el botón de salir
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);

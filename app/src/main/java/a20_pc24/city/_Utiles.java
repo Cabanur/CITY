@@ -5,6 +5,7 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.util.Log;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,13 +15,15 @@ public class _Utiles {
     /**
      * Este método nos permite coger una imagen o sonido de la carpeta Assets
      *
-     * @param context definición de "Context": https://stackoverflow.com/questions/3572463/what-is-context-on-android
+     //@param context definición de "Context": https://stackoverflow.com/questions/3572463/what-is-context-on-android
+     //Usamos la clase _Context para referenciar el mismo dbeido a los null pointer ocasionados
      * @param filePath
      * @return devuelve el bitmap creado a partir del context y la ruta
      */
 
-    public static Bitmap getBitmapFromAsset(Context context, String filePath) {
-        AssetManager assetManager = context.getAssets();
+    public static Bitmap getBitmapFromAsset(String filePath) {
+//    public static Bitmap getBitmapFromAsset(Context context, String filePath) {
+        AssetManager assetManager = _Context.getAppContext().getAssets();
         InputStream istr = null;
         Bitmap bitmap = null;
 
@@ -28,7 +31,7 @@ public class _Utiles {
             istr = assetManager.open(filePath);
             bitmap = BitmapFactory.decodeStream(istr);
         } catch (IOException e) {
-            // handle exception
+            e.printStackTrace();
         }
 
         return bitmap;

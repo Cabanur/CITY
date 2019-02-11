@@ -24,31 +24,30 @@ public class _Dimensions {
      */
 
     public void setDpi(double densidad){
-//        if (densidad== 0.75f)
-//        {
-//            // LDPI
-//        }
-//        else if (densidad>= 1.0f && densidad< 1.5f)
-//        {
-//            // MDPI
-//        }
-//        else if (densidad== 1.5f)
-//        {
-//            // HDPI
-//        }
-//        else if (densidad> 1.5f && densidad<= 2.0f)
-//        {
-//            // XHDPI
-//        }
-//        else if (densidad> 2.0f && densidad<= 3.0f)
-//        {
-//            // XXHDPI
-//        }
-//        else
-//        {
-//            // XXXHDPI
-//        }
-
+        if (densidad== 0.75f)
+        {
+            // LDPI
+        }
+        else if (densidad>= 1.0f && densidad< 1.5f)
+        {
+            // MDPI
+        }
+        else if (densidad== 1.5f)
+        {
+            // HDPI
+        }
+        else if (densidad> 1.5f && densidad<= 2.0f)
+        {
+            // XHDPI
+        }
+        else if (densidad> 2.0f && densidad<= 3.0f)
+        {
+            // XXHDPI
+        }
+        else
+        {
+            // XXXHDPI
+        }
     }
 
     public void setPxSizeX(int x){
