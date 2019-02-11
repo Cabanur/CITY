@@ -19,15 +19,8 @@ public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callba
     private SurfaceHolder surfaceHolder;      // Interfaz abstracta para manejar la superficie de dibujado
     private Context context;                  // Contexto de la aplicación
 
-    private double anchoPantalla=1;              // Ancho de la pantalla, su valor se actualiza en el método surfaceChanged
-    public double getAnchoPantalla() {
-        return anchoPantalla;
-    }
-
+    private int anchoPantalla=1;              // Ancho de la pantalla, su valor se actualiza en el método surfaceChanged
     private int altoPantalla=1;               // Alto de la pantalla, su valor se actualiza en el método surfaceChanged
-    public int getAltoPantalla() {
-        return altoPantalla;
-    }
 
     private Hilo hilo;                        // Hilo encargado de dibujar y actualizar la física
     private boolean funcionando = false;      // Control del hilo

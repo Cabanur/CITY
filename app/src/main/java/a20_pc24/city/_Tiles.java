@@ -9,15 +9,9 @@ public class _Tiles {
 
     private Context tilesContext;
     //CalleCiudad
-    public final ST_TileSprite CALLE_SUELO = new ST_TileSprite(_Utiles.getBitmapFromAsset(getTilesContext(),"cityscape/suelosimple.png"), double spriteLargariaX, double spriteAlturaY, boolean colisionable, boolean animado, TileTipo tileTipo);
+    public final ST_TileSprite CALLE_SUELO = new ST_TileSprite(_Utiles.getBitmapFromAsset(getTilesContext(),"cityscape/suelosimple.png"), false, false, ST_TileSprite.TileTipo.SUELO);
 
     //
-
-
-
-
-
-
     public _Tiles(Context tilesContext){
         this.tilesContext = tilesContext;
     }

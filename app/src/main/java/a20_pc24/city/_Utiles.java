@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,6 +33,35 @@ public class _Utiles {
 
         return bitmap;
     }
+
+    /**
+     * Espeja el Bitmap dado en horizontal
+     * Fuente: https://acomputerengineer.wordpress.com/2016/06/07/flip-imagebitmap-horizontally-and-vertically-in-android/
+     * @param bm bitmap que vamos a usar
+     * @return bm girado horizontalmente
+     */
+
+    public static Bitmap flipBitmapX(Bitmap bm){
+        Matrix m = new Matrix();
+        m.preScale(-1.0f, 1.0f);
+        Bitmap flipedBM = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), m, true);
+        return flipedBM;
+    }
+
+    /**
+     * Espeja el Bitmap dado en vertical
+     * Fuente: https://acomputerengineer.wordpress.com/2016/06/07/flip-imagebitmap-horizontally-and-vertically-in-android/
+     * @param bm bitmap que vamos a usar
+     * @return bm girado horizontalmente
+     */
+
+    public static Bitmap flipBitmapY(Bitmap bm){
+        Matrix m = new Matrix();
+        m.preScale(-1.0f, 1.0f);
+        Bitmap flipedBM = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), m, true);
+        return flipedBM;
+    }
+
     //Origen: https://stackoverflow.com/questions/8501309/android-get-bitmap-or-sound-from-assets
 
     //EXIT APPLICATION: https://stackoverflow.com/questions/6330200/how-to-quit-android-application-programmatically
