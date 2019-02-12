@@ -42,7 +42,8 @@ public class AM_Launch extends AppCompatActivity {
         determinarDimensiones.setPxSizeY(p.y);
         determinarDimensiones.setPxSizeX(p.x);
 
-        determinarDimensiones.setDPs();
+        determinarDimensiones.setDPsX();
+        determinarDimensiones.setDPsY();
         /********************************************************************/
         /********************************************************************/
         /********************************************************************/

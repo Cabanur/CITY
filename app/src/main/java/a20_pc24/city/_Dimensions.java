@@ -1,12 +1,12 @@
 package a20_pc24.city;
 
-public final class _Dimensions {
+public class _Dimensions {
 
     public static float screenDPsX;
     public static float screenDPsY;
     public static float screenDpi;
-    public static float pX;
-    public static float pY;
+    public static float pXLargo;
+    public static float pYAncho;
 
     /**
      * Fuente: https://desarrollador-android.com/material-design/diseno-material-design/layouts/unidades-y-medidas/#Densidad_independiente_de_pixeles_dp
@@ -20,11 +20,11 @@ public final class _Dimensions {
      * Más información sobre Dp vs DPI vs px https://medium.com/@euryperez/android-pearls-set-size-to-a-view-in-dp-programatically-71d22eed7fc0
      */
     public void setDPsY(){
-        this.screenDPsY = (pY * 160) / screenDpi;
+        this.screenDPsY = (pYAncho * 160) / screenDpi;
     }
 
     public void setDPsX(){
-        this.screenDPsX = (pX * 160) / screenDpi;
+        this.screenDPsX = (pXLargo * 160) / screenDpi;
     }
 
     /**
@@ -68,7 +68,7 @@ public final class _Dimensions {
      * @param x
      */
     public void setPxSizeX(int x){
-        this.pX = x;
+        this.pXLargo = x;
     }
 
     /**
@@ -76,7 +76,7 @@ public final class _Dimensions {
      * @param y
      */
     public void setPxSizeY(int y){
-        this.pY = y;
+        this.pYAncho = y;
     }
 
 
