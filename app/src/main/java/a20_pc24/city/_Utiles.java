@@ -6,7 +6,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
+import android.graphics.Rect;
 import android.util.Log;
+import android.view.MotionEvent;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -102,4 +104,22 @@ public class _Utiles {
     //IDEAS:
     //fling: https://code.tutsplus.com/tutorials/adding-physics-based-animations-to-android-apps--cms-29053
     //https://www.udemy.com/libgdx-game-development-masterclass/
+
+    /**
+     * "haTocado" determina si la pulsación corresonde al rectángulo contenedor
+     *
+     * @param contenedor rectángulo de coordenadas correspondientes a un objeto
+     * @param event Motion event gatillo
+     * @return true en caso de que la pulsación corresponda a un contenedor, false en caso contrario
+     */
+
+    public static boolean haTocado(Rect contenedor, MotionEvent event){
+        if(contenedor.contains((int)event.getX(), (int)event.getY()))
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

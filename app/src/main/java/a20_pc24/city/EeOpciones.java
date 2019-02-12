@@ -28,7 +28,6 @@ public class EeOpciones extends EE_EsquemaEscena {
         } catch (Exception e) {
             Log.i("Error al dibujar", e.getLocalizedMessage());
         }
-
     }
 
     public void actualizarFisica() {
@@ -48,16 +47,17 @@ public class EeOpciones extends EE_EsquemaEscena {
 
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
             case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
-//                if(pulsa(juego,event)) {
-//                    return 1;
-//                }else if(pulsa(ayuda,event)){
-//                    return 99;
-//                }else if(pulsa(opciones,event)){
-//                    return 98;
-//
-//                }else if(pulsa(records,event)){
-//                    return 97;
-//                }
+                /*
+                if(pulsa(juego,event)) {
+                    return 1;
+                }else if(pulsa(ayuda,event)){
+                    return 99;
+                }else if(pulsa(opciones,event)){
+                    return 98;
+
+                }else if(pulsa(records,event)){
+                    return 97;
+                }*/
                 break;
 
             case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos

@@ -41,8 +41,8 @@ public class EE_EsquemaEscena {
         pBoton2 = new Paint();
         pBoton2.setColor(Color.MAGENTA);
 
-        backToPrincipal = new Rect(anchoPantalla-anchoPantalla/7,0,anchoPantalla,anchoPantalla/7);
-//TODO iniciar fondo a algo o kapoot
+        backToPrincipal = new Rect(anchoPantalla-anchoPantalla/7,0, anchoPantalla,anchoPantalla/7);
+//TODO preguntar por qué peta en api 22
         //Crear imagen placeholder de pantalla
         fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.placeholder);
         fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
@@ -136,5 +136,4 @@ public class EE_EsquemaEscena {
             return false;
         }
     }
-
 }

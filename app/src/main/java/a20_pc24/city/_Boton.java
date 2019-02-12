@@ -60,6 +60,6 @@ public class _Boton{
         if(this.btnTieneBorde){
             c.drawRect(this.btnBorde,btnBordePaint);
         }
-        c.drawText(this.btnTexto,this.btn.width()-this.btn.width()*2/3,this.btn.centerY(),this.btnTextPaint);
+        c.drawText(this.btnTexto,this.btn.width()-this.btn.width()*4/7,this.btn.centerY()+this.btn.height()*1/11,this.btnTextPaint);
     }
 }

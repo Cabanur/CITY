@@ -33,12 +33,25 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 //                (_Dimensions.pXLargo*1/7,500,
 //                 _Dimensions.pXLargo,750,
 //                        Color.GREEN, true, "Partida 1");
-      btnP1=new _Boton
-                (anchoPantalla*1/7,altoPantalla*1/7,
-                 anchoPantalla-anchoPantalla*1/7,altoPantalla-altoPantalla*5/7,
+        btnP1=new _Boton
+                (anchoPantalla*1/5,altoPantalla*1/7,
+                 anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*5/7,
                         Color.GREEN, true, "Partida 1");
+
+        btnP2=new _Boton
+            (anchoPantalla*1/5,altoPantalla*3/7,
+                    anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*3/7,
+                    Color.GREEN, true, "Partida 2");
+
+        btnP3=new _Boton
+            (anchoPantalla*1/5,altoPantalla*5/7,
+                    anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*1/7,
+                    Color.GREEN, true, "Partida 3");
+
+//TODO Preguntar por qué coge coordenadas erróneas de esta forma
 // public _Boton(float top, float left, float bottom, float right, int colorFondoBoton,
 //                  Boolean btnTieneBorde, String btnTexto){
+
         this.arrL_TilesUsadas = new ArrayList<>();
 
         this.arrL_TilesUsadas.add(_Tiles.MENU_SPOT);
@@ -56,16 +69,19 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
                 }
             }
 
+//            System.exit(0);
+//            c.drawBitmap(fondo,0,0,null);
+            btnP1.dibujaBoton(c);
+            btnP2.dibujaBoton(c);
+            btnP3.dibujaBoton(c);
+
+            super.dibujar(c);
+            //Llamamos a super para poner el botón de salir
+
             Log.i("TEST","ANCHO PANTALLA "+getAnchoPantalla());
             Log.i("TEST","ANCHO PANTALLA DPX "+_Dimensions.pXLargo);
             Log.i("TEST","ALTO PANTALLA "+getAltoPantalla());
             Log.i("TEST","ALTO PANTALLA DPY "+_Dimensions.pYAncho);
-//            System.exit(0);
-//            c.drawBitmap(fondo,0,0,null);
-            btnP1.dibujaBoton(c);
-            super.dibujar(c);
-            //Llamamos a super para poner el botón de salir
-
 
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
@@ -80,7 +96,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
     }
 
-
+/*
     public int onTouchEvent(MotionEvent event) {
         int pointerIndex = event.getActionIndex();        //Obtenemos el índice de la acción
         int pointerID = event.getPointerId(pointerIndex); //Obtenemos el Id del pointer asociado a la acción
@@ -117,5 +133,30 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
         return getIdEscena();
     }
+    */
+    public int onTouchEvent(MotionEvent moe){
+        int pointerIndex = moe.getActionIndex();        //Obtenemos el índice de la acción
+        int pointerID = moe.getPointerId(pointerIndex); //Obtenemos el Id del pointer asociado a la acción
+        int accion = moe.getActionMasked();             //Obtenemos el tipo de pulsación
+        switch (accion) {
+            case MotionEvent.ACTION_DOWN:           // Primer dedo toca
+            case MotionEvent.ACTION_POINTER_DOWN:  // Segundo y siguientes tocan
+                break;
+
+            case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
+            case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
+                if(pulsa(backToPrincipal,moe) && idEscena!=0){
+                    return 0;
+                }
+                break;
+
+            case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos
+
+                break;
+            default:  Log.i("Otra acción", "Acción no definida: "+accion);
+        }
+        return getIdEscena();
+    }
+
 }
 
