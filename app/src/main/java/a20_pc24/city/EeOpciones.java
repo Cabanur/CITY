@@ -8,6 +8,8 @@ import android.graphics.Canvas;
 import android.util.Log;
 import android.view.MotionEvent;
 
+//http://www.sgoliver.net/blog/preferencias-en-android-i-shared-preferences/
+
 public class EeOpciones extends EE_EsquemaEscena {
     public EeOpciones(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);

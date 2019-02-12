@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import a20_pc24.city._Tiles;
 import a20_pc24.city.sprites.ST_TileSprite;
 
-public class eejuegoEdificioPB extends eejuego_PantallaMapeada {
+public final class eejuegoEdificioPB extends eejuego_PantallaMapeada {
 
     public static ST_TileSprite[][] mapaCoordEdificioPB;
 

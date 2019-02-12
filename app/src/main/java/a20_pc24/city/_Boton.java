@@ -7,7 +7,9 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.view.MotionEvent;
 
-public class _Boton extends DrawableC{
+public class _Boton extends {
+
+    float coordXo,coordYo, coordXf, coordYf;
 
     RectF baseBotonRect;
     Paint paintBoton;
@@ -15,7 +17,6 @@ public class _Boton extends DrawableC{
     RectF botonBorde;
     Paint paintBotonBorde;
     boolean tieneBorde;
-    int destinoBoton;
 
     public _Boton(float top, float left, float bottom, float right, int colorFondoBoton, Boolean tieneBorde, String textoBoton, int colorTextoBoton, int destinoBoton){
         this.baseBotonRect=new RectF(left,top,right,bottom);
@@ -23,16 +24,19 @@ public class _Boton extends DrawableC{
         this.paintBoton = new Paint();
         this.paintBoton.setColor(colorFondoBoton);
 
-        this.destinoBoton = destinoBoton;
-
         this.paintBotonText = new Paint();
         this.paintBotonText.setColor(colorTextoBoton);
     }
 
+    /**
+     * Dibuja el botón
+     * @param c lienzo donde dibuja
+     */
+
     public void dibujaBordeBoton(Canvas c){
         if(tieneBorde){
+
             c.drawRect(this.baseBotonRect,paintBoton);
         }
     }
-    //
 }
