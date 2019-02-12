@@ -1,4 +1,4 @@
-package a20_pc24.city;
+package a20_pc24.city.Escenarios;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

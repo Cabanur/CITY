@@ -1,9 +1,9 @@
-package a20_pc24.city;
+package a20_pc24.city.Escenarios;
 
 import android.graphics.Bitmap;
 
-public class eejuegoEdificioP2 extends eejuego_PantallaMapeada {
-    public eejuegoEdificioP2() {
+public class eejuegoEdificioP3 extends eejuego_PantallaMapeada {
+    public eejuegoEdificioP3() {
 
 
     }

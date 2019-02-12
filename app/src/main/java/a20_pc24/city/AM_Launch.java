@@ -56,6 +56,7 @@ public class AM_Launch extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        //Se quita el getWindow porque no hace falta en el onResume
         View decorView = getWindow().getDecorView();
         int opciones = View.SYSTEM_UI_FLAG_FULLSCREEN        // pone la pantalla en modo pantalla completa ocultando elementos no criticos como la barra de estado.
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION  // oculta la barra de navegación
@@ -64,7 +65,6 @@ public class AM_Launch extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_IMMERSIVE
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         decorView.setSystemUiVisibility(opciones);
-        //Se quita el getWindow porque no hace falta en el onResume
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }

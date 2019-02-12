@@ -1,11 +1,11 @@
-package a20_pc24.city;
+package a20_pc24.city.Escenarios;
 
 import android.graphics.Bitmap;
 
-public class eejuegoEdificioSotano extends eejuego_PantallaMapeada {
-    public eejuegoEdificioSotano() {
-
+public class eejuegoEdificioP1 extends eejuego_PantallaMapeada {
+    public eejuegoEdificioP1(){
     }
+
 
     @Override
     public Bitmap unificaMapa() {

@@ -7,7 +7,7 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.view.MotionEvent;
 
-public class _Boton {
+public class _Boton extends DrawableC{
 
     RectF baseBotonRect;
     Paint paintBoton;

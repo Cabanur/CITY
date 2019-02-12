@@ -11,20 +11,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc202e9-a1f6-429d-b6bc-9d3a24c5d9b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/assets/buildinggenerals/sueloedificio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioPB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_CharacterSprites.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_CharacterSprites.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Boton.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Boton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Utiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Utiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoCallePrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoCallePrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP1.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4Tejado.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4Tejado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioPB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioPB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioSotano.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioSotano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuego_PantallaMapeada.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuego_PantallaMapeada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoCallePrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoCallePrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP1.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4Tejado.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP4Tejado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioPB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioSotano.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioSotano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuego_PantallaMapeada.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuego_PantallaMapeada.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,15 +66,16 @@
     <session id="-1355997998">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="107" />
+          <entry key="java" value="129" />
           <entry key="png" value="5" />
           <entry key="xml" value="1" />
         </counts>
@@ -74,19 +83,19 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="5" />
-          <entry key="JAVA" value="107" />
+          <entry key="JAVA" value="129" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4405" />
+          <entry key="java" value="4584" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4405" />
+          <entry key="JAVA" value="4584" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -94,131 +103,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+            <state relative-caret-position="513">
+              <caret line="38" column="64" selection-start-line="37" selection-start-column="55" selection-end-line="38" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoCallePrincipal.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuego_PantallaMapeada.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="62" column="5" lean-forward="true" selection-start-line="50" selection-end-line="62" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#275#276#0" expanded="true" />
-                <element signature="e#335#336#0" expanded="true" />
-                <element signature="e#7409#7410#0" expanded="true" />
-                <element signature="e#7441#7442#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-              <folding>
-                <element signature="e#243#244#0" expanded="true" />
-                <element signature="e#282#283#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP2.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuego_PaartidaActual.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#243#244#0" expanded="true" />
-                <element signature="e#282#283#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-              <folding>
-                <element signature="e#243#244#0" expanded="true" />
-                <element signature="e#282#283#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4Tejado.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#294#295#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioPB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-              <folding>
-                <element signature="e#243#244#0" expanded="true" />
-                <element signature="e#282#283#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioSotano.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-              <folding>
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#289#290#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#243#244#0" expanded="true" />
-                <element signature="e#282#283#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuego_PantallaMapeada.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="67" column="28" lean-forward="true" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
-              <folding>
-                <element signature="e#1756#1757#0" expanded="true" />
-                <element signature="e#1795#1796#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="437">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
             </state>
           </provider>
         </entry>
@@ -252,7 +159,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeAyuda.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/a.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/_Dimensions.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/S_Sprite.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/SoSpriteDecoracion.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/SO_SpritesObjetoEnEscena.java" />
@@ -266,20 +172,23 @@
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Dimensions.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Timer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/ST_TileSprite.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_CharacterSprites.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Utiles.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_MapasDeCoordenadas.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuego_PantallaMapeada.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoCallePrincipal.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioSotano.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioPB.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4Tejado.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP3.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP2.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP1.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoCallePrincipal.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioPB.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Boton.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuego_PantallaMapeada.java" />
       </list>
     </option>
   </component>
@@ -295,62 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="city" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="city" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="sprites" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="cityscape" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="menugraphics" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -397,8 +251,34 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="city" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CITY" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -414,6 +294,7 @@
       <recent name="a20_pc24.city" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\WINDUNNER\AndroidStudioProjects\CITY\app\src\main\assets\building1" />
       <recent name="C:\Users\WINDUNNER\AndroidStudioProjects\CITY\app\src\main\assets\menugraphics" />
     </key>
   </component>
@@ -562,7 +443,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17919463" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17919463" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -573,7 +454,7 @@
       <window_info id="Capture Tool" order="8" />
       <window_info id="Learn" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -654,38 +535,18 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_MapasDeCoordenadas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeRecords.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_MapasDeCoordenadas.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeOpciones.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -717,38 +578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuego_PaartidaActual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeAyuda.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="619">
           <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EE_EsquemaEscena.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EA_EscenaActual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -766,16 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Dimensions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -783,30 +606,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_CharacterSprites.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Boton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -866,112 +669,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Context.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuego_PantallaMapeada.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="67" column="28" lean-forward="true" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+        <state relative-caret-position="296">
+          <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EA_EscenaActual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EE_EsquemaEscena.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="27" />
           <folding>
-            <element signature="e#1756#1757#0" expanded="true" />
-            <element signature="e#1795#1796#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoCallePrincipal.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeRecords.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="50" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="133">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Tiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Boton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioSotano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioPB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP4Tejado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoCallePrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#275#276#0" expanded="true" />
             <element signature="e#335#336#0" expanded="true" />
             <element signature="e#7409#7410#0" expanded="true" />
-            <element signature="e#7441#7442#0" expanded="true" />
+            <element signature="e#7448#7449#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioSotano.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuego_PantallaMapeada.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding>
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="76">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioPB.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuego_PaartidaActual.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding>
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="437">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4Tejado.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding>
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/eejuegoEdificioP1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding>
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="513">
+          <caret line="38" column="64" selection-start-line="37" selection-start-column="55" selection-end-line="38" selection-end-column="64" />
         </state>
       </provider>
     </entry>

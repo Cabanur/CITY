@@ -1,12 +1,13 @@
-package a20_pc24.city;
+package a20_pc24.city.Escenarios;
 
 import android.graphics.Bitmap;
 
+import a20_pc24.city._Tiles;
 import a20_pc24.city.sprites.ST_TileSprite;
 
 public final class eejuegoCallePrincipal extends eejuego_PantallaMapeada {
 
-    public static ST_TileSprite[][] mapaCoordCallePrincipal;
+    public static ST_TileSprite[][] mapaCoordCallePrincipal = rellenador();
 
     public eejuegoCallePrincipal() {
          this.mapaCoordCallePrincipal = rellenador();
@@ -41,7 +42,7 @@ public final class eejuegoCallePrincipal extends eejuego_PantallaMapeada {
         mapaCoordCallePrincipal = new ST_TileSprite[20][15];
         for(int i = 0; i<mapaCoordCallePrincipal.length;i++){
             for(int j = 0; j<mapaCoordCallePrincipal[i].length;j++){
-                mapaCoordCallePrincipal[i][j]=_Tiles.CALLE_SUELO;
+                mapaCoordCallePrincipal[i][j]= _Tiles.CALLE_SUELO;
             }
         }
         return mapaCoordCallePrincipal;
