@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.view.MotionEvent;
 
 import java.sql.SQLTransactionRollbackException;
@@ -25,7 +26,7 @@ public class _Boton{
 
     String btnTexto;
 
-    public _Boton(float top, float left, float bottom, float right, int colorFondoBoton,
+    public _Boton(float left, float top, float right, float bottom, int colorFondoBoton,
                   Boolean btnTieneBorde, String btnTexto){
 
         this.btnTieneBorde = btnTieneBorde;
@@ -44,6 +45,8 @@ public class _Boton{
 
         this.btnTexto = btnTexto;
         this.btnTextPaint = new Paint();
+        this.btnTextPaint.setTextSize(this.btn.height()-this.btn.height()*2/3);
+        this.btnTextPaint.setTypeface(Typeface.DEFAULT);
         this.btnTextPaint.setColor(Color.BLACK);
     }
 
@@ -52,11 +55,11 @@ public class _Boton{
      * @param c lienzo donde dibuja
      */
 
-    public void dibujaBordeBoton(Canvas c){
+    public void dibujaBoton(Canvas c){
         c.drawRect(btn, btnPaint);
         if(this.btnTieneBorde){
             c.drawRect(this.btnBorde,btnBordePaint);
         }
-        c.drawText(btnTexto,btn.left+(btn.left*1/5),btn.top+(btn.top*1/2),btnTextPaint);
+        c.drawText(this.btnTexto,this.btn.width()-this.btn.width()*2/3,this.btn.centerY(),this.btnTextPaint);
     }
 }

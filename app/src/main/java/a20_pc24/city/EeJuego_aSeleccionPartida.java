@@ -3,6 +3,7 @@ package a20_pc24.city;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
@@ -28,8 +29,16 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 //        fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
 //        this.savedGamesBackgroundTile1Spot = new ST_TileSprite(fondo,false,false,ST_TileSprite.TileTipo.SUELO);
                                     //Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo
-//        btnP1=new _Boton(0+(),);
-
+//        btnP1=new _Boton
+//                (_Dimensions.pXLargo*1/7,500,
+//                 _Dimensions.pXLargo,750,
+//                        Color.GREEN, true, "Partida 1");
+      btnP1=new _Boton
+                (anchoPantalla*1/7,altoPantalla*1/7,
+                 anchoPantalla-anchoPantalla*1/7,altoPantalla-altoPantalla*5/7,
+                        Color.GREEN, true, "Partida 1");
+// public _Boton(float top, float left, float bottom, float right, int colorFondoBoton,
+//                  Boolean btnTieneBorde, String btnTexto){
         this.arrL_TilesUsadas = new ArrayList<>();
 
         this.arrL_TilesUsadas.add(_Tiles.MENU_SPOT);
@@ -51,11 +60,11 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             Log.i("TEST","ANCHO PANTALLA DPX "+_Dimensions.pXLargo);
             Log.i("TEST","ALTO PANTALLA "+getAltoPantalla());
             Log.i("TEST","ALTO PANTALLA DPY "+_Dimensions.pYAncho);
-            System.exit(0);
+//            System.exit(0);
 //            c.drawBitmap(fondo,0,0,null);
+            btnP1.dibujaBoton(c);
             super.dibujar(c);
             //Llamamos a super para poner el botón de salir
-
 
 
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);

@@ -102,7 +102,7 @@ public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callba
         public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
         anchoPantalla = width;               // se establece el nuevo ancho de pantalla
         altoPantalla = height;               // se establece el nuevo alto de pantalla
-        escenaActual = new EeMenu(_Context.getAppContext(), 0, width, height);
+        escenaActual = new EeMenu(context, 0, anchoPantalla, altoPantalla);
 
         hilo.setSurfaceSize(width,height);   // se establece el nuevo ancho y alto de pantalla en el hilo
         hilo. setFuncionando(true);

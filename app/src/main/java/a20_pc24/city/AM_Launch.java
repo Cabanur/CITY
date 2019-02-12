@@ -39,8 +39,8 @@ public class AM_Launch extends AppCompatActivity {
         Display d = getWindowManager().getDefaultDisplay();
         Point p = new Point();
         d.getSize(p);
-        determinarDimensiones.setPxSizeY(p.y);
-        determinarDimensiones.setPxSizeX(p.x);
+        determinarDimensiones.setPxSizeY(d.getHeight());
+        determinarDimensiones.setPxSizeX(d.getWidth());
 
         determinarDimensiones.setDPsX();
         determinarDimensiones.setDPsY();

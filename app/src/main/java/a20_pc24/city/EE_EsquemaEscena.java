@@ -2,6 +2,7 @@ package a20_pc24.city;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -41,6 +42,10 @@ public class EE_EsquemaEscena {
         pBoton2.setColor(Color.MAGENTA);
 
         backToPrincipal = new Rect(anchoPantalla-anchoPantalla/7,0,anchoPantalla,anchoPantalla/7);
+//TODO iniciar fondo a algo o kapoot
+        //Crear imagen placeholder de pantalla
+        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.placeholder);
+        fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
     }
 
     public Context getCntx() {

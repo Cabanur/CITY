@@ -77,7 +77,7 @@ public class _Utiles {
      * @return
      */
 
-    public static Bitmap combineImageIntoOne(ArrayList<Bitmap> bitmap, int [][] mapaCoordenadas) {
+    public static Bitmap juntaBitmapsEnUno(ArrayList<Bitmap> bitmap, int [][] mapaCoordenadas) {
         int w = 0, h = 0;
         for (int i = 0; i < bitmap.size(); i++) {
             if (i < bitmap.size() - 1) {
