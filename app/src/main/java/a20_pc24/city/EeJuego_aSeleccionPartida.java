@@ -26,6 +26,8 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 //        fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
 //        this.savedGamesBackgroundTile1Spot = new ST_TileSprite(fondo,false,false,ST_TileSprite.TileTipo.SUELO);
                                     //Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo
+        this.arrL_TilesUsadas = new ArrayList<>();
+
         this.arrL_TilesUsadas.add(_Tiles.MENU_SPOT);
         this.arrL_TilesUsadas.add(_Tiles.MENU_CROSS);
         this.arrL_TilesUsadas.add(_Tiles.MENU_CIRCLE);
@@ -42,9 +44,10 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             }
 //            c.drawBitmap(fondo,0,0,null);
             super.dibujar(c);
-
-            
             //Llamamos a super para poner el botón de salir
+
+
+
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
 
