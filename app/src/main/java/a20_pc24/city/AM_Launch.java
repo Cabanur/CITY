@@ -34,7 +34,7 @@ public class AM_Launch extends AppCompatActivity {
         /*********************************************************************/
 
         _Dimensions determinarDimensiones=new _Dimensions();
-        determinarDimensiones.setDpi((double)this.getResources().getDisplayMetrics().densityDpi);
+        determinarDimensiones.setDpi((float)this.getResources().getDisplayMetrics().densityDpi);
 
         Display d = getWindowManager().getDefaultDisplay();
         Point p = new Point();

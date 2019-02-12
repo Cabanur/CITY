@@ -18,6 +18,8 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
     BitmapDrawable mosaicDefinerBD;
     ArrayList<ST_TileSprite> arrL_TilesUsadas;
 
+    _Boton btnP1, btnP2, btnP3;
+
     public EeJuego_aSeleccionPartida(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
 //        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.b);
@@ -26,6 +28,8 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 //        fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
 //        this.savedGamesBackgroundTile1Spot = new ST_TileSprite(fondo,false,false,ST_TileSprite.TileTipo.SUELO);
                                     //Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo
+        btnP1=new _Boton(0+(_Dimensions.screenDPs *1/7),);
+
         this.arrL_TilesUsadas = new ArrayList<>();
 
         this.arrL_TilesUsadas.add(_Tiles.MENU_SPOT);

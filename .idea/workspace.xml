@@ -11,15 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc202e9-a1f6-429d-b6bc-9d3a24c5d9b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Dimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Dimensions.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +57,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="147" />
+          <entry key="java" value="149" />
           <entry key="png" value="5" />
           <entry key="xml" value="1" />
         </counts>
@@ -71,19 +65,19 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="5" />
-          <entry key="JAVA" value="147" />
+          <entry key="JAVA" value="149" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5273" />
+          <entry key="java" value="5766" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5273" />
+          <entry key="JAVA" value="5766" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -92,19 +86,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Boton.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+            <state relative-caret-position="266">
+              <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Dimensions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+            <state relative-caret-position="206">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="method#setDpi#0;class#_Dimensions#0" />
+                <element signature="e#1491#1492#0" expanded="true" />
+                <element signature="e#1518#1519#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -124,26 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="48" selection-start-line="44" selection-start-column="39" selection-end-line="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/SO_SpritesObjetoEnEscena.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/SoSpriteDecoracion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="-8">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -225,7 +215,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EA_EscenaActual.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Context.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Dimensions.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Timer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/sprites/ST_TileSprite.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_CharacterSprites.java" />
@@ -245,9 +234,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeOpciones.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioP1.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/Escenarios/eejuegoEdificioPB.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Boton.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Dimensions.java" />
       </list>
     </option>
   </component>
@@ -521,7 +511,7 @@
       <window_info anchor="bottom" id="Build" order="7" weight="0.25106382" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="10" visible="true" weight="0.3248227" />
+      <window_info anchor="bottom" id="Logcat" order="10" weight="0.3248227" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -650,13 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Dimensions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_CharacterSprites.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -693,13 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -856,10 +832,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/AM_Launch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="48" selection-start-line="44" selection-start-column="39" selection-end-line="48" />
+        <state relative-caret-position="-8">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
@@ -872,8 +855,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/EeJuego_aSeleccionPartida.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+        <state relative-caret-position="266">
+          <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/a20_pc24/city/_Dimensions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="method#setDpi#0;class#_Dimensions#0" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
