@@ -30,7 +30,7 @@ public class AM_Launch extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         /*********************************************************************/
-        /***************determinando tamaño pantalla(DP)**********************/
+        /***************determinando tamaño pantalla en DP********************/
         /*********************************************************************/
 
         _Dimensions determinarDimensiones=new _Dimensions();

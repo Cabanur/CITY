@@ -8,15 +8,15 @@ import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
 import android.view.MotionEvent;
 
+import java.util.ArrayList;
+
 import a20_pc24.city.sprites.ST_TileSprite;
 
 public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
     Rect boundsRect;
     BitmapDrawable mosaicDefinerBD;
-    ST_TileSprite savedGamesBackgroundTile1Spot;
-    ST_TileSprite savedGamesBackgroundTile2Cross;
-    ST_TileSprite savedGamesBackgroundTile3Circle;
+    ArrayList<ST_TileSprite> arrL_TilesUsadas;
 
     public EeJuego_aSeleccionPartida(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
@@ -26,22 +26,24 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 //        fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
 //        this.savedGamesBackgroundTile1Spot = new ST_TileSprite(fondo,false,false,ST_TileSprite.TileTipo.SUELO);
                                     //Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo
-        this.savedGamesBackgroundTile1Spot = _Tiles.MENU_SPOT;
-        this.savedGamesBackgroundTile2Cross = _Tiles.MENU_CROSS;
-        this.savedGamesBackgroundTile3Circle = _Tiles.MENU_CIRCLE;
+        this.arrL_TilesUsadas.add(_Tiles.MENU_SPOT);
+        this.arrL_TilesUsadas.add(_Tiles.MENU_CROSS);
+        this.arrL_TilesUsadas.add(_Tiles.MENU_CIRCLE);
     }
 
     public void dibujar(Canvas c) {
         try{
             for(int i=0;i<getAltoPantalla();i+=64){
                 for(int j=0;j<getAnchoPantalla();j+=64){
-                    c.drawBitmap(this.savedGamesBackgroundTile1Spot.getSpriteIMG(),j,i,null);
-                    c.drawBitmap(this.savedGamesBackgroundTile2Cross.getSpriteIMG(),j,i,null);
-                    c.drawBitmap(this.savedGamesBackgroundTile3Circle.getSpriteIMG(),j,i,null);
+                    c.drawBitmap(this.arrL_TilesUsadas.get(this.arrL_TilesUsadas.indexOf(_Tiles.MENU_SPOT)).getSpriteIMG(),j,i,null);
+                    c.drawBitmap(this.arrL_TilesUsadas.get(this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CIRCLE)).getSpriteIMG(),j,i,null);
+                    c.drawBitmap(this.arrL_TilesUsadas.get(this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CROSS)).getSpriteIMG(),j,i,null);
                 }
             }
 //            c.drawBitmap(fondo,0,0,null);
             super.dibujar(c);
+
+            
             //Llamamos a super para poner el botón de salir
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
