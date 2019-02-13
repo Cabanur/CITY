@@ -96,7 +96,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
     }
 
-/*
+
     public int onTouchEvent(MotionEvent event) {
         int pointerIndex = event.getActionIndex();        //Obtenemos el índice de la acción
         int pointerID = event.getPointerId(pointerIndex); //Obtenemos el Id del pointer asociado a la acción
@@ -133,30 +133,5 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
         return getIdEscena();
     }
-    */
-    public int onTouchEvent(MotionEvent moe){
-        int pointerIndex = moe.getActionIndex();        //Obtenemos el índice de la acción
-        int pointerID = moe.getPointerId(pointerIndex); //Obtenemos el Id del pointer asociado a la acción
-        int accion = moe.getActionMasked();             //Obtenemos el tipo de pulsación
-        switch (accion) {
-            case MotionEvent.ACTION_DOWN:           // Primer dedo toca
-            case MotionEvent.ACTION_POINTER_DOWN:  // Segundo y siguientes tocan
-                break;
-
-            case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
-            case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
-                if(pulsa(backToPrincipal,moe) && idEscena!=0){
-                    return 0;
-                }
-                break;
-
-            case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos
-
-                break;
-            default:  Log.i("Otra acción", "Acción no definida: "+accion);
-        }
-        return getIdEscena();
-    }
-
 }
 

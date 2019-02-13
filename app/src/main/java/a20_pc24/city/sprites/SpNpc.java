@@ -6,23 +6,8 @@ public class SpNpc extends SP_Personajes {
 
     private boolean movil;
 
-    public SpNpc(Bitmap spriteIMG, boolean colisionable, boolean animado, boolean movil) {
-        super(spriteIMG, colisionable, animado);
-        this.movil=movil;
-    }
-
-    @Override
-    public void cuadroCoolision() {
-        super.cuadroCoolision();
-    }
-
-    @Override
-    public void movimiento() {
-        super.movimiento();
-    }
-
-    @Override
-    public void animacion() {
-        super.animacion();
+    public SpNpc(Bitmap spriteIMG, float spritePosX, float spritePosY, boolean movil) {
+        super(spriteIMG, spritePosX, spritePosY);
+        this.movil = movil;
     }
 }

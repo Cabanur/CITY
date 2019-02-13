@@ -1,32 +1,36 @@
 package a20_pc24.city.sprites;
 
 import android.graphics.Bitmap;
+import android.graphics.PointF;
+import android.graphics.RectF;
 
 public abstract class S_Sprite{
 
+    public PointF spritePos;
+    float spritePosX, spritePosY;
     private Bitmap spriteIMG;
-    private double spriteLargariaX;
-    private double spriteLargariaY;
-    private double size[];
-    private boolean colisionable;
-    private boolean animado;
-    //Los identificadores de los tiles están declarados como final en las clase abstracta _TILES
+    public RectF spriteColisionRect;
+    //Los tiles y sprites son definidos con las clases que heredan de S_SPRITE
+    // y construídos en las clases _Tiles y _CharacterSprites
+
+    public S_Sprite(Bitmap spriteIMG){
+        this.spriteIMG = spriteIMG;
+    }
 
     /**
      * A pesar de ser una clase abstracta, declaro el constructor para que sea la base de los hijos
      *
-     * @param spriteIMG
-     * @param colisionable
-     * @param animado
+     * @param spriteIMG bitmap correspondiente al sprite
+     * @param spritePosX posición X donde posicionaremos y dibujaremos
+     * @param spritePosY posición Y donde posicionaremos y dibujaremos
      */
 
-    public S_Sprite(Bitmap spriteIMG, boolean colisionable, boolean animado){
-        this.spriteIMG = spriteIMG;
-        this.spriteLargariaX = spriteIMG.getWidth();
-        this.spriteLargariaY = spriteIMG.getHeight();
-        this.colisionable = colisionable;
-        this.animado = animado;
-        this.size = new double[]{spriteLargariaX, spriteLargariaY};
+    public S_Sprite(Bitmap spriteIMG, float spritePosX, float spritePosY){
+        this(spriteIMG);
+        this.spritePosX = spritePosX;
+        this.spritePosY = spritePosY;
+        this.spritePos = new PointF(spritePosX,spritePosY);
+        this.spriteColisionRect = new RectF(spritePosX,spritePosY,spriteIMG.getWidth(),spriteIMG.getHeight());
     }
 
     public Bitmap getSpriteIMG() {
@@ -35,38 +39,6 @@ public abstract class S_Sprite{
 
     public void setSpriteIMG(Bitmap spriteIMG) {
         this.spriteIMG = spriteIMG;
-    }
-
-    public double getspriteLargariaX() {
-        return spriteLargariaX;
-    }
-
-    public double getspriteLargariaY() {
-        return spriteLargariaY;
-    }
-
-    public boolean isColisionable() {
-        return colisionable;
-    }
-
-    public void setColisionable(boolean colisionable) {
-        this.colisionable = colisionable;
-    }
-
-    public boolean isAnimado() {
-        return animado;
-    }
-
-    public void setAnimado(boolean animado) {
-        this.animado = animado;
-    }
-
-    public double[] getSize() {
-        return size;
-    }
-
-    public void setSize(double x, double y) {
-        this.size = new double[]{x,y};
     }
 
     /**

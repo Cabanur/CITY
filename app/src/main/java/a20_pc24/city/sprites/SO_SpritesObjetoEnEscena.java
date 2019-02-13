@@ -4,8 +4,7 @@ import android.graphics.Bitmap;
 
 public class SO_SpritesObjetoEnEscena extends S_Sprite {
 
-    public SO_SpritesObjetoEnEscena(Bitmap spriteIMG, boolean colisionable, boolean animado) {
-        super(spriteIMG, colisionable, animado);
+    public SO_SpritesObjetoEnEscena(Bitmap spriteIMG, float spritePosX, float spritePosY) {
+        super(spriteIMG, spritePosX, spritePosY);
     }
-
 }
