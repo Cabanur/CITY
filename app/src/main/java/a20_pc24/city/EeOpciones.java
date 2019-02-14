@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 
 //http://www.sgoliver.net/blog/preferencias-en-android-i-shared-preferences/
+//Id 97
 
 public class EeOpciones extends EE_EsquemaEscena {
     public EeOpciones(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {

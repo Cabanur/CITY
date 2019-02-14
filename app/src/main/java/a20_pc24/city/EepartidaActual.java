@@ -5,7 +5,14 @@ import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-public class eejuego_PaartidaActual extends EE_EsquemaEscena{
+//Clase destinada a cargar la partida guardada
+//
+
+public class EepartidaActual extends EE_EsquemaEscena{
+
+    public byte idEscena = 96;
+    public byte idPartida;
+
 
     /**
      * Extiende del esquema general de escenas.
@@ -19,9 +26,9 @@ public class eejuego_PaartidaActual extends EE_EsquemaEscena{
      * @param altoPantalla prescindible en un futuro próximo
      */
 
-    public eejuego_PaartidaActual(Context cntx, int idEscena, int anchoPantalla, int altoPantalla, byte idPartida) {
+    public EepartidaActual(Context cntx, int idEscena, int anchoPantalla, int altoPantalla, byte idPartida) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
+        this.idPartida = idPartida;
 //        this.cargarPartida(idPartida);
     }
-
 }

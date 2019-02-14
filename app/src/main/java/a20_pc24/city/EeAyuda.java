@@ -7,6 +7,8 @@ import android.graphics.Canvas;
 import android.util.Log;
 import android.view.MotionEvent;
 
+//Id 99
+
 public class EeAyuda extends EE_EsquemaEscena {
     public EeAyuda(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);

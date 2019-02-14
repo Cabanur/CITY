@@ -19,7 +19,15 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
     BitmapDrawable mosaicDefinerBD;
     ArrayList<ST_TileSprite> arrL_TilesUsadas;
 
-    _Boton btnP1, btnP2, btnP3;
+    _Boton btnP1, btnP2, btnP3;                 //El valor será respectivamente 961, 962, 963
+
+    /**
+     *
+     * @param cntx
+     * @param idEscena
+     * @param anchoPantalla
+     * @param altoPantalla
+     */
 
     public EeJuego_aSeleccionPartida(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
@@ -29,28 +37,21 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 //        fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
 //        this.savedGamesBackgroundTile1Spot = new ST_TileSprite(fondo,false,false,ST_TileSprite.TileTipo.SUELO);
                                     //Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo
-//        btnP1=new _Boton
-//                (_Dimensions.pXLargo*1/7,500,
-//                 _Dimensions.pXLargo,750,
-//                        Color.GREEN, true, "Partida 1");
+
         btnP1=new _Boton
                 (anchoPantalla*1/5,altoPantalla*1/7,
                  anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*5/7,
-                        Color.GREEN, true, "Partida 1");
+                        Color.GREEN, true, "Partida 1", 961);
 
         btnP2=new _Boton
             (anchoPantalla*1/5,altoPantalla*3/7,
                     anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*3/7,
-                    Color.GREEN, true, "Partida 2");
+                    Color.GREEN, true, "Partida 2",962);
 
         btnP3=new _Boton
             (anchoPantalla*1/5,altoPantalla*5/7,
                     anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*1/7,
-                    Color.GREEN, true, "Partida 3");
-
-//TODO Preguntar por qué coge coordenadas erróneas de esta forma
-// public _Boton(float top, float left, float bottom, float right, int colorFondoBoton,
-//                  Boolean btnTieneBorde, String btnTexto){
+                    Color.GREEN, true, "Partida 3",963);
 
         this.arrL_TilesUsadas = new ArrayList<>();
 
@@ -63,9 +64,12 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
         try{
             for(int i=0;i<getAltoPantalla();i+=64){
                 for(int j=0;j<getAnchoPantalla();j+=64){
-                    c.drawBitmap(this.arrL_TilesUsadas.get(this.arrL_TilesUsadas.indexOf(_Tiles.MENU_SPOT)).getSpriteIMG(),j,i,null);
-                    c.drawBitmap(this.arrL_TilesUsadas.get(this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CIRCLE)).getSpriteIMG(),j,i,null);
-                    c.drawBitmap(this.arrL_TilesUsadas.get(this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CROSS)).getSpriteIMG(),j,i,null);
+                    c.drawBitmap(this.arrL_TilesUsadas.get(
+                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_SPOT)).getSpriteIMG(),j,i,null);
+                    c.drawBitmap(
+                            this.arrL_TilesUsadas.get(this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CIRCLE)).getSpriteIMG(),j,i,null);
+                    c.drawBitmap(
+                            this.arrL_TilesUsadas.get(this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CROSS)).getSpriteIMG(),j,i,null);
                 }
             }
 
@@ -75,8 +79,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             btnP2.dibujaBoton(c);
             btnP3.dibujaBoton(c);
 
-            super.dibujar(c);
-            //Llamamos a super para poner el botón de salir
+            super.dibujar(c);                       //Llamamos a super para poner el botón de salir
 
             Log.i("TEST","ANCHO PANTALLA "+getAnchoPantalla());
             Log.i("TEST","ANCHO PANTALLA DPX "+_Dimensions.pXLargo);
@@ -107,18 +110,27 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             case MotionEvent.ACTION_POINTER_DOWN:  // Segundo y siguientes tocan
                 break;
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
+                if(btnP1.pulsaBoton(event)){
+                    return btnP1.btnValue;
+                }else if(btnP2.pulsaBoton(event)){
+                    return btnP2.btnValue;
+                }else if(btnP3.pulsaBoton(event)){
+                    return btnP3.btnValue;
+                }
                 break;
             case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
-//                if(pulsa(juego,event)) {
-//                    return 1;
-//                }else if(pulsa(ayuda,event)){
-//                    return 99;
-//                }else if(pulsa(opciones,event)){
-//                    return 98;
-//
-//                }else if(pulsa(records,event)){
-//                    return 97;
-//                }
+                /*
+                if(pulsa(juego,event)) {
+                    return 1;
+                }else if(pulsa(ayuda,event)){
+                    return 99;
+                }else if(pulsa(opciones,event)){
+                    return 98;
+
+                }else if(pulsa(records,event)){
+                    return 97;
+                }
+                */
                 break;
             case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos
                 break;

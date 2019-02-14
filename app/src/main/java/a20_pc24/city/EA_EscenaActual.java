@@ -7,9 +7,8 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-/**
- * Clase que gestiona la sucesión de escenas del juego
- */
+//Clase que gestiona la sucesión de escenas del juego
+
 
 public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callback{
     private SurfaceHolder surfaceHolder;      // Interfaz abstracta para manejar la superficie de dibujado
@@ -58,6 +57,15 @@ public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callba
                         break;
                     case 1:
                         escenaActual=new EeJuego_aSeleccionPartida(context,nuevaEscena,anchoPantalla,altoPantalla);
+                        break;
+                    case 961:
+                        escenaActual=new EepartidaActual(context,nuevaEscena,anchoPantalla,altoPantalla,(byte)1);
+                        break;
+                    case 962:
+                        escenaActual=new EepartidaActual(context,nuevaEscena,anchoPantalla,altoPantalla,(byte)2);
+                        break;
+                    case 963:
+                        escenaActual=new EepartidaActual(context,nuevaEscena,anchoPantalla,altoPantalla,(byte)3);
                         break;
                     case 97:
                         escenaActual=new EeOpciones(context,nuevaEscena,anchoPantalla,altoPantalla);

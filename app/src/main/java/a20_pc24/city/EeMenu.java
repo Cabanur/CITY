@@ -4,14 +4,18 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.Log;
 import android.view.MotionEvent;
 
+//Id 0
+
 public class EeMenu extends EE_EsquemaEscena {
 
     Rect ayuda, opciones, juego, records;
+    _Boton btnAyuda, btnOpciones, btnJuego, btnRecords;
     Paint tit, tit2;
     int alto;
     int ancho, ancho2;
@@ -26,9 +30,15 @@ public class EeMenu extends EE_EsquemaEscena {
 
         ancho2=anchoPantalla/10;
 
-        juego = new Rect(ancho,alto,ancho*4,alto*3);
+//        juego = new Rect(ancho,alto,ancho*4,alto*3);
+        btnJuego=new _Boton
+                        (ancho,alto,ancho*4,alto*3,
+                        Color.RED, true, "Entrar", 1);
 
         opciones = new Rect(ancho2,alto*4,ancho2*3,alto*6);
+        btnOpciones=new _Boton
+                (ancho2,alto,ancho2*3,alto*6,
+                        Color.CYAN, true, "Entrar", 1);
 
         ayuda = new Rect(ancho2*4,alto*4,ancho2*6,alto*6);
 
