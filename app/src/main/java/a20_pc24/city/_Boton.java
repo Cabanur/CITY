@@ -91,7 +91,7 @@ public class _Boton{
         if(this.btnTieneBorde){
             c.drawRect(this.btnBordeRect,btnBordePaint);
         }
-        c.drawText(this.btnTexto,this.btnRect.centerX(),this.btnRect.centerY()+this.btnRect.height()*1/11,this.btnTextPaint);
+        c.drawText(this.btnTexto,(this.btnRect.centerX()-(this.btnRect.centerX()*1/7)),this.btnRect.centerY()+this.btnRect.height()*1/11,this.btnTextPaint);
     }
 
     /**

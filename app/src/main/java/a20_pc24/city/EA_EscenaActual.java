@@ -56,16 +56,16 @@ public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callba
                         escenaActual=new EeMenu(context,nuevaEscena,anchoPantalla,altoPantalla);
                         break;
                     case 1:
+                        escenaActual=new EepartidaActual(context,nuevaEscena,anchoPantalla,altoPantalla,nuevaEscena);
+                        break;
+                    case 2:
+                        escenaActual=new EepartidaActual(context,nuevaEscena,anchoPantalla,altoPantalla,nuevaEscena);
+                        break;
+                    case 3:
+                        escenaActual=new EepartidaActual(context,nuevaEscena,anchoPantalla,altoPantalla,nuevaEscena);
+                        break;
+                    case 96:
                         escenaActual=new EeJuego_aSeleccionPartida(context,nuevaEscena,anchoPantalla,altoPantalla);
-                        break;
-                    case 961:
-                        escenaActual=new EepartidaActual(context,nuevaEscena,anchoPantalla,altoPantalla,(byte)1);
-                        break;
-                    case 962:
-                        escenaActual=new EepartidaActual(context,nuevaEscena,anchoPantalla,altoPantalla,(byte)2);
-                        break;
-                    case 963:
-                        escenaActual=new EepartidaActual(context,nuevaEscena,anchoPantalla,altoPantalla,(byte)3);
                         break;
                     case 97:
                         escenaActual=new EeOpciones(context,nuevaEscena,anchoPantalla,altoPantalla);

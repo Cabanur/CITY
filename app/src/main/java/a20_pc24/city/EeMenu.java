@@ -16,6 +16,7 @@ public class EeMenu extends EE_EsquemaEscena {
 
     Rect ayuda, opciones, juego, records;
     _Boton btnAyuda, btnOpciones, btnJuego, btnRecords;
+    _Boton []btnArr;
     Paint tit, tit2;
     int alto;
     int ancho, ancho2;
@@ -33,36 +34,45 @@ public class EeMenu extends EE_EsquemaEscena {
 //        juego = new Rect(ancho,alto,ancho*4,alto*3);
         btnJuego=new _Boton
                         (ancho,alto,ancho*4,alto*3,
-                        Color.RED, true, "Entrar", 1);
+                        Color.RED, true, "Entrar", 96);
 
-        opciones = new Rect(ancho2,alto*4,ancho2*3,alto*6);
+//        opciones = new Rect(ancho2,alto*4,ancho2*3,alto*6);
         btnOpciones=new _Boton
-                (ancho2,alto,ancho2*3,alto*6,
-                        Color.CYAN, true, "Entrar", 1);
+                        (ancho2,alto*4,ancho2*3,alto*6,
+                        Color.CYAN, true, "Opciones", 97);
 
-        ayuda = new Rect(ancho2*4,alto*4,ancho2*6,alto*6);
+//        ayuda = new Rect(ancho2*4,alto*4,ancho2*6,alto*6);
+        btnAyuda=new _Boton
+                        (ancho2*4,alto*4,ancho2*6,alto*6,
+                        Color.CYAN, true, "Ayuda", 98);
 
-        records = new Rect(ancho2*7,alto*4,ancho2*9,alto*6);
-
+//        records = new Rect(ancho2*7,alto*4,ancho2*9,alto*6);
+        btnRecords=new _Boton
+                        (ancho2*7,alto*4,ancho2*9,alto*6,
+                        Color.CYAN, true, "Récords", 99);
+        this.btnArr = new _Boton[]{btnJuego,btnOpciones,btnAyuda,btnRecords};
     }
 
     public void dibujar(Canvas c) {
-        try{
+//        try{
             c.drawBitmap(fondo,0,0,null);
             super.dibujar(c);
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
 
-            c.drawRect(juego,pBoton);
-            c.drawText("Jugar",juego.centerX(),juego.centerY()+alto/2, pTexto);
-
-            c.drawRect(ayuda, pBoton2);
-            c.drawRect(opciones, pBoton2);
-            c.drawRect(records,pBoton2);
-        }catch(Exception e){
-            Log.i("Error al dibujar", e.getLocalizedMessage());
-        }
-
+//            c.drawRect(juego,pBoton);
+//            c.drawText("Jugar",juego.centerX(),juego.centerY()+alto/2, pTexto);
+//
+//            c.drawRect(ayuda, pBoton2);
+//            c.drawRect(opciones, pBoton2);
+//            c.drawRect(records,pBoton2);
+//        }catch(Exception e){
+//            Log.i("Error al dibujar", e.getLocalizedMessage());
+//        }
+        btnJuego.dibujaBoton(c);
+        btnOpciones.dibujaBoton(c);
+        btnAyuda.dibujaBoton(c);
+        btnRecords.dibujaBoton(c);
     }
 
     public void actualizarFisica() {
@@ -77,29 +87,21 @@ public class EeMenu extends EE_EsquemaEscena {
         int accion = event.getActionMasked();             //Obtenemos el tipo de pulsación
         switch (accion) {
             case MotionEvent.ACTION_DOWN:           // Primer dedo toca
+                break;
             case MotionEvent.ACTION_POINTER_DOWN:  // Segundo y siguientes tocan
                 break;
-
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
+                for(_Boton btnAux: btnArr){
+                    if(btnAux.pulsaBoton(event)){
+                        return btnAux.btnValue;
+                    }
+                }
+                break;
             case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
-                if(pulsa(juego,event)) {
-                    return 1;
-                }
-                else if(pulsa(opciones,event)){
-                    return 97;
-                }
-                else if(pulsa(records,event)){
-                    return 98;
-                }
-                else if(pulsa(ayuda,event)) {
-                    return 99;
-                }
                 break;
-
             case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos
-
-                break;
             default:  Log.i("Otra acción", "Acción no definida: "+accion);
+                break;
         }
         return getIdEscena();
     }

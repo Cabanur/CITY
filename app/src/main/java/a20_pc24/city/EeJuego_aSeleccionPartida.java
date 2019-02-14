@@ -19,7 +19,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
     BitmapDrawable mosaicDefinerBD;
     ArrayList<ST_TileSprite> arrL_TilesUsadas;
 
-    _Boton btnP1, btnP2, btnP3;                 //El valor será respectivamente 961, 962, 963
+    _Boton btnP1, btnP2, btnP3;                 //El valor será respectivamente 1, 2, 3
 
     /**
      *
@@ -41,17 +41,17 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
         btnP1=new _Boton
                 (anchoPantalla*1/5,altoPantalla*1/7,
                  anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*5/7,
-                        Color.GREEN, true, "Partida 1", 961);
+                        Color.GREEN, true, "Partida 1", 1);
 
         btnP2=new _Boton
             (anchoPantalla*1/5,altoPantalla*3/7,
                     anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*3/7,
-                    Color.GREEN, true, "Partida 2",962);
+                    Color.GREEN, true, "Partida 2",2);
 
         btnP3=new _Boton
             (anchoPantalla*1/5,altoPantalla*5/7,
                     anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*1/7,
-                    Color.GREEN, true, "Partida 3",963);
+                    Color.GREEN, true, "Partida 3",3);
 
         this.arrL_TilesUsadas = new ArrayList<>();
 

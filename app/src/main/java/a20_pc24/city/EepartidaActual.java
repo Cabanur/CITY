@@ -10,8 +10,8 @@ import android.view.SurfaceView;
 
 public class EepartidaActual extends EE_EsquemaEscena{
 
-    public byte idEscena = 96;
-    public byte idPartida;
+    public int idEscena = 96;
+    public int idPartida;
 
 
     /**
@@ -26,7 +26,7 @@ public class EepartidaActual extends EE_EsquemaEscena{
      * @param altoPantalla prescindible en un futuro próximo
      */
 
-    public EepartidaActual(Context cntx, int idEscena, int anchoPantalla, int altoPantalla, byte idPartida) {
+    public EepartidaActual(Context cntx, int idEscena, int anchoPantalla, int altoPantalla, int idPartida) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
         this.idPartida = idPartida;
 //        this.cargarPartida(idPartida);
