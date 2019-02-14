@@ -16,32 +16,36 @@ public class EE_EsquemaEscena {
     private int idEscena;
     private int anchoPantalla, altoPantalla;
     Bitmap fondo;
-    Paint pTexto, pTexto2, pBoton, pBoton2;
+//    Paint pTexto, pTexto2, pBoton, pBoton2;
     Rect backToPrincipal;
+    _Boton btnAtras;
 
     public EE_EsquemaEscena(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         this.cntx = cntx;
         this.idEscena = idEscena;
         this.anchoPantalla = anchoPantalla;
         this.altoPantalla = altoPantalla;
-        pTexto= new Paint();
-        pTexto2= new Paint();
-
-        pTexto.setColor(Color.GREEN);
-        pTexto.setTextAlign(Paint.Align.CENTER);
-        pTexto.setTextSize((int)(getAltoPantalla()/7*1.5));
-
-        pTexto2.setColor(Color.WHITE);
-        pTexto2.setTextAlign(Paint.Align.CENTER);
-        pTexto2.setTextSize((int)(getAltoPantalla()/5));
-
-        pBoton = new Paint();
-        pBoton.setColor(Color.BLUE);
-
-        pBoton2 = new Paint();
-        pBoton2.setColor(Color.MAGENTA);
+//        pTexto= new Paint();
+//        pTexto2= new Paint();
+//
+//        pTexto.setColor(Color.GREEN);
+//        pTexto.setTextAlign(Paint.Align.CENTER);
+//        pTexto.setTextSize((int)(getAltoPantalla()/7*1.5));
+//
+//        pTexto2.setColor(Color.WHITE);
+//        pTexto2.setTextAlign(Paint.Align.CENTER);
+//        pTexto2.setTextSize((int)(getAltoPantalla()/5));
+//
+//        pBoton = new Paint();
+//        pBoton.setColor(Color.BLUE);
+//
+//        pBoton2 = new Paint();
+//        pBoton2.setColor(Color.MAGENTA);
 
         backToPrincipal = new Rect(anchoPantalla-anchoPantalla/7,0, anchoPantalla,anchoPantalla/7);
+        btnAtras = new _Boton
+                        (anchoPantalla-anchoPantalla/7,0,anchoPantalla,anchoPantalla/7,
+                        Color.BLUE, true, "X");
 //TODO preguntar por qué peta en api 22
         //Crear imagen placeholder de pantalla
         fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.placeholder);
@@ -92,7 +96,8 @@ public class EE_EsquemaEscena {
     public void dibujar(Canvas c){
         try{
             if(idEscena!=0){
-                c.drawRect(backToPrincipal,pBoton);
+//                c.drawRect(backToPrincipal,pBoton);
+                btnAtras.dibujaBoton(c);
             }
         }catch(Exception e){
 
@@ -114,7 +119,8 @@ public class EE_EsquemaEscena {
 
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
             case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
-                if(pulsa(backToPrincipal,event) && idEscena!=0){
+//                if(pulsa(backToPrincipal,event) && idEscena!=0){
+                if(btnAtras.pulsaBoton(event) && this.idEscena!=0){
                     return 0;
                 }
                 break;
@@ -127,13 +133,13 @@ public class EE_EsquemaEscena {
         return getIdEscena();
     }
 
-    public boolean pulsa(Rect boton, MotionEvent event){
-        if(boton.contains((int)event.getX(), (int)event.getY()))
-        {
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+//    public boolean pulsa(Rect boton, MotionEvent event){
+//        if(boton.contains((int)event.getX(), (int)event.getY()))
+//        {
+//            return true;
+//        }
+//        else{
+//            return false;
+//        }
+//    }
 }

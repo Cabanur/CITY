@@ -1,7 +1,12 @@
 package a20_pc24.city;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -10,7 +15,7 @@ import android.view.SurfaceView;
 
 public class EepartidaActual extends EE_EsquemaEscena{
 
-    public int idEscena = 96;
+    public int idEscena;
     public int idPartida;
 
 
@@ -29,6 +34,63 @@ public class EepartidaActual extends EE_EsquemaEscena{
     public EepartidaActual(Context cntx, int idEscena, int anchoPantalla, int altoPantalla, int idPartida) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
         this.idPartida = idPartida;
+        this.idEscena = idPartida;
 //        this.cargarPartida(idPartida);
+
+        fondo = BitmapFactory.decodeResource(cntx.getResources(), R.drawable.placeholder);
+        fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
     }
+
+    public void dibujar(Canvas c) {
+        try {
+            c.drawBitmap(fondo, 0, 0, null);
+            super.dibujar(c);
+//            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
+//            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
+
+        } catch (Exception e) {
+            Log.i("Error al dibujar", e.getLocalizedMessage());
+        }
+
+    }
+
+    public void actualizarFisica() {
+
+    }
+
+
+    public int onTouchEvent(MotionEvent event) {
+        int pointerIndex = event.getActionIndex();        //Obtenemos el índice de la acción
+        int pointerID = event.getPointerId(pointerIndex); //Obtenemos el Id del pointer asociado a la acción
+        int accion = event.getActionMasked();             //Obtenemos el tipo de pulsación
+        switch (accion) {
+            case MotionEvent.ACTION_DOWN:           // Primer dedo toca
+                break;
+            case MotionEvent.ACTION_POINTER_DOWN:  // Segundo y siguientes tocan
+                break;
+            case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
+
+                break;
+            case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
+                break;
+            case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos
+                break;
+            default:
+                Log.i("Otra acción", "Acción no definida: " + accion);
+                break;
+        }
+
+        int idPadre = 96;
+        if(idPadre!=this.getIdEscena()){
+            return idPadre;
+        }
+        return getIdEscena();
+    }
+
+    /**
+     * TODO Cargar partida
+     */
+//    public void cargarPartida(int idPartida){
+//
+//    }
 }

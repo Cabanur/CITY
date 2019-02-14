@@ -9,7 +9,6 @@ import android.view.SurfaceView;
 
 //Clase que gestiona la sucesión de escenas del juego
 
-
 public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callback{
     private SurfaceHolder surfaceHolder;      // Interfaz abstracta para manejar la superficie de dibujado
     private Context context;                  // Contexto de la aplicación

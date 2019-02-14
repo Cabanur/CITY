@@ -7,6 +7,8 @@ import android.graphics.Canvas;
 import android.util.Log;
 import android.view.MotionEvent;
 
+//Id 99
+
 public class EeRecords extends EE_EsquemaEscena {
 
     public EeRecords(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {

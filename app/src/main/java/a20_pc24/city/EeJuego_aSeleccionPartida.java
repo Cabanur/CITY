@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 import a20_pc24.city.sprites.ST_TileSprite;
 
+//Id 96
+
 public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
     Rect boundsRect;
