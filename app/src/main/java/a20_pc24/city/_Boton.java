@@ -27,7 +27,7 @@ public class _Boton{
     String btnTexto;
 
     public _Boton(float left, float top, float right, float bottom, int colorFondoBoton,
-                  Boolean btnTieneBorde, String btnTexto){
+                  boolean btnTieneBorde, String btnTexto){
 
         this.btnTieneBorde = btnTieneBorde;
 
@@ -62,4 +62,6 @@ public class _Boton{
         }
         c.drawText(this.btnTexto,this.btn.width()-this.btn.width()*4/7,this.btn.centerY()+this.btn.height()*1/11,this.btnTextPaint);
     }
+
+
 }

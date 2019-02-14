@@ -7,12 +7,8 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-/*  Muestra la escena actual, en referencia a la UI, puede ser:
- *  - Ayuda
- *  - Juego
- *  - Menu
- *  - Opciones
- *  - Récords
+/**
+ * Clase que gestiona la sucesión de escenas del juego
  */
 
 public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callback{
@@ -27,6 +23,7 @@ public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callba
     EE_EsquemaEscena escenaActual;
 
 
+
     public EA_EscenaActual(Context context) {
         super(context);
         this.surfaceHolder = getHolder();       // Se obtiene el holder
@@ -35,7 +32,6 @@ public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callba
         hilo = new Hilo();                      // Inicializamos el hilo
         setFocusable(true);                     // Aseguramos que reciba eventos de toque
     }
-
 
     // Actualizamos la física de los elementos en pantalla
 //    public void actualizarFisica(){
@@ -97,7 +93,7 @@ public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callba
             e.printStackTrace();
         }
     }
-
+	//Se ejecuta también tras crear la surface view
     @Override
         public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
         anchoPantalla = width;               // se establece el nuevo ancho de pantalla
@@ -109,7 +105,7 @@ public class EA_EscenaActual extends SurfaceView implements SurfaceHolder.Callba
         if(hilo.getState() == Thread.State.NEW){
             hilo.start();
         }
-        if(hilo.getState() == Thread.State.NEW){
+        if(hilo.getState() == Thread.State.TERMINATED){
             Hilo h = new Hilo();
             h.start();
         }

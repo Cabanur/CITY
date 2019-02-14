@@ -6,7 +6,7 @@ import android.graphics.RectF;
 
 import a20_pc24.city._Utiles;
 
-public class SpPersonajePrincipal{
+public class SpPersonajePrincipal extends S_Sprite{
 
     Bitmap spriteBm;
     PointF spritePos;
@@ -60,7 +60,7 @@ public class SpPersonajePrincipal{
 
 
     public SpPersonajePrincipal(Bitmap spriteBm){
-        this.spriteBm = spriteBm;
+        super(spriteBm);
     }
 
     public SpPersonajePrincipal(Bitmap spriteBm, float spritePosX, float spritePosY){
@@ -76,8 +76,6 @@ public class SpPersonajePrincipal{
     }
 
     public void moverPersonajePrincipal() {
-
-
         this.cuadroCoolision();
     }
 

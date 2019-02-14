@@ -5,42 +5,23 @@ import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-public class eejuego_PaartidaActual extends SurfaceView implements SurfaceHolder.Callback{
+public class eejuego_PaartidaActual extends EE_EsquemaEscena{
 
-    /*  Muestra la pantalla de juego actual, en referencia al juego, puede ser:
-     *  - CallePrincipal
-     *  - EdificioSotano
-     *  - EdificioPB
-     *  - EdificioP1
-     *  - EdificioP2
-     *  - EdificioP3
-     *  - EdificioP4
-     *  - EdificioP4Tejado
-     *  - MenuInterno y todos sus submenus
+    /**
+     * Extiende del esquema general de escenas.
+     * Carga la partida guardada en el slot correspondiente.
      *
-     *  La pantalla actual será creada y cargada al cargas la partida. Es necesario darle una ID a cada pantalla
+     * @param cntx recursos y datos de la aplicación
+     * @param idEscena identificador correspondiente a esta escena
      *
      *
+     * @param anchoPantalla prescindible en un futuro próximo
+     * @param altoPantalla prescindible en un futuro próximo
      */
 
-
-
-    public eejuego_PaartidaActual(Context context) {
-        super(context);
+    public eejuego_PaartidaActual(Context cntx, int idEscena, int anchoPantalla, int altoPantalla, byte idPartida) {
+        super(cntx, idEscena, anchoPantalla, altoPantalla);
+//        this.cargarPartida(idPartida);
     }
 
-    @Override
-    public void surfaceCreated(SurfaceHolder holder) {
-
-    }
-
-    @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
-
-    }
 }

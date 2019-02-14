@@ -46,13 +46,9 @@ public abstract class S_Sprite{
      * No es abstracto porque es innecesario si el sprite no tiene colisiones
      */
 
-    public void cuadroCoolision(){
-    }
+    public void cuadroCoolision(){}
 
-    public void movimiento(){
-    }
+    public void movimiento(){}
 
-    public void animacion(){
-
-    }
+    public void animacion(){}
 }

@@ -103,10 +103,11 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
         int accion = event.getActionMasked();             //Obtenemos el tipo de pulsación
         switch (accion) {
             case MotionEvent.ACTION_DOWN:           // Primer dedo toca
+                break;
             case MotionEvent.ACTION_POINTER_DOWN:  // Segundo y siguientes tocan
                 break;
-
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
+                break;
             case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
 //                if(pulsa(juego,event)) {
 //                    return 1;
@@ -119,11 +120,11 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 //                    return 97;
 //                }
                 break;
-
             case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos
-
                 break;
-            default:  Log.i("Otra acción", "Acción no definida: "+accion);
+            default:
+                Log.i("Otra acción", "Acción no definida: "+accion);
+                break;
         }
 
         int idPadre = super.onTouchEvent(event);
@@ -133,5 +134,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
         return getIdEscena();
     }
-}
 
+
+
+}
