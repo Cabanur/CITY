@@ -1,7 +1,6 @@
 package a20_pc24.city;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Rect;
@@ -20,6 +19,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
     Rect boundsRect;
     BitmapDrawable mosaicDefinerBD;
     ArrayList<ST_TileSprite> arrL_TilesUsadas;
+    ArrayList<_Boton> btnArrayList;
 
     _Boton btnP1, btnP2, btnP3;                 //El valor será respectivamente 1, 2, 3
 
@@ -40,6 +40,8 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 //        this.savedGamesBackgroundTile1Spot = new ST_TileSprite(fondo,false,false,ST_TileSprite.TileTipo.SUELO);
                                     //Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo
 
+
+
         btnP1=new _Boton
                 (anchoPantalla*1/5,altoPantalla*1/7,
                  anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*5/7,
@@ -54,6 +56,13 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             (anchoPantalla*1/5,altoPantalla*5/7,
                     anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*1/7,
                     Color.GREEN, true, "Partida 3",3);
+        this.btnAtras.btnValue = 0;
+
+        this.btnArrayList = new ArrayList<>();
+        this.btnArrayList.add(btnP1);
+        this.btnArrayList.add(btnP2);
+        this.btnArrayList.add(btnP3);
+        this.btnArrayList.add(this.btnAtras);
 
         this.arrL_TilesUsadas = new ArrayList<>();
 
@@ -63,7 +72,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
     }
 
     public void dibujar(Canvas c) {
-        try{
+//        try{
             for(int i=0;i<getAltoPantalla();i+=64){
                 for(int j=0;j<getAnchoPantalla();j+=64){
                     c.drawBitmap(this.arrL_TilesUsadas.get(
@@ -84,16 +93,16 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             super.dibujar(c);                       //Llamamos a super para poner el botón de salir
 
             Log.i("TEST","ANCHO PANTALLA "+getAnchoPantalla());
-            Log.i("TEST","ANCHO PANTALLA DPX "+_Dimensions.pXLargo);
+            Log.i("TEST","ANCHO PANTALLA DPX "+ _Dimensiones.pXLargo);
             Log.i("TEST","ALTO PANTALLA "+getAltoPantalla());
-            Log.i("TEST","ALTO PANTALLA DPY "+_Dimensions.pYAncho);
+            Log.i("TEST","ALTO PANTALLA DPY "+ _Dimensiones.pYAlto);
 
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
 
-        }catch(Exception e){
-            Log.i("Error al dibujar", e.getLocalizedMessage());
-        }
+//        }catch(Exception e){
+//            Log.i("Error al dibujar", e.getLocalizedMessage());
+//        }
     }
 
     public void actualizarFisica() {
@@ -103,21 +112,20 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
 
     public int onTouchEvent(MotionEvent event) {
-        int pointerIndex = event.getActionIndex();        //Obtenemos el índice de la acción
-        int pointerID = event.getPointerId(pointerIndex); //Obtenemos el Id del pointer asociado a la acción
-        int accion = event.getActionMasked();             //Obtenemos el tipo de pulsación
+        int pointerIndex = event.getActionIndex();          //Obtenemos el índice de la acción
+        int pointerID = event.getPointerId(pointerIndex);   //Obtenemos el Id del pointer asociado a la acción
+        int accion = event.getActionMasked();               //Obtenemos el tipo de pulsación
         switch (accion) {
-            case MotionEvent.ACTION_DOWN:           // Primer dedo toca
+            case MotionEvent.ACTION_DOWN:                   // Primer dedo toca
                 break;
-            case MotionEvent.ACTION_POINTER_DOWN:  // Segundo y siguientes tocan
+            case MotionEvent.ACTION_POINTER_DOWN:           // Segundo y siguientes tocan
                 break;
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
-                if(btnP1.pulsaBoton(event)){
-                    return btnP1.btnValue;
-                }else if(btnP2.pulsaBoton(event)){
-                    return btnP2.btnValue;
-                }else if(btnP3.pulsaBoton(event)){
-                    return btnP3.btnValue;
+                Log.i("TOUCH","I TOUCH");
+                for(_Boton b : btnArrayList){
+                    if(b.pulsaBoton(event)){
+                        return b.btnValue;
+                    }
                 }
                 break;
             case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
@@ -141,14 +149,11 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
                 break;
         }
 
-        int idPadre = super.onTouchEvent(event);
-        if(idPadre!=getIdEscena()){
-            return idPadre;
-        }
-
+//        int idPadre = super.onTouchEvent(event);
+//        if(idPadre!=getIdEscena()){
+//            return idPadre;
+//        }
+//
         return getIdEscena();
     }
-
-
-
 }

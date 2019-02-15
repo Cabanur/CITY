@@ -35,10 +35,10 @@ public class EepartidaActual extends EE_EsquemaEscena{
         super(cntx, idEscena, anchoPantalla, altoPantalla);
         this.idPartida = idPartida;
         this.idEscena = idPartida;
-//        this.cargarPartida(idPartida);
 
-        fondo = BitmapFactory.decodeResource(cntx.getResources(), R.drawable.placeholder);
-        fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
+
+        this.btnAtras.btnValue = 96;        //Necesario para volver. En un futuro dará acceso al menú in-Game
+//  TODO      this.cargarPartida(idPartida);
     }
 
     public void dibujar(Canvas c) {
@@ -51,7 +51,6 @@ public class EepartidaActual extends EE_EsquemaEscena{
         } catch (Exception e) {
             Log.i("Error al dibujar", e.getLocalizedMessage());
         }
-
     }
 
     public void actualizarFisica() {
@@ -65,11 +64,14 @@ public class EepartidaActual extends EE_EsquemaEscena{
         int accion = event.getActionMasked();             //Obtenemos el tipo de pulsación
         switch (accion) {
             case MotionEvent.ACTION_DOWN:           // Primer dedo toca
+
                 break;
             case MotionEvent.ACTION_POINTER_DOWN:  // Segundo y siguientes tocan
                 break;
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
-
+                    if(this.btnAtras.pulsaBoton(event)){
+                        return this.btnAtras.btnValue;
+                    }
                 break;
             case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
                 break;
@@ -78,11 +80,6 @@ public class EepartidaActual extends EE_EsquemaEscena{
             default:
                 Log.i("Otra acción", "Acción no definida: " + accion);
                 break;
-        }
-
-        int idPadre = 96;
-        if(idPadre!=this.getIdEscena()){
-            return idPadre;
         }
         return getIdEscena();
     }

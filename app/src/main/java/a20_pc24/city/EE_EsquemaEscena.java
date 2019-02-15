@@ -42,13 +42,14 @@ public class EE_EsquemaEscena {
 //        pBoton2 = new Paint();
 //        pBoton2.setColor(Color.MAGENTA);
 
-        backToPrincipal = new Rect(anchoPantalla-anchoPantalla/7,0, anchoPantalla,anchoPantalla/7);
+//        backToPrincipal = new Rect(anchoPantalla-anchoPantalla/7,0, anchoPantalla,anchoPantalla/7);
+
         btnAtras = new _Boton
                         (anchoPantalla-anchoPantalla/7,0,anchoPantalla,anchoPantalla/7,
-                        Color.BLUE, true, "X");
+                        Color.BLUE, true, "X",0);
 //TODO preguntar por qué peta en api 22
         //Crear imagen placeholder de pantalla
-        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.placeholder);
+        fondo = _Utiles.getBitmapFromAsset("placeholder.png");
         fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
     }
 

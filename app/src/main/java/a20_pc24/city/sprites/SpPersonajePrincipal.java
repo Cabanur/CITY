@@ -76,6 +76,7 @@ public class SpPersonajePrincipal extends S_Sprite{
     }
 
     public void moverPersonajePrincipal() {
+
         this.cuadroCoolision();
     }
 

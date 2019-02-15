@@ -1,14 +1,11 @@
 package a20_pc24.city;
 
-import android.content.Context;
 import android.content.pm.ActivityInfo;
-import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 
 //Activity main -> lanzamiento
 public class AM_Launch extends AppCompatActivity {
@@ -38,7 +35,7 @@ public class AM_Launch extends AppCompatActivity {
 
     //determinando tamaño pantalla en DP
         Display display = getWindowManager().getDefaultDisplay();
-        _Dimensions determinarDimensiones=new _Dimensions(this, display);
+        _Dimensiones determinarDimensiones=new _Dimensiones(this, display);
     //
 
         EA_EscenaActual juego = new EA_EscenaActual(this);

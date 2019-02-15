@@ -10,13 +10,13 @@ import android.view.Display;
  * para poder acceder a ellas de forma estática en caso de ser necesario
  */
 
-public class _Dimensions {
+public class _Dimensiones {
 
     public static float screenDPsX;
     public static float screenDPsY;
     public static float screenDpi;
     public static float pXLargo;
-    public static float pYAncho;
+    public static float pYAlto;
 
     /**
      * Una vez se crea "_Dimensiones" lanza los métodos que dan valor a las medidas
@@ -25,7 +25,7 @@ public class _Dimensions {
      * @param display objeto correspondiente a la pantalla donde sucede la activity
      */
 
-    public _Dimensions(Context cntxt, Display display){
+    public _Dimensiones(Context cntxt, Display display){
 
         this.setDpi((float)cntxt.getResources().getDisplayMetrics().densityDpi);
 
@@ -52,7 +52,7 @@ public class _Dimensions {
      */
 
     public void setDPsY(){
-        this.screenDPsY = (pYAncho * 160) / screenDpi;
+        this.screenDPsY = (pYAlto * 160) / screenDpi;
     }
 
     public void setDPsX(){
@@ -108,6 +108,6 @@ public class _Dimensions {
      * @param y
      */
     public void setPxSizeY(int y){
-        this.pYAncho = y;
+        this.pYAlto = y;
     }
 }
