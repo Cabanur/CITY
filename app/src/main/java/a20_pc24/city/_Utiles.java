@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Rect;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 
@@ -122,4 +123,28 @@ public class _Utiles {
             return false;
         }
     }
+
+
+
+    /**
+     * Fuente https://stackoverflow.com/questions/4605527/converting-pixels-to-dp
+     *
+     * @param dp A value in dp (density independent pixels) unit. Which we need to convert into pixels
+     * @return A float value to represent px equivalent to dp depending on device density
+     */
+    public static float convertDpToPixel(float dp){
+        return dp * (_Dimensiones.screenDpi / DisplayMetrics.DENSITY_DEFAULT);
+    }
+
+    /**
+     * Fuente https://stackoverflow.com/questions/4605527/converting-pixels-to-dp
+     *
+     * @param px Valor medido en píxels que queremos convertir a DPs
+     * @return Valor float equivalente en DPs al valor de píxels dado
+     */
+    public static float convertPixelsToDp(float px){
+        return px / (_Dimensiones.screenDpi / DisplayMetrics.DENSITY_DEFAULT);
+    }
+
+
 }

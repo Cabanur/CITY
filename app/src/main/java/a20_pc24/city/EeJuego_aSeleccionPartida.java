@@ -121,7 +121,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             case MotionEvent.ACTION_POINTER_DOWN:           // Segundo y siguientes tocan
                 break;
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
-                Log.i("TOUCH","I TOUCH");
+                Log.i("TOUCH","ALTO: "+_Dimensiones.pYAlto+" LARGO: "+_Dimensiones.pXLargo);
                 for(_Boton b : btnArrayList){
                     if(b.pulsaBoton(event)){
                         return b.btnValue;

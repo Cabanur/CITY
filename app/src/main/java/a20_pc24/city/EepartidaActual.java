@@ -64,11 +64,11 @@ public class EepartidaActual extends EE_EsquemaEscena{
         try {
 //            c.drawBitmap(fondo, 0, 0, null);
             this.escenarioActual.dibujaMapa(c);
-            super.dibujar(c);
 
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
 
+            super.dibujar(c);
         } catch (Exception e) {
             Log.i("Error al dibujar", e.getLocalizedMessage());
         }

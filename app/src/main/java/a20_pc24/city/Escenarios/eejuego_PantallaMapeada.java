@@ -3,6 +3,7 @@ package a20_pc24.city.Escenarios;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -85,9 +86,14 @@ public class eejuego_PantallaMapeada {
      */
 
     public void dibujaMapa(Canvas c){
-        for(int i = 0; i < _Dimensiones.screenDPsX;i+=64){
-            for(int j = 0; j < _Dimensiones.screenDPsY;j+=64){
-                c.drawBitmap(_Utiles.getBitmapFromAsset("placeholder.png"),i,j,this.mapaPaint);
+
+        int nuevaTamanyoTile = (int)_Utiles.convertDpToPixel(32);
+
+        for(int i = 0; i < _Dimensiones.pYAlto;i+=32){
+            for(int j = 0; j < _Dimensiones.pXLargo;j+=32){
+                Bitmap test = _Utiles.getBitmapFromAsset("cityscape/suelosimple.png");
+                test = Bitmap.createScaledBitmap(test,nuevaTamanyoTile,nuevaTamanyoTile,false);
+                c.drawBitmap(test,(int)_Utiles.convertDpToPixel(j),(int)_Utiles.convertDpToPixel(i),this.mapaPaint);
             }
         }
     }

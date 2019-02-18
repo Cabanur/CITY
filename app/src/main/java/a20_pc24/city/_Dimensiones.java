@@ -2,6 +2,7 @@ package a20_pc24.city;
 
 import android.content.Context;
 import android.graphics.Point;
+import android.util.DisplayMetrics;
 import android.view.Display;
 
 /**
@@ -52,11 +53,11 @@ public class _Dimensiones {
      */
 
     public void setDPsY(){
-        this.screenDPsY = (pYAlto * 160) / screenDpi;
+        this.screenDPsY = pYAlto * (this.screenDpi / DisplayMetrics.DENSITY_DEFAULT);
     }
 
     public void setDPsX(){
-        this.screenDPsX = (pXLargo * 160) / screenDpi;
+        this.screenDPsX = pXLargo * (this.screenDpi / DisplayMetrics.DENSITY_DEFAULT);
     }
 
     /**
