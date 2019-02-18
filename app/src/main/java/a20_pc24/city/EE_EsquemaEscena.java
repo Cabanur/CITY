@@ -47,7 +47,6 @@ public class EE_EsquemaEscena {
         btnAtras = new _Boton
                         (anchoPantalla-anchoPantalla/7,0,anchoPantalla,anchoPantalla/7,
                         Color.BLUE, true, "X",0);
-//TODO preguntar por qué peta en api 22
         //Crear imagen placeholder de pantalla
         fondo = _Utiles.getBitmapFromAsset("placeholder.png");
         fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);

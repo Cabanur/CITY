@@ -1,16 +1,20 @@
 package a20_pc24.city.Escenarios;
 
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 
 import a20_pc24.city._Tiles;
 import a20_pc24.city.sprites.ST_TileSprite;
+
+//Escenario 0
 
 public final class eejuegoCallePrincipal extends eejuego_PantallaMapeada {
 
     public static ST_TileSprite[][] mapaCoordCallePrincipal = rellenador();
 
     public eejuegoCallePrincipal() {
-         this.mapaCoordCallePrincipal = rellenador();
+        this.setEscenarioID(0);
+        this.mapaCoordCallePrincipal = rellenador();
     }
 //      TODO: rellenar correctamente este mapa
 //     {
@@ -56,10 +60,12 @@ public final class eejuegoCallePrincipal extends eejuego_PantallaMapeada {
     }
 
     @Override
-    public void dibujaMapa(){}
+    public void dibujaMapa(Canvas c){
+        super.dibujaMapa(c);
+    }
 
     @Override
-    void actualizarMapa() {
+    public void actualizarMapa() {
 
     }
 }

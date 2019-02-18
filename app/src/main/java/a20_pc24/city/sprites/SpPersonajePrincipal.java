@@ -1,12 +1,14 @@
 package a20_pc24.city.sprites;
 
 import android.graphics.Bitmap;
-import android.graphics.Point;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.util.Log;
 import android.view.MotionEvent;
 
+import a20_pc24.city._Dimensiones;
 import a20_pc24.city._Utiles;
 
 public class SpPersonajePrincipal extends S_Sprite{
@@ -15,56 +17,26 @@ public class SpPersonajePrincipal extends S_Sprite{
     PointF spritePos, pIni, pFin;
     float spritePosX, spritePosY;
     RectF spriteColRect;
+    Paint spritePaint;
+    public enum Direccion{
+        ABAJO(0), ARRIBA(1), DERECHA(2), IZQUIERDA(3);
 
+        private int nDireccion;
 
-    /*PERSONAJE PRINCIPAL*/
-    /*-------------------*/
-    //Personaje Principal Frente
-    public final SpPersonajePrincipal mainCharaFront =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StaticPanda/front.png"));
-    public final SpPersonajePrincipal mainCharaBack =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StaticPanda/back.png"));
-    public final SpPersonajePrincipal mainCharaSideL =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StaticPanda/sideL.png"));
-    public final SpPersonajePrincipal mainCharaSideR =
-            new SpPersonajePrincipal(
-                    _Utiles.flipBitmapX(_Utiles.getBitmapFromAsset("panda/StaticPanda/front.png")));
-    //Personaje Principal Andando Espalda
-    public final SpPersonajePrincipal mainCharaBackStep1 =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepBack/bs1.png"));
-    public final SpPersonajePrincipal mainCharaBackStep2 =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepBack/bs2.png"));
-    //Personaje Principal Andando Frente
-    public final SpPersonajePrincipal mainCharaFrontStep1 =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepFront/sf1.png"));
-    public final SpPersonajePrincipal mainCharaFrontStep2 =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepFront/sf2.png"));
-    //Personaje Principal Andando Derecha
-    public final SpPersonajePrincipal mainCharaRightStep1 =
-            new SpPersonajePrincipal(
-                    _Utiles.flipBitmapX(_Utiles.getBitmapFromAsset("panda/StepLeft/sL1.png")));
-    public final SpPersonajePrincipal mainCharaRightStep2 =
-            new SpPersonajePrincipal(
-                    _Utiles.flipBitmapX(_Utiles.getBitmapFromAsset("panda/StepLeft/sL2.png")));
-    public final SpPersonajePrincipal mainCharaRightStep3 =
-            new SpPersonajePrincipal(
-                    _Utiles.flipBitmapX(_Utiles.getBitmapFromAsset("panda/StepLeft/sL3.png")));
-    public final SpPersonajePrincipal mainCharaRightStep4 =
-            new SpPersonajePrincipal(
-                    _Utiles.flipBitmapX(_Utiles.getBitmapFromAsset("panda/StepLeft/sL4.png")));
-    //Personaje Principal Andando Izquierda
-    public final SpPersonajePrincipal mainCharaLeftStep1 =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepFront/sf1.png"));
-    public final SpPersonajePrincipal mainCharaLeftStep2 =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepLeft/sL2.png"));
-    public final SpPersonajePrincipal mainCharaLeftStep3 =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepLeft/sL3.png"));
-    public final SpPersonajePrincipal mainCharaLeftStep4 =
-            new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepLeft/sL4.png"));
-
+        Direccion(int nDireccion){
+            this.nDireccion = nDireccion;
+        }
+        public int getNDireccion(){
+            return this.nDireccion;
+        }
+    }
 
     public SpPersonajePrincipal(Bitmap spriteBm){
         super(spriteBm);
+        //el sprite en un principio siempre aparecerá enmedio de la pantalla
+        this.spritePosX = (_Dimensiones.pXLargo/2)-(this.spriteBm.getWidth()/2);
+        this.spritePosY = (_Dimensiones.pYAlto/2)-(this.spriteBm.getHeight()/2);
+        this.spritePaint = new Paint();
     }
 
     public SpPersonajePrincipal(Bitmap spriteBm, float spritePosX, float spritePosY){
@@ -75,13 +47,17 @@ public class SpPersonajePrincipal extends S_Sprite{
         this.cuadroCoolision();
     }
 
+    public void dibujaMainChar(Canvas c){
+        c.drawBitmap(this.spriteBm,this.spriteBm.getWidth(),this.spriteBm.getHeight(),spritePaint);
+    }
+
     public void cuadroCoolision() {
         spriteColRect = new RectF(spritePosX,spritePosY,spriteBm.getWidth(),spriteBm.getHeight());
     }
 
     public void moverPersonajePrincipal() {
-
         this.cuadroCoolision();
+        //aquí desplazamiento de fondo
     }
 
     public int onTouchEvent(MotionEvent event) {
@@ -122,7 +98,7 @@ public class SpPersonajePrincipal extends S_Sprite{
                 //El movimiento no tiene diagonales diagonales
                 //El pj se mueve en la dirección correspondiente a la mayor variable
                 if(npX>npY){
-                    npY=
+
                 }else{
 
                 }

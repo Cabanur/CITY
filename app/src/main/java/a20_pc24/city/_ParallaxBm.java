@@ -1,4 +1,4 @@
-package a20_pc24.city.sprites;
+package a20_pc24.city;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

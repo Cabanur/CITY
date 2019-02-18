@@ -10,41 +10,62 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
+import a20_pc24.city.Escenarios.eejuegoCallePrincipal;
+import a20_pc24.city.Escenarios.eejuegoEdificioPB;
+import a20_pc24.city.Escenarios.eejuego_PantallaMapeada;
+import a20_pc24.city.sprites.SpPersonajePrincipal;
+
 //Clase destinada a cargar la partida guardada
 //
 
 public class EepartidaActual extends EE_EsquemaEscena{
 
-    public int idEscena;
+    public int escenarioID;
     public int idPartida;
-
+    public eejuego_PantallaMapeada[] escenariosPosibles =
+            new eejuego_PantallaMapeada[]{new eejuegoCallePrincipal(), new eejuegoEdificioPB()};
+    public eejuego_PantallaMapeada escenarioActual;
 
     /**
      * Extiende del esquema general de escenas.
      * Carga la partida guardada en el slot correspondiente.
      *
      * @param cntx recursos y datos de la aplicación
-     * @param idEscena identificador correspondiente a esta escena
+     * @param escenarioID identificador correspondiente al escenario
+     * @param idPartida corresponde a la partida que estamos seleccionando. TODO REAL IMPLEMENTATION
      *
      *
      * @param anchoPantalla prescindible en un futuro próximo
      * @param altoPantalla prescindible en un futuro próximo
      */
 
-    public EepartidaActual(Context cntx, int idEscena, int anchoPantalla, int altoPantalla, int idPartida) {
-        super(cntx, idEscena, anchoPantalla, altoPantalla);
+    // El último parámetro corresponde a la id del escenario
+    // Los probamos a machete, ya que posteriormente, cuando funcione el método
+    // cargar partida, será allí donde se especificará el escenario.
+    // No en este contructor
+
+    public EepartidaActual(Context cntx, int idPartida, int anchoPantalla, int altoPantalla, int escenarioID) {
+        super(cntx, escenarioID, anchoPantalla, altoPantalla);
         this.idPartida = idPartida;
-        this.idEscena = idPartida;
+        this.escenarioID = escenarioID;
 
+        for(int i = 0; i< escenariosPosibles.length; i++){
+            if(this.escenariosPosibles[i].getEscenarioID()==this.escenarioID){
+                this.escenarioActual = this.escenariosPosibles[i];
+            }
+        }
 
-        this.btnAtras.btnValue = 96;        //Necesario para volver. En un futuro dará acceso al menú in-Game
+        this.btnAtras.btnValue = 96;        //Necesario para volver a la selección de partida.
+                                            // En un futuro dará acceso al menú in-Game
 //  TODO      this.cargarPartida(idPartida);
     }
 
     public void dibujar(Canvas c) {
         try {
-            c.drawBitmap(fondo, 0, 0, null);
+//            c.drawBitmap(fondo, 0, 0, null);
+            this.escenarioActual.dibujaMapa(c);
             super.dibujar(c);
+
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
 

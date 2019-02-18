@@ -77,10 +77,10 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
                 for(int j=0;j<getAnchoPantalla();j+=64){
                     c.drawBitmap(this.arrL_TilesUsadas.get(
                             this.arrL_TilesUsadas.indexOf(_Tiles.MENU_SPOT)).getSpriteIMG(),j,i,null);
-                    c.drawBitmap(
-                            this.arrL_TilesUsadas.get(this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CIRCLE)).getSpriteIMG(),j,i,null);
-                    c.drawBitmap(
-                            this.arrL_TilesUsadas.get(this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CROSS)).getSpriteIMG(),j,i,null);
+                    c.drawBitmap(this.arrL_TilesUsadas.get(
+                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CIRCLE)).getSpriteIMG(),j,i,null);
+                    c.drawBitmap(this.arrL_TilesUsadas.get(
+                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CROSS)).getSpriteIMG(),j,i,null);
                 }
             }
 
@@ -92,10 +92,10 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
             super.dibujar(c);                       //Llamamos a super para poner el botón de salir
 
-            Log.i("TEST","ANCHO PANTALLA "+getAnchoPantalla());
-            Log.i("TEST","ANCHO PANTALLA DPX "+ _Dimensiones.pXLargo);
-            Log.i("TEST","ALTO PANTALLA "+getAltoPantalla());
-            Log.i("TEST","ALTO PANTALLA DPY "+ _Dimensiones.pYAlto);
+//            Log.i("TEST","ANCHO PANTALLA "+getAnchoPantalla());
+//            Log.i("TEST","ANCHO PANTALLA DPX "+ _Dimensiones.pXLargo);
+//            Log.i("TEST","ALTO PANTALLA "+getAltoPantalla());
+//            Log.i("TEST","ALTO PANTALLA DPY "+ _Dimensiones.pYAlto);
 
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);

@@ -1,6 +1,7 @@
 package a20_pc24.city.Escenarios;
 
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 
 public class eejuegoEdificioP4 extends eejuego_PantallaMapeada {
     public eejuegoEdificioP4(){
@@ -13,10 +14,12 @@ public class eejuegoEdificioP4 extends eejuego_PantallaMapeada {
     }
 
     @Override
-    public void dibujaMapa(){}
+    public void dibujaMapa(Canvas c){
+        super.dibujaMapa(c);
+    }
 
     @Override
-    void actualizarMapa() {
+    public void actualizarMapa() {
 
     }
 }
