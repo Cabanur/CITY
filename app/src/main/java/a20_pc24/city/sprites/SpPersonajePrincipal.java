@@ -1,17 +1,21 @@
 package a20_pc24.city.sprites;
 
 import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.RectF;
+import android.util.Log;
+import android.view.MotionEvent;
 
 import a20_pc24.city._Utiles;
 
 public class SpPersonajePrincipal extends S_Sprite{
 
     Bitmap spriteBm;
-    PointF spritePos;
+    PointF spritePos, pIni, pFin;
     float spritePosX, spritePosY;
     RectF spriteColRect;
+
 
     /*PERSONAJE PRINCIPAL*/
     /*-------------------*/
@@ -78,6 +82,59 @@ public class SpPersonajePrincipal extends S_Sprite{
     public void moverPersonajePrincipal() {
 
         this.cuadroCoolision();
+    }
+
+    public int onTouchEvent(MotionEvent event) {
+        int pointerIndex = event.getActionIndex();        //Obtenemos el índice de la acción
+        int pointerID = event.getPointerId(pointerIndex); //Obtenemos el Id del pointer asociado a la acción
+        int accion = event.getActionMasked();             //Obtenemos el tipo de pulsación
+        switch (accion) {
+            case MotionEvent.ACTION_DOWN:           // Primer dedo toca
+                pIni = new PointF(event.getX(),event.getY());
+                pFin = new PointF(event.getX(),event.getY());
+                break;
+            case MotionEvent.ACTION_POINTER_DOWN:  // Segundo y siguientes tocan
+                break;
+            case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
+                break;
+            case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
+                break;
+            case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos
+
+                pFin = new PointF(event.getX(),event.getY());
+
+                float npX, npY;
+                if(pFin.x>pIni.x){
+                    //Movimiento Derecha
+                    npX =pFin.x;
+                }else{
+                    npX =pIni.x;
+                    //Movimmiento Izquierda
+                }
+                if(pFin.y>pIni.y){
+                    npY = pFin.y;
+                    //Movimiento arriba
+                }else{
+                    npY = pIni.y;
+                    //Movimiento abajo
+                }
+
+                //El movimiento no tiene diagonales diagonales
+                //El pj se mueve en la dirección correspondiente a la mayor variable
+                if(npX>npY){
+                    npY=
+                }else{
+
+                }
+
+                pIni = new PointF(event.getX(),event.getY());
+
+                break;
+            default:
+                Log.i("Otra acción", "Acción no definida: " + accion);
+                break;
+        }
+        return 0;
     }
 
 //    public void animacion() {

@@ -78,7 +78,6 @@ public class EeMenu extends EE_EsquemaEscena {
         imgParallax1.dibujaParallax(c);
         imgParallax2.dibujaParallax(c);
         imgParallax3.dibujaParallax(c);
-        imgParallax4.dibujaParallax(c);
         super.dibujar(c);
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
@@ -93,6 +92,7 @@ public class EeMenu extends EE_EsquemaEscena {
 //            Log.i("Error al dibujar", e.getLocalizedMessage());
 //        }
         btnJuego.dibujaBoton(c);
+        imgParallax4.dibujaParallax(c);
         btnOpciones.dibujaBoton(c);
         btnAyuda.dibujaBoton(c);
         btnRecords.dibujaBoton(c);
@@ -128,6 +128,7 @@ public class EeMenu extends EE_EsquemaEscena {
             case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
                 break;
             case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos
+                break;
             default:  Log.i("Otra acción", "Acción no definida: "+accion);
                 break;
         }
