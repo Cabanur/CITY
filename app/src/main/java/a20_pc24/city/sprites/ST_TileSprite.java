@@ -2,6 +2,8 @@ package a20_pc24.city.sprites;
 
 import android.graphics.Bitmap;
 
+import a20_pc24.city._Utiles;
+
 
 public class ST_TileSprite extends S_Sprite {
 
@@ -9,7 +11,7 @@ public class ST_TileSprite extends S_Sprite {
     private TileAnim tileAnim;
 
     public ST_TileSprite(Bitmap spriteIMG, TileAnim tileAnim) {
-        super(spriteIMG);
+        super(Bitmap.createScaledBitmap(spriteIMG,(int) _Utiles.convertDpToPixel(32),(int) _Utiles.convertDpToPixel(32),false) );
         this.tileAnim = tileAnim;
     }
 
@@ -28,4 +30,6 @@ public class ST_TileSprite extends S_Sprite {
     public void animacion() {
         super.animacion();
     }
+
+
 }

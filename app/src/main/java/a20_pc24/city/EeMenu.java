@@ -53,19 +53,19 @@ public class EeMenu extends EE_EsquemaEscena {
         this.btnArr = new _Boton[]{btnJuego,btnOpciones,btnAyuda,btnRecords};
 
         this.imgParallax0 = new _ParallaxBm(         //Fondo cielo
-                _Utiles.getBitmapFromAsset("parallax/parallax0.png"),_Dimensiones.screenDPsX*1/2500, 0,0,false);
+                _Utiles.getBitmapFromAsset("parallax/parallax0.png"),_Utiles.convertDpToPixel(0.1f), 0,0,false);
         this.imgParallax2 = new _ParallaxBm(         //Fondo llanuras
-                _Utiles.getBitmapFromAsset("parallax/parallax2.png"),_Dimensiones.screenDPsX*1/1000, 0,0, false);
+                _Utiles.getBitmapFromAsset("parallax/parallax2.png"),_Utiles.convertDpToPixel(0.25f), 0,0, false);
         this.imgParallax3 = new _ParallaxBm(         //Edificios claros
-                _Utiles.getBitmapFromAsset("parallax/parallax3.png"),_Dimensiones.screenDPsX*1/650, 0,0,false);
+                _Utiles.getBitmapFromAsset("parallax/parallax3.png"),_Utiles.convertDpToPixel(0.35f), 0,0,false);
         this.imgParallax4 = new _ParallaxBm(         //Edificios oscuros
-                _Utiles.getBitmapFromAsset("parallax/parallax4.png"),_Dimensiones.screenDPsX*1/350, 0,0, false);
+                _Utiles.getBitmapFromAsset("parallax/parallax4.png"),_Utiles.convertDpToPixel(0.75f), 0,0, false);
         this.imgParallax5 = new _ParallaxBm(         //Farolas y calle
-                _Utiles.getBitmapFromAsset("parallax/parallax5.png"),_Dimensiones.screenDPsX*1/200, 0,0, false);
+                _Utiles.getBitmapFromAsset("parallax/parallax5.png"),_Utiles.convertDpToPixel(1.25f), 0,0, false);
 
         /*Movimiento vertical*/
         this.imgParallax1 = new _ParallaxBm(         //La luna
-                _Utiles.getBitmapFromAsset("parallax/parallax1.png"),0.1f, 0,0,true);
+                _Utiles.getBitmapFromAsset("parallax/parallax1.png"),0.05f, 0,0,true);
     }
 
     public void dibujar(Canvas c) {

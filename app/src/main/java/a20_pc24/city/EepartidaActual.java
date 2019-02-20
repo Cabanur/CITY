@@ -68,10 +68,10 @@ public class EepartidaActual extends EE_EsquemaEscena{
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
 
-            super.dibujar(c);
         } catch (Exception e) {
             Log.i("Error al dibujar", e.getLocalizedMessage());
         }
+            this.btnAtras.dibujaBoton(c);
     }
 
     public void actualizarFisica() {

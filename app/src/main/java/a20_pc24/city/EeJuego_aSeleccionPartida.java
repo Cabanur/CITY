@@ -73,8 +73,8 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
     public void dibujar(Canvas c) {
 //        try{
-            for(int i=0;i<getAltoPantalla();i+=64){
-                for(int j=0;j<getAnchoPantalla();j+=64){
+            for(int i=0;i<getAltoPantalla();i+=_Tiles.PLACEHOLDER.getHeigh()){
+                for(int j=0;j<getAnchoPantalla();j+=_Tiles.PLACEHOLDER.getHeigh()){
                     c.drawBitmap(this.arrL_TilesUsadas.get(
                             this.arrL_TilesUsadas.indexOf(_Tiles.MENU_SPOT)).getSpriteIMG(),j,i,null);
                     c.drawBitmap(this.arrL_TilesUsadas.get(

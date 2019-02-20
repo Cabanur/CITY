@@ -87,15 +87,14 @@ public class eejuego_PantallaMapeada {
 
     public void dibujaMapa(Canvas c){
 
-        int nuevaTamanyoTile = (int)_Utiles.convertDpToPixel(32);
+        Bitmap test = _Utiles.getBitmapFromAsset("cityscape/suelosimple.png");
+        test = Bitmap.createScaledBitmap(test,(int)_Utiles.convertDpToPixel(64),(int)_Utiles.convertDpToPixel(64),false);
 
-        for(int i = 0; i < _Dimensiones.pYAlto;i+=32){
-            for(int j = 0; j < _Dimensiones.pXLargo;j+=32){
-                Bitmap test = _Utiles.getBitmapFromAsset("cityscape/suelosimple.png");
-                test = Bitmap.createScaledBitmap(test,nuevaTamanyoTile,nuevaTamanyoTile,false);
-                c.drawBitmap(test,(int)_Utiles.convertDpToPixel(j),(int)_Utiles.convertDpToPixel(i),this.mapaPaint);
-            }
-        }
+//        for(int i = 0; i < _Dimensiones.pYAlto;i+=nuevaTamanyoTile){
+//            for(int j = 0; j < _Dimensiones.pXLargo;j+=nuevaTamanyoTile){
+                c.drawBitmap(test,0,0,this.mapaPaint);
+//            }
+//        }
     }
 
     public void actualizarMapa(){

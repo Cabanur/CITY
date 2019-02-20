@@ -51,4 +51,11 @@ public abstract class S_Sprite{
     public void movimiento(){}
 
     public void animacion(){}
+
+    public float getWidth(){
+        return this.spriteIMG.getWidth();
+    }
+    public float getHeigh(){
+        return this.spriteIMG.getHeight();
+    }
 }

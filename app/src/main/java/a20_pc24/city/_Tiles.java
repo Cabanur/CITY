@@ -17,5 +17,7 @@ public final class _Tiles {
     //EdificioPB
     public static ST_TileSprite EDIFICIO_SUELO = new ST_TileSprite(_Utiles.getBitmapFromAsset("buildinggenerals/sueloedificio.png"),ST_TileSprite.TileAnim.NINGUNO);
 
+    public static ST_TileSprite PLACEHOLDER = new ST_TileSprite(_Utiles.getBitmapFromAsset("placeholder.png"),ST_TileSprite.TileAnim.NINGUNO);
+
     private _Tiles(){}
 }
