@@ -4,15 +4,22 @@ import android.graphics.Bitmap;
 import android.graphics.PointF;
 import android.graphics.RectF;
 
+    // Los tiles y sprites son definidos con las clases que heredan de S_SPRITE
+    // y construídos en las clases _Tiles y _CharacterSprites,
+    // menos los correspondientes al personaje principal que están en SpPersonajePrincipal
+
 public abstract class S_Sprite{
 
-    public PointF spritePos;
-    float spritePosX, spritePosY;
-    private Bitmap spriteIMG;
-    public RectF spriteColisionRect;
-    //Los tiles y sprites son definidos con las clases que heredan de S_SPRITE
-    // y construídos en las clases _Tiles y _CharacterSprites
+    private PointF spritePos;                //Posición en que se coloca el sprite
+    private float spritePosX, spritePosY;           //Coordenadas que componen spritePos
+    private Bitmap spriteIMG;               //Imagen del sprite
+    private RectF spriteColisionRect;        //Cuadrado creado a partir del sprite que determina sus límites
 
+    /**
+     * Constructor para instanciar el sprite sin darle más propiedades,
+     * con el fín de poder dárselas de forma dinámica
+     * @param spriteIMG imagen que integra el sprite
+     */
     public S_Sprite(Bitmap spriteIMG){
         this.spriteIMG = spriteIMG;
     }
@@ -24,7 +31,6 @@ public abstract class S_Sprite{
      * @param spritePosX posición X donde posicionaremos y dibujaremos
      * @param spritePosY posición Y donde posicionaremos y dibujaremos
      */
-
     public S_Sprite(Bitmap spriteIMG, float spritePosX, float spritePosY){
         this(spriteIMG);
         this.spritePosX = spritePosX;
@@ -33,29 +39,118 @@ public abstract class S_Sprite{
         this.spriteColisionRect = new RectF(spritePosX,spritePosY,spriteIMG.getWidth(),spriteIMG.getHeight());
     }
 
+    /**
+     * @return obtiene el Bitmap del sprite
+     */
     public Bitmap getSpriteIMG() {
         return spriteIMG;
     }
 
+    /**
+     * Cambia a machete el Bitmap de un sprite
+     * @param spriteIMG nuevo Bitmap para el sprite
+     */
     public void setSpriteIMG(Bitmap spriteIMG) {
         this.spriteIMG = spriteIMG;
     }
 
     /**
-     * Método destinado a definir el cuadro de coolisiones siempre que colisionable sea TRUE
-     * No es abstracto porque es innecesario si el sprite no tiene colisiones
+     * @return el ancho del sprite
      */
-
-    public void cuadroCoolision(){}
-
-    public void movimiento(){}
-
-    public void animacion(){}
-
     public float getWidth(){
         return this.spriteIMG.getWidth();
     }
+
+    /**
+     * @return el alto del sprite
+     */
     public float getHeigh(){
         return this.spriteIMG.getHeight();
     }
+
+    /**
+     * @return devuelve la posición donde se encuentra el sprite
+     */
+    public PointF getSpritePos() {
+        return spritePos;
+    }
+
+    /**
+     * Indica una nueva posición para el sprite
+     * @param spritePos nueva posición
+     */
+    public void setSpritePos(PointF spritePos) {
+        this.spritePos = spritePos;
+    }
+
+    /**
+     * @return devuelve la posición X del sprite
+     */
+    public float getSpritePosX() {
+        return spritePosX;
+    }
+
+    /**
+     * Indica nuevo valor para X (horizontal)
+     * @param spritePosX nueva posición X (horizontal)
+     */
+    public void setSpritePosX(float spritePosX) {
+        this.spritePosX = spritePosX;
+    }
+
+    /**
+     * @return devuelve la posición Y del sprite
+     */
+    public float getSpritePosY() {
+        return spritePosY;
+    }
+
+    /**
+     * Indica nuevo valor para Y (vertical)
+     * @param spritePosY nueva posición Y (vertical)
+     */
+    public void setSpritePosY(float spritePosY) {
+        this.spritePosY = spritePosY;
+    }
+
+    /**
+     * @return obtiene el rectándulo de colisiones
+     */
+    public RectF getSpriteColisionRect() {
+        return spriteColisionRect;
+    }
+
+    /**
+     * Determina un nuevo rectángulo de colisiones
+     * @param spriteColisionRect
+     */
+    public void setSpriteColisionRect(RectF spriteColisionRect) {
+        this.spriteColisionRect = spriteColisionRect;
+    }
+
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+
+    /**
+     * Método destinado a definir el cuadro de coolisiones
+     */
+    public void cuadroCoolision(){
+
+    }
+
+    /**
+     * Cambio de posición en el mapa
+     */
+    public void movimiento(){
+
+    }
+
+    /**
+     * Sucesión de sprites que conforman la animación
+     */
+    public void animacion(){
+
+    }
+
 }
