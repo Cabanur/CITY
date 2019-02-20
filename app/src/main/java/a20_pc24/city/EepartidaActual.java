@@ -61,16 +61,16 @@ public class EepartidaActual extends EE_EsquemaEscena{
     }
 
     public void dibujar(Canvas c) {
-        try {
+//        try {
 //            c.drawBitmap(fondo, 0, 0, null);
             this.escenarioActual.dibujaMapa(c);
 
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
-
-        } catch (Exception e) {
-            Log.i("Error al dibujar", e.getLocalizedMessage());
-        }
+//
+//        } catch (Exception e) {
+//            Log.i("Error al dibujar", e.getLocalizedMessage());
+//        }
             this.btnAtras.dibujaBoton(c);
     }
 
