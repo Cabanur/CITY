@@ -13,13 +13,10 @@ import a20_pc24.city._Utiles;
 
 public class SpPersonajePrincipal extends S_Sprite{
 
-    Bitmap spriteBm;
-    PointF spritePos, pIni, pFin;
-    float spritePosX, spritePosY;
+    PointF pIni, pFin;
     RectF spriteColRect;
-    Paint spritePaint;
     public enum Direccion{
-        ABAJO(0), ARRIBA(1), DERECHA(2), IZQUIERDA(3);
+        ABAJO(1),ARRIBA(2),DERECHA(3),IZQUIERDA(4);
 
         private int nDireccion;
 
@@ -34,17 +31,18 @@ public class SpPersonajePrincipal extends S_Sprite{
     public SpPersonajePrincipal(Bitmap spriteBm){
         super(spriteBm);
         //el sprite en un principio siempre aparecerá enmedio de la pantalla
-        this.spritePosX = (_Dimensiones.pXLargo/2)-(this.spriteBm.getWidth()/2);
-        this.spritePosY = (_Dimensiones.pYAlto/2)-(this.spriteBm.getHeight()/2);
-        this.spritePaint = new Paint();
+        this.setSpritePosX((_Dimensiones.pXLargo/2)-(this.getspriteBm().getWidth()/2));
+        this.setSpritePosY((_Dimensiones.pYAlto/2)-(this.getspriteBm().getHeight()/2));
     }
 
+    /**
+     * En el caso de que se quiera cambiar la posición del sprite desde el inicio de la escena
+     * @param spriteBm
+     * @param spritePosX
+     * @param spritePosY
+     */
     public SpPersonajePrincipal(Bitmap spriteBm, float spritePosX, float spritePosY){
-        this(spriteBm);
-        this.spritePosX = spritePosX;
-        this.spritePosY = spritePosY;
-        this.spritePos = new PointF(spritePosX,spritePosY);
-        this.cuadroCoolision();
+        super(spriteBm, spritePosX, spritePosY);
     }
 
     /*****************************************************************/
@@ -53,15 +51,18 @@ public class SpPersonajePrincipal extends S_Sprite{
 
     /**
      * Método destinado a definir el cuadro de coolisiones
+     * Usamos la posición a partir de la que se ha dibujado el sprite,
+     * su altura y su ancho.
      */
     public void spriteCuadroColision(){
-
+        this.spriteColRect = new RectF(this.getSpritePosX(),this.getSpritePosY(),
+                this.getspriteBm().getWidth(),this.getspriteBm().getHeight());
     }
 
     /**
-     * Cambio de posición en el mapa
+     * Cambio de "posición"
      */
-    public void spriteMovimiento(){
+    public void spriteMovimiento(Direccion direccion){
 
     }
 
@@ -83,16 +84,11 @@ public class SpPersonajePrincipal extends S_Sprite{
     /*****************************************************************/
 
     public void dibujaMainChar(Canvas c){
-        c.drawBitmap(this.spriteBm,this.spriteBm.getWidth(),this.spriteBm.getHeight(),spritePaint);
-    }
-
-    public void cuadroCoolision() {
-        spriteColRect = new RectF(spritePosX,spritePosY,spriteBm.getWidth(),spriteBm.getHeight());
+        c.drawBitmap(this.getspriteBm(),this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
     }
 
     public void moverPersonajePrincipal() {
-        this.cuadroCoolision();
-        //aquí desplazamiento de fondo
+        this.setSpriteColisionRect(new RectF(this.getSpritePosX(),this.getSpritePosY(),this.getWidth(),this.getHeigh()));
     }
 
     public int onTouchEvent(MotionEvent event) {
@@ -115,31 +111,31 @@ public class SpPersonajePrincipal extends S_Sprite{
                 pFin = new PointF(event.getX(),event.getY());
 
                 float npX, npY;
-                if(pFin.x>pIni.x){
-                    //Movimiento Derecha
+                if(pFin.x>pIni.x){  //Movimiento Derecha
+
                     npX =pFin.x;
-                }else{
+                }else{              //Movimmiento Izquierda
                     npX =pIni.x;
-                    //Movimmiento Izquierda
+
                 }
-                if(pFin.y>pIni.y){
+                if(pFin.y>pIni.y){  //Movimiento arriba
                     npY = pFin.y;
-                    //Movimiento arriba
-                }else{
+
+                }else{              //Movimiento abajo
                     npY = pIni.y;
-                    //Movimiento abajo
+
                 }
 
                 //El movimiento no tiene diagonales diagonales
-                //El pj se mueve en la dirección correspondiente a la mayor variable
-                if(npX>npY){
+                //El pj se mueve en la dirección correspondiente al mayor desplazamiento
 
-                }else{
-
+                if(npX>npY){        //Desplazamiento horizontal
+                    this.moverPersonajePrincipal(   );
+                }else{              //Desplazamiento vertical
+                    this.moverPersonajePrincipal();
                 }
 
                 pIni = new PointF(event.getX(),event.getY());
-
                 break;
             default:
                 Log.i("Otra acción", "Acción no definida: " + accion);
@@ -147,8 +143,4 @@ public class SpPersonajePrincipal extends S_Sprite{
         }
         return 0;
     }
-
-//    public void animacion() {
-//        super.animacion();
-//    }
 }

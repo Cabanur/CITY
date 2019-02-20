@@ -24,6 +24,10 @@ public final class eejuegoEdificioPB extends eejuego_PantallaMapeada {
         return this.mapaMontado;
     }
 
+    /**
+     * Gestionado correctamente en eejuego_PantallaMapeada
+     * ya que es un método genérico para todos los escenarios
+     */
     @Override
     public void dibujaMapa(Canvas c){
         super.dibujaMapa(c);
@@ -38,13 +42,4 @@ public final class eejuegoEdificioPB extends eejuego_PantallaMapeada {
     /*****************************************************************/
     /*****************************************************************/
 
-    public static ST_TileSprite[][] rellenador(){
-        mapaCoordEdificioPB = new ST_TileSprite[20][15];
-        for(int i = 0; i<mapaCoordEdificioPB.length;i++){
-            for(int j = 0; j<mapaCoordEdificioPB[i].length;j++){
-                mapaCoordEdificioPB[i][j]= _Tiles.EDIFICIO_SUELO;
-            }
-        }
-        return mapaCoordEdificioPB;
-    }
 }

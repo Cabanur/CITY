@@ -8,30 +8,33 @@ import android.util.Log;
 import java.util.ArrayList;
 
 import a20_pc24.city._Dimensiones;
+import a20_pc24.city._Tiles;
 import a20_pc24.city._Utiles;
+import a20_pc24.city.sprites.ST_TileSprite;
 import a20_pc24.city.sprites.S_Sprite;
 
 //Clase que únicamente define el comportamiento general de las clases de los mapas
 
 public class eejuego_PantallaMapeada {
 
-    /**************************************************************************************/
     private int escenarioID;                            //Cada clase tiene un ID
-
     public int getEscenarioID() {
         return escenarioID;
     }
     public void setEscenarioID(int escenarioID) {
         this.escenarioID = escenarioID;
     }
+
     /**************************************************************************************/
+    /**************************************************************************************/
+    /**************************************************************************************/
+
     private ArrayList<S_Sprite> elementosMapa;          //Elementos mapa es el array que contiene todos los tiles que habrá en el mapa
     public Bitmap mapaMontado;                          //El método montar mapa genera este bitmap.
-    public Paint mapaPaint;
-
+    public static ST_TileSprite[][] mapaCoord;
 
     public eejuego_PantallaMapeada(){
-        mapaPaint = new Paint();
+        ST_TileSprite[][] mapaCoord = this.rellenador();
     }
 
     /**
@@ -90,7 +93,13 @@ public class eejuego_PantallaMapeada {
      */
 
     public void dibujaMapa(Canvas c){
-
+        for(int i = 0, posX = 0; i < this.mapaCoord.length; i++, posX+=64){
+            for(int j = 0, posY = 0; j < this.mapaCoord[i].length; j++, posY+=64){
+                this.mapaCoord[i][j].setSpritePosY(posY);
+                this.mapaCoord[i][j].setSpritePosX(posX);
+                this.mapaCoord[i][j].spriteDibujar(c);
+            }
+        }
     }
 
     public void actualizarMapa(){
@@ -100,5 +109,20 @@ public class eejuego_PantallaMapeada {
     /*****************************************************************/
     /*****************************************************************/
     /*****************************************************************/
+
+    /**
+     * Método para rellanar arrays, usado a modo de placeholder hasta tener los mapas de coordenadas correspondientes
+     * @return array bidimensional correspondiente a un mapa plano e uniforme
+     */
+
+    public ST_TileSprite[][] rellenador(){
+        this.mapaCoord = new ST_TileSprite[20][15];
+        for(int i = 0; i<this.mapaCoord.length;i++){
+            for(int j = 0; j<this.mapaCoord[i].length;j++){
+                this.mapaCoord[i][j]= _Tiles.CALLE_SUELO;
+            }
+        }
+        return this.mapaCoord;
+    }
 
 }

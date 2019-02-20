@@ -60,25 +60,33 @@ public class EepartidaActual extends EE_EsquemaEscena{
 //  TODO      this.cargarPartida(idPartida);
     }
 
+    /**
+     * Dibuja el mapa indicado por escenarioID
+     * @param c
+     */
+
     public void dibujar(Canvas c) {
-//        try {
-//            c.drawBitmap(fondo, 0, 0, null);
+        try {
             this.escenarioActual.dibujaMapa(c);
 
-//            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
-//            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
-//
-//        } catch (Exception e) {
-//            Log.i("Error al dibujar", e.getLocalizedMessage());
-//        }
+        } catch (Exception e) {
+            Log.i("Error al dibujar", e.getLocalizedMessage());
+        }
             this.btnAtras.dibujaBoton(c);
     }
 
+    /**
+     *
+     */
     public void actualizarFisica() {
 
     }
 
-
+    /**
+     *
+     * @param event
+     * @return
+     */
     public int onTouchEvent(MotionEvent event) {
         int pointerIndex = event.getActionIndex();        //Obtenemos el índice de la acción
         int pointerID = event.getPointerId(pointerIndex); //Obtenemos el Id del pointer asociado a la acción

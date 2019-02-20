@@ -6,39 +6,39 @@ import android.graphics.PointF;
 import android.graphics.RectF;
 
     // Los tiles y sprites son definidos con las clases que heredan de S_SPRITE
-    // y construídos en las clases _Tiles y _CharacterSprites,
+    // y construídos en las clases _Tiles y _CharacterMainSprites,
     // menos los correspondientes al personaje principal que están en SpPersonajePrincipal
 
 public abstract class S_Sprite{
 
     private PointF spritePos;                //Posición en que se coloca el sprite
     private float spritePosX, spritePosY;           //Coordenadas que componen spritePos
-    private Bitmap spriteIMG;               //Imagen del sprite
+    private Bitmap spriteBm;               //Imagen del sprite
     private RectF spriteColisionRect;        //Cuadrado creado a partir del sprite que determina sus límites
     private Paint spritePaint;
 
     /**
      * Constructor para instanciar el sprite sin darle más propiedades,
      * con el fín de poder dárselas de forma dinámica
-     * @param spriteIMG imagen que integra el sprite
+     * @param spriteBm imagen que integra el sprite
      */
-    public S_Sprite(Bitmap spriteIMG){
-        this.spriteIMG = spriteIMG;
+    public S_Sprite(Bitmap spriteBm){
+        this.spriteBm = spriteBm;
     }
 
     /**
      * A pesar de ser una clase abstracta, declaro el constructor para que sea la base de los hijos
      *
-     * @param spriteIMG bitmap correspondiente al sprite
+     * @param spriteBm bitmap correspondiente al sprite
      * @param spritePosX posición X donde posicionaremos y dibujaremos
      * @param spritePosY posición Y donde posicionaremos y dibujaremos
      */
-    public S_Sprite(Bitmap spriteIMG, float spritePosX, float spritePosY){
-        this(spriteIMG);
+    public S_Sprite(Bitmap spriteBm, float spritePosX, float spritePosY){
+        this(spriteBm);
         this.spritePosX = spritePosX;
         this.spritePosY = spritePosY;
         this.spritePos = new PointF(spritePosX,spritePosY);
-        this.spriteColisionRect = new RectF(spritePosX,spritePosY,spriteIMG.getWidth(),spriteIMG.getHeight());
+        this.setSpriteColisionRect(new RectF(spritePosX,spritePosY,spriteBm.getWidth(),spriteBm.getHeight()));
         this.spritePaint = new Paint();
     }
 
@@ -79,30 +79,30 @@ public abstract class S_Sprite{
     /**
      * @return obtiene el Bitmap del sprite
      */
-    public Bitmap getSpriteIMG() {
-        return spriteIMG;
+    public Bitmap getspriteBm() {
+        return spriteBm;
     }
 
     /**
      * Cambia a machete el Bitmap de un sprite
-     * @param spriteIMG nuevo Bitmap para el sprite
+     * @param spriteBm nuevo Bitmap para el sprite
      */
-    public void setSpriteIMG(Bitmap spriteIMG) {
-        this.spriteIMG = spriteIMG;
+    public void setspriteBm(Bitmap spriteBm) {
+        this.spriteBm = spriteBm;
     }
 
     /**
      * @return el ancho del sprite
      */
     public float getWidth(){
-        return this.spriteIMG.getWidth();
+        return this.spriteBm.getWidth();
     }
 
     /**
      * @return el alto del sprite
      */
     public float getHeigh(){
-        return this.spriteIMG.getHeight();
+        return this.spriteBm.getHeight();
     }
 
     /**

@@ -72,20 +72,18 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
     }
 
     public void dibujar(Canvas c) {
-//        try{
+        try{
             for(int i=0;i<getAltoPantalla();i+=_Tiles.PLACEHOLDER.getHeigh()){
                 for(int j=0;j<getAnchoPantalla();j+=_Tiles.PLACEHOLDER.getHeigh()){
                     c.drawBitmap(this.arrL_TilesUsadas.get(
-                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_SPOT)).getSpriteIMG(),j,i,null);
+                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_SPOT)).getspriteBm(),j,i,null);
                     c.drawBitmap(this.arrL_TilesUsadas.get(
-                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CIRCLE)).getSpriteIMG(),j,i,null);
+                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CIRCLE)).getspriteBm(),j,i,null);
                     c.drawBitmap(this.arrL_TilesUsadas.get(
-                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CROSS)).getSpriteIMG(),j,i,null);
+                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CROSS)).getspriteBm(),j,i,null);
                 }
             }
 
-//            System.exit(0);
-//            c.drawBitmap(fondo,0,0,null);
             btnP1.dibujaBoton(c);
             btnP2.dibujaBoton(c);
             btnP3.dibujaBoton(c);
@@ -100,9 +98,9 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
 
-//        }catch(Exception e){
-//            Log.i("Error al dibujar", e.getLocalizedMessage());
-//        }
+        }catch(Exception e){
+            Log.i("Error al dibujar", e.getLocalizedMessage());
+        }
     }
 
     public void actualizarFisica() {

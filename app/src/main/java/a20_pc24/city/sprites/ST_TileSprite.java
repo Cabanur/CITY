@@ -46,11 +46,12 @@ public class ST_TileSprite extends S_Sprite {
     public void spriteAnimacion(){
 
     }
+
     /**
      * Dibuja sprite en coordenadas dadas
      */
     public void spriteDibujar(Canvas c){
-        Bitmap tile = Bitmap.createScaledBitmap(this.getSpriteIMG()
+        Bitmap tile = Bitmap.createScaledBitmap(this.getspriteBm()
                 ,(int)_Utiles.convertDpToPixel(64)
                 ,(int)_Utiles.convertDpToPixel(64)
                 , false);
