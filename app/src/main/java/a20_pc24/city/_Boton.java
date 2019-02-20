@@ -24,21 +24,30 @@ import java.sql.SQLTransactionRollbackException;
 
 public class _Boton{
 
-    float btnCoordXo,btnCoordYo, btnCoordXf, btnCoordYf;
-    float btnBordeCoordXo, btnBordeCoordYo, btnBordeCoordXf, btnBordeCoordYf;
+//    float btnCoordXo,btnCoordYo, btnCoordXf, btnCoordYf;
+//    float btnBordeCoordXo, btnBordeCoordYo, btnBordeCoordXf, btnBordeCoordYf;
 
-    RectF btnRect;
-    RectF btnBordeRect;
+    private RectF btnRect;
+    private RectF btnBordeRect;
 
-    boolean btnTieneBorde;
+    private boolean btnTieneBorde;
 
-    Paint btnPaint;
-    Paint btnBordePaint;
-    Paint btnTextPaint;
+    private Paint btnPaint;
+    private Paint btnBordePaint;
+    private Paint btnTextPaint;
 
-    String btnTexto;
+    private String btnTexto;
 
-    int btnValue;
+    /****************************************************************/
+    private int btnValue;                   //Valor del botón. Necesario para el control de escenas
+
+    public int getBtnValue() {
+        return btnValue;
+    }
+    public void setBtnValue(int btnValue) {
+        this.btnValue = btnValue;
+    }
+    /****************************************************************/
 
     /**
      * Crea el botón como concepto a partir de los parámetros proporcionados
@@ -63,7 +72,7 @@ public class _Boton{
         if(btnTieneBorde){
             this.btnBordeRect=new RectF(left,top,right,bottom);
             this.btnBordePaint = new Paint();
-            this.btnBordePaint.setStrokeWidth(10);
+            this.btnBordePaint.setStrokeWidth(_Utiles.convertDpToPixel(1));
             this.btnBordePaint.setColor(Color.BLACK);
             this.btnBordePaint.setStyle(Paint.Style.STROKE);
         }

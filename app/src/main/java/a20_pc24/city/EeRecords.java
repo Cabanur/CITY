@@ -16,7 +16,7 @@ public class EeRecords extends EE_EsquemaEscena {
 //        fondo = BitmapFactory.decodeResource(cntx.getResources(), R.drawable.e);
 //        fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
 
-        this.btnAtras.btnValue = 0;
+        this.btnAtras.setBtnValue(0);
     }
 
     public void dibujar(Canvas c) {

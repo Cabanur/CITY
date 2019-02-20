@@ -1,6 +1,7 @@
 package a20_pc24.city.sprites;
 
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 
 import a20_pc24.city._Utiles;
 
@@ -21,15 +22,42 @@ public class ST_TileSprite extends S_Sprite {
         //Es importante recordar que los tiles siempre son cuadrados
     }
 
-    @Override
-    public void cuadroCoolision() {
-        super.cuadroCoolision();
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+
+    /**
+     * Método destinado a definir el cuadro de coolisiones
+     */
+    public void spriteCuadroColision(){
+
     }
 
-    @Override
-    public void animacion() {
-        super.animacion();
+    /**
+     * Cambio de posición en el mapa
+     */
+    public void spriteMovimiento(){
+
     }
 
+    /**
+     * Sucesión de sprites que conforman la animación
+     */
+    public void spriteAnimacion(){
 
+    }
+    /**
+     * Dibuja sprite en coordenadas dadas
+     */
+    public void spriteDibujar(Canvas c){
+        Bitmap tile = Bitmap.createScaledBitmap(this.getSpriteIMG()
+                ,(int)_Utiles.convertDpToPixel(64)
+                ,(int)_Utiles.convertDpToPixel(64)
+                , false);
+        c.drawBitmap(tile,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
+    }
+
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
 }

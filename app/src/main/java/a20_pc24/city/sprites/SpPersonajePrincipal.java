@@ -47,6 +47,41 @@ public class SpPersonajePrincipal extends S_Sprite{
         this.cuadroCoolision();
     }
 
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+
+    /**
+     * Método destinado a definir el cuadro de coolisiones
+     */
+    public void spriteCuadroColision(){
+
+    }
+
+    /**
+     * Cambio de posición en el mapa
+     */
+    public void spriteMovimiento(){
+
+    }
+
+    /**
+     * Sucesión de sprites que conforman la animación
+     */
+    public void spriteAnimacion(){
+
+    }
+    /**
+     * Dibuja sprite en coordenadas dadas
+     */
+    public void spriteDibujar(Canvas c){
+
+    }
+
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+
     public void dibujaMainChar(Canvas c){
         c.drawBitmap(this.spriteBm,this.spriteBm.getWidth(),this.spriteBm.getHeight(),spritePaint);
     }

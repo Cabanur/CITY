@@ -15,6 +15,9 @@ public final class eejuegoEdificioPB extends eejuego_PantallaMapeada {
         this.mapaCoordEdificioPB = rellenador();
     }
 
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
 
     @Override
     public Bitmap unificaMapa() {
@@ -30,6 +33,10 @@ public final class eejuegoEdificioPB extends eejuego_PantallaMapeada {
     public void actualizarMapa() {
 
     }
+
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
 
     public static ST_TileSprite[][] rellenador(){
         mapaCoordEdificioPB = new ST_TileSprite[20][15];

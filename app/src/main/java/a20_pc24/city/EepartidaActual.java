@@ -55,7 +55,7 @@ public class EepartidaActual extends EE_EsquemaEscena{
             }
         }
 
-        this.btnAtras.btnValue = 96;        //Necesario para volver a la selección de partida.
+        this.btnAtras.setBtnValue(96);      //Necesario para volver a la selección de partida.
                                             // En un futuro dará acceso al menú in-Game
 //  TODO      this.cargarPartida(idPartida);
     }
@@ -91,7 +91,7 @@ public class EepartidaActual extends EE_EsquemaEscena{
                 break;
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
                     if(this.btnAtras.pulsaBoton(event)){
-                        return this.btnAtras.btnValue;
+                        return this.btnAtras.getBtnValue();
                     }
                 break;
             case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último

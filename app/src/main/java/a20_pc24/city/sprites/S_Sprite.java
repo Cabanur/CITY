@@ -1,6 +1,7 @@
 package a20_pc24.city.sprites;
 
 import android.graphics.Bitmap;
+import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 
@@ -14,6 +15,7 @@ public abstract class S_Sprite{
     private float spritePosX, spritePosY;           //Coordenadas que componen spritePos
     private Bitmap spriteIMG;               //Imagen del sprite
     private RectF spriteColisionRect;        //Cuadrado creado a partir del sprite que determina sus límites
+    private Paint spritePaint;
 
     /**
      * Constructor para instanciar el sprite sin darle más propiedades,
@@ -37,7 +39,42 @@ public abstract class S_Sprite{
         this.spritePosY = spritePosY;
         this.spritePos = new PointF(spritePosX,spritePosY);
         this.spriteColisionRect = new RectF(spritePosX,spritePosY,spriteIMG.getWidth(),spriteIMG.getHeight());
+        this.spritePaint = new Paint();
     }
+
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+
+    /**
+     * Método destinado a definir el cuadro de coolisiones
+     */
+    public void spriteCuadroColision(){
+
+    }
+
+    /**
+     * Cambio de posición en el mapa
+     */
+    public void spriteMovimiento(){
+
+    }
+
+    /**
+     * Sucesión de sprites que conforman la animación
+     */
+    public void spriteAnimacion(){
+
+    }
+    /**
+     * Dibuja sprite en coordenadas dadas
+     */
+    public void spriteDibujar(){
+
+    }
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
 
     /**
      * @return obtiene el Bitmap del sprite
@@ -128,29 +165,19 @@ public abstract class S_Sprite{
         this.spriteColisionRect = spriteColisionRect;
     }
 
-    /*****************************************************************/
-    /*****************************************************************/
-    /*****************************************************************/
-
     /**
-     * Método destinado a definir el cuadro de coolisiones
+     *
+     * @return
      */
-    public void cuadroCoolision(){
-
+    public Paint getSpritePaint() {
+        return spritePaint;
     }
 
     /**
-     * Cambio de posición en el mapa
+     *
+     * @param spritePaint
      */
-    public void movimiento(){
-
+    public void setSpritePaint(Paint spritePaint) {
+        this.spritePaint = spritePaint;
     }
-
-    /**
-     * Sucesión de sprites que conforman la animación
-     */
-    public void animacion(){
-
-    }
-
 }

@@ -117,7 +117,7 @@ public class EeMenu extends EE_EsquemaEscena {
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
                 for(_Boton btnAux: btnArr){
                     if(btnAux.pulsaBoton(event)){
-                        return btnAux.btnValue;
+                        return btnAux.getBtnValue();
                     }
                 }
                 break;

@@ -52,7 +52,9 @@ public final class eejuegoCallePrincipal extends eejuego_PantallaMapeada {
         return mapaCoordCallePrincipal;
     }
 
-
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
 
     @Override
     public Bitmap unificaMapa() {
@@ -61,11 +63,22 @@ public final class eejuegoCallePrincipal extends eejuego_PantallaMapeada {
 
     @Override
     public void dibujaMapa(Canvas c){
-        super.dibujaMapa(c);
+        for(int i = 0, posX = 0; i < mapaCoordCallePrincipal.length; i++, posX+=64){
+            for(int j = 0, posY = 0; j < mapaCoordCallePrincipal.length; j++, posY+=64){
+                mapaCoordCallePrincipal[i][j].setSpritePosY(posY);
+                mapaCoordCallePrincipal[i][j].setSpritePosX(posX);
+                mapaCoordCallePrincipal[i][j].spriteDibujar(c);
+            }
+        }
     }
 
     @Override
     public void actualizarMapa() {
 
     }
+
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+
 }

@@ -56,7 +56,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             (anchoPantalla*1/5,altoPantalla*5/7,
                     anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*1/7,
                     Color.GREEN, true, "Partida 3",3);
-        this.btnAtras.btnValue = 0;
+        this.btnAtras.setBtnValue(0);
 
         this.btnArrayList = new ArrayList<>();
         this.btnArrayList.add(btnP1);
@@ -124,7 +124,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
                 Log.i("TOUCH","ALTO: "+_Dimensiones.pYAlto+" LARGO: "+_Dimensiones.pXLargo);
                 for(_Boton b : btnArrayList){
                     if(b.pulsaBoton(event)){
-                        return b.btnValue;
+                        return b.getBtnValue();
                     }
                 }
                 break;

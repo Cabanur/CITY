@@ -16,7 +16,7 @@ import a20_pc24.city.sprites.S_Sprite;
 public class eejuego_PantallaMapeada {
 
     /**************************************************************************************/
-    private int escenarioID;                         //Cada clase tiene un ID
+    private int escenarioID;                            //Cada clase tiene un ID
 
     public int getEscenarioID() {
         return escenarioID;
@@ -25,11 +25,9 @@ public class eejuego_PantallaMapeada {
         this.escenarioID = escenarioID;
     }
     /**************************************************************************************/
-
-    private ArrayList<S_Sprite> elementosMapa;      //Elementos mapa es el array que contiene todos los tiles que habrá en el mapa
-    public Bitmap mapaMontado;                      //El método montar mapa genera este bitmap.
+    private ArrayList<S_Sprite> elementosMapa;          //Elementos mapa es el array que contiene todos los tiles que habrá en el mapa
+    public Bitmap mapaMontado;                          //El método montar mapa genera este bitmap.
     public Paint mapaPaint;
-
 
 
     public eejuego_PantallaMapeada(){
@@ -66,6 +64,11 @@ public class eejuego_PantallaMapeada {
         return elementosMapa;
     }
 
+
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+
     /**
      *      Aquí se creará el Bitmap del mapa a partir del array bidimensional correspondiente.
      *      El contenido serán los elementos de @param elementosMapa
@@ -77,6 +80,7 @@ public class eejuego_PantallaMapeada {
      *
      * @return this.mapaMontado
      */
+
     public Bitmap unificaMapa(){
         return this.mapaMontado;
     }
@@ -87,17 +91,14 @@ public class eejuego_PantallaMapeada {
 
     public void dibujaMapa(Canvas c){
 
-        Bitmap test = _Utiles.getBitmapFromAsset("cityscape/suelosimple.png");
-        test = Bitmap.createScaledBitmap(test,(int)_Utiles.convertDpToPixel(64),(int)_Utiles.convertDpToPixel(64),false);
-
-//        for(int i = 0; i < _Dimensiones.pYAlto;i+=nuevaTamanyoTile){
-//            for(int j = 0; j < _Dimensiones.pXLargo;j+=nuevaTamanyoTile){
-                c.drawBitmap(test,0,0,this.mapaPaint);
-//            }
-//        }
     }
 
     public void actualizarMapa(){
 
     }
+
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+
 }
