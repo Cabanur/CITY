@@ -129,8 +129,8 @@ public class _DimensionesDispositivo {
      * @param pixels INT coordenada en pixses en realcion a una pantalla de 1208x775
      * @return INT coordenada adaptada a la resolucion del dispositivo
      */
-    public int getDpAncho(int pixels){
-        return (int)((pixels/12.08)*this.pXLargo)/100;
+    public static int getDpAncho(int pixels){
+        return (int)((pixels/12.08)*_DimensionesDispositivo.pXLargo)/100;
     }
 
     /**
@@ -138,8 +138,8 @@ public class _DimensionesDispositivo {
      * @param pixels FLOAT coordenada en pixses en realcion a una pantalla de 1208x775
      * @return INT coordenada adaptada a la resolucion del dispositivo
      */
-    public int getDpAncho(float pixels){
-        return (int)((pixels/12.08)*this.pXLargo)/100;
+    public static int getDpAncho(float pixels){
+        return (int)((pixels/12.08)*_DimensionesDispositivo.pXLargo)/100;
     }
     /**
      * Calculo de las coordenada x en relacion al una pantalla de 1208x775
@@ -147,8 +147,8 @@ public class _DimensionesDispositivo {
      * @return FLOAT coordenada adaptada a la resolucion del dispositivo
      */
 
-    public float getDpAnchoF(int pixels){
-        return (float)((pixels/12.08)*this.pXLargo)/100;
+    public static float getDpAnchoF(int pixels){
+        return (float)((pixels/12.08)*_DimensionesDispositivo.pXLargo)/100;
     }
 
     /**
@@ -157,8 +157,8 @@ public class _DimensionesDispositivo {
      * @return FLOAT coordenada adaptada a la resolucion del dispositivo
      */
 
-    public float getDpAnchoF(float pixels){
-        return (float)((pixels/12.08)*this.pXLargo)/100;
+    public static float getDpAnchoF(float pixels){
+        return (float)((pixels/12.08)*_DimensionesDispositivo.pXLargo)/100;
     }
 
     /**
@@ -166,8 +166,8 @@ public class _DimensionesDispositivo {
      * @param pixels INT coordenada en pixses en realcion a una pantalla de 1208x775
      * @return FLOAT coordenada adaptada a la resolucion del dispositivo
      */
-    public float getDpAltoF(int pixels){
-        return (float)((pixels/7.75)*this.pYAlto)/100;
+    public static float getDpAltoF(int pixels){
+        return (float)((pixels/7.75)*_DimensionesDispositivo.pYAlto)/100;
     }
 
     /**
@@ -175,8 +175,8 @@ public class _DimensionesDispositivo {
      * @param pixels FLOAT coordenada en pixses en realcion a una pantalla de 1208x775
      * @return FLOAT coordenada adaptada a la resolucion del dispositivo
      */
-    public float getDpAltoF(float pixels){
-        return (float)((pixels/7.75)*this.pYAlto)/100;
+    public static float getDpAltoF(float pixels){
+        return (float)((pixels/7.75)*_DimensionesDispositivo.pYAlto)/100;
     }
 
     /**
@@ -184,8 +184,8 @@ public class _DimensionesDispositivo {
      * @param pixels INT coordenada en pixses en realcion a una pantalla de 1208x775
      * @return INT coordenada adaptada a la resolucion del dispositivo
      */
-    public int getDpAlto(int pixels){
-        return (int)((pixels/7.75)*this.pYAlto)/100;
+    public static int getDpAlto(int pixels){
+        return (int)((pixels/7.75)*_DimensionesDispositivo.pYAlto)/100;
     }
 
     /**
@@ -193,8 +193,8 @@ public class _DimensionesDispositivo {
      * @param pixels FLOAT coordenada en pixses en realcion a una pantalla de 1208x775
      * @return INT coordenada adaptada a la resolucion del dispositivo
      */
-    public int getDpAlto(float pixels){
-        return (int)((pixels/7.75)*this.pYAlto)/100;
+    public static int getDpAlto(float pixels){
+        return (int)((pixels/7.75)*_DimensionesDispositivo.pYAlto)/100;
     }
 
 }

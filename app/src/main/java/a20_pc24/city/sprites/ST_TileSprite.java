@@ -13,7 +13,7 @@ public class ST_TileSprite extends S_Sprite {
     private TileAnim tileAnim;
 
     public ST_TileSprite(Bitmap spriteIMG, TileAnim tileAnim) {
-        super(Bitmap.createScaledBitmap(spriteIMG,(int) _Utiles.convertDpToPixel(32),(int) _Utiles.convertDpToPixel(32),false) );
+        super(spriteIMG);
         this.tileAnim = tileAnim;
     }
 
@@ -55,12 +55,7 @@ public class ST_TileSprite extends S_Sprite {
      */
     @Override
     public void spriteDibujar(Canvas c){
-//        super.spriteDibujar(c);
-        Bitmap tile = Bitmap.createScaledBitmap(this.getspriteBm()
-                ,(int)_Utiles.convertDpToPixel(_DimensionesDispositivo._TileProporcion)
-                ,(int)_Utiles.convertDpToPixel(_DimensionesDispositivo._TileProporcion)
-                , false);
-        c.drawBitmap(tile,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
+        super.spriteDibujar(c);
     }
 
     /*****************************************************************/

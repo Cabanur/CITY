@@ -14,7 +14,7 @@ public class _ParallaxBm {
 
     public _ParallaxBm(Bitmap imgParallax, float imgParallaxVelocidad, float imgParallaxPosX, float imgParallaxPosY, boolean movimientoVerticalUHorizontal) {
         this.imgParallax = Bitmap.createScaledBitmap(imgParallax, (int) _DimensionesDispositivo.pXLargo, (int) _DimensionesDispositivo.pYAlto, false);
-        this.imgParallaxVelocidad = (int) _Utiles.convertDpToPixel(imgParallaxVelocidad);
+        this.imgParallaxVelocidad = _DimensionesDispositivo.getDpAnchoF(imgParallaxVelocidad);
         this.imgParallaxPosX = imgParallaxPosX;
         this.imgParallaxPosY = imgParallaxPosY;
 
@@ -24,7 +24,10 @@ public class _ParallaxBm {
     }
 
     public void dibujaParallax(Canvas c){
-        c.drawBitmap(this.imgParallax,this.imgParallaxPosX,this.imgParallaxPosY,imgParallaxPaint);
+        c.drawBitmap(this.imgParallax,
+                (int)this.imgParallaxPosX,
+                (int)this.imgParallaxPosY,
+                imgParallaxPaint);
         if((!movimientoVerticalUHorizontal) && this.imgParallaxPosX<0){         //Movimiento del bitmap a la izquierda
             c.drawBitmap(this.imgParallax, _DimensionesDispositivo.pXLargo+this.imgParallaxPosX,this.imgParallaxPosY,imgParallaxPaint);
         }else if((!movimientoVerticalUHorizontal) && this.imgParallaxPosX>0){   //Movimiento del bitmap a la derecha

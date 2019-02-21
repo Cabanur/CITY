@@ -3,22 +3,9 @@ package a20_pc24.city;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.view.MotionEvent;
-
-import java.sql.SQLTransactionRollbackException;
-
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.graphics.Typeface;
-import android.view.MotionEvent;
-
-import java.sql.SQLTransactionRollbackException;
 
 //Clase de refuerzo para crear botones y gestionar su pulsación en ellos
 
@@ -72,7 +59,7 @@ public class _Boton{
         if(btnTieneBorde){
             this.btnBordeRect=new RectF(left,top,right,bottom);
             this.btnBordePaint = new Paint();
-            this.btnBordePaint.setStrokeWidth(_Utiles.convertDpToPixel(1));
+            this.btnBordePaint.setStrokeWidth(_TamanyosEstandar._TamanyoBordeBotonFino);
             this.btnBordePaint.setColor(Color.BLACK);
             this.btnBordePaint.setStyle(Paint.Style.STROKE);
         }

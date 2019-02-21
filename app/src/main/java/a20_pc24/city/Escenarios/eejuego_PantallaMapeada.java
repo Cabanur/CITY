@@ -90,10 +90,14 @@ public class eejuego_PantallaMapeada {
      */
 
     public void dibujaMapa(Canvas c){
-        for(int i = 0, posX = 0; i < this.mapaCoord.length; i++, posX+=64){
-            for(int j = 0, posY = 0; j < this.mapaCoord[i].length; j++, posY+=64){
-                this.mapaCoord[i][j].setSpritePosY(_Utiles.convertDpToPixel(posY));
-                this.mapaCoord[i][j].setSpritePosX(_Utiles.convertDpToPixel(posX));
+
+        int incremento = _Tiles.PLACEHOLDER.getSpriteDPsX();        //Puedo hacer esto porque
+                                                                    //el tamaño de los tiles es siempre el mismo
+
+        for(int i = 0, posX = 0; i < this.mapaCoord.length; i++, posX+=incremento){
+            for(int j = 0, posY = 0; j < this.mapaCoord[i].length; j++, posY+=incremento){
+                this.mapaCoord[i][j].setSpritePosY(posY);
+                this.mapaCoord[i][j].setSpritePosX(posX);
                 this.mapaCoord[i][j].spriteDibujar(c);
             }
         }

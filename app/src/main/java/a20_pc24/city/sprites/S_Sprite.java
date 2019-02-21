@@ -6,6 +6,7 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 
+import a20_pc24.city._DimensionesDispositivo;
 import a20_pc24.city._Utiles;
 
 // Los tiles y sprites son definidos con las clases que heredan de S_SPRITE
@@ -32,6 +33,7 @@ public abstract class S_Sprite{
         }
     }
     Direccion d;
+    private int SpriteDPsX, SpriteDPsY;
 
     /**
      * Constructor para instanciar el sprite sin darle más propiedades,
@@ -40,6 +42,16 @@ public abstract class S_Sprite{
      */
     public S_Sprite(Bitmap spriteBm){
         this.spriteBm = spriteBm;
+        this.SpriteDPsX = getSpriteDPsX();
+        this.SpriteDPsY = getSpriteDPsY();
+    }
+
+    public int getSpriteDPsX(){
+        return _DimensionesDispositivo.getDpAncho(this.getWidth());
+    }
+
+    public int getSpriteDPsY(){
+        return _DimensionesDispositivo.getDpAlto(this.getHeigh());
     }
 
     /**
@@ -57,6 +69,7 @@ public abstract class S_Sprite{
         this.setSpriteColisionRect(new RectF(spritePosX,spritePosY,spriteBm.getWidth(),spriteBm.getHeight()));
         this.spritePaint = new Paint();
     }
+
 
     /*****************************************************************/
     /*****************************************************************/
@@ -87,8 +100,8 @@ public abstract class S_Sprite{
      */
     public void spriteDibujar(Canvas c){
         Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
-                ,(int)_Utiles.convertDpToPixel(this.getspriteBm().getHeight()/2)
-                ,(int)_Utiles.convertDpToPixel(this.getspriteBm().getWidth()/2)
+                , this.getSpriteDPsX()
+                , this.getSpriteDPsY()
                 , false);
         c.drawBitmap(sprite,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
 //        c.drawBitmap(this.getspriteBm(),this.spritePosX,this.getSpritePosY(),this.getSpritePaint());
