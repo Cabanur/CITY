@@ -29,7 +29,7 @@ public final class _Tiles {
                     ,(int)_Utiles.convertDpToPixel(64)
                     ,(int)_Utiles.convertDpToPixel(64)
                     ,false)
-            , ST_TileSprite.TileAnim.HORIZONTAL);
+            , ST_TileSprite.TileAnim.DIAGONAL);
     public static ST_TileSprite MENU_CIRCLE = new ST_TileSprite(
             Bitmap.createScaledBitmap(
                     _Utiles.getBitmapFromAsset("menugraphics/savegame1circle.png")

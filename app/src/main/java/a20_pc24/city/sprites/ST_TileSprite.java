@@ -3,6 +3,7 @@ package a20_pc24.city.sprites;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
+import a20_pc24.city._DimensionesDispositivo;
 import a20_pc24.city._Utiles;
 
 
@@ -49,11 +50,15 @@ public class ST_TileSprite extends S_Sprite {
 
     /**
      * Dibuja sprite en coordenadas dadas
+     * Es necesario sobreescribir el método genérico porque
+     * el ancho/alto de los tiles es el mismo siempre
      */
+    @Override
     public void spriteDibujar(Canvas c){
+//        super.spriteDibujar(c);
         Bitmap tile = Bitmap.createScaledBitmap(this.getspriteBm()
-                ,(int)_Utiles.convertDpToPixel(64)
-                ,(int)_Utiles.convertDpToPixel(64)
+                ,(int)_Utiles.convertDpToPixel(_DimensionesDispositivo._TileProporcion)
+                ,(int)_Utiles.convertDpToPixel(_DimensionesDispositivo._TileProporcion)
                 , false);
         c.drawBitmap(tile,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
     }

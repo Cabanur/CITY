@@ -18,7 +18,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
     Rect boundsRect;
     BitmapDrawable mosaicDefinerBD;
-    ArrayList<ST_TileSprite> arrL_TilesUsadas;
+    ArrayList<ST_TileSprite> _TilesArrayList;
     ArrayList<_Boton> btnArrayList;
 
     _Boton btnP1, btnP2, btnP3;                 //El valor será respectivamente 1, 2, 3
@@ -33,15 +33,9 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
 
     public EeJuego_aSeleccionPartida(Context cntx, int idEscena, int anchoPantalla, int altoPantalla) {
         super(cntx, idEscena, anchoPantalla, altoPantalla);
-//        fondo = BitmapFactory.decodeResource(cntx.getResources(),R.drawable.b);
-//        fondo = Bitmap.createScaledBitmap(fondo, anchoPantalla, altoPantalla, false);
-//        fondo = _Utiles.getBitmapFromAsset(this.cntx,"menugraphics/savegame4smallcross.png");
-//        fondo = Bitmap.createScaledBitmap(fondo,64,64,false);
-//        this.savedGamesBackgroundTile1Spot = new ST_TileSprite(fondo,false,false,ST_TileSprite.TileTipo.SUELO);
-                                    //Bitmap spriteIMG, double spriteChoordX, double spriteChoordY, boolean colisionable, boolean animado, TileTipo tileTipo
 
 
-
+        //Creamos los botones correspondientes a cada partida
         btnP1=new _Boton
                 (anchoPantalla*1/5,altoPantalla*1/7,
                  anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*5/7,
@@ -56,31 +50,34 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             (anchoPantalla*1/5,altoPantalla*5/7,
                     anchoPantalla-anchoPantalla*1/5,altoPantalla-altoPantalla*1/7,
                     Color.GREEN, true, "Partida 3",3);
+        //Re-defino el valor del botón "atrás"
         this.btnAtras.setBtnValue(0);
 
+        //Añado todos los botones de esta escena en un arraylist
         this.btnArrayList = new ArrayList<>();
         this.btnArrayList.add(btnP1);
         this.btnArrayList.add(btnP2);
         this.btnArrayList.add(btnP3);
         this.btnArrayList.add(this.btnAtras);
 
-        this.arrL_TilesUsadas = new ArrayList<>();
+        //Añado todos los tiles que voy a usar en esta escena en un arraylist
+        this._TilesArrayList = new ArrayList<>();
 
-        this.arrL_TilesUsadas.add(_Tiles.MENU_SPOT);
-        this.arrL_TilesUsadas.add(_Tiles.MENU_CROSS);
-        this.arrL_TilesUsadas.add(_Tiles.MENU_CIRCLE);
+        this._TilesArrayList.add(_Tiles.MENU_SPOT);
+        this._TilesArrayList.add(_Tiles.MENU_CROSS);
+        this._TilesArrayList.add(_Tiles.MENU_CIRCLE);
     }
 
     public void dibujar(Canvas c) {
         try{
             for(int i=0;i<getAltoPantalla();i+=_Tiles.PLACEHOLDER.getHeigh()){
                 for(int j=0;j<getAnchoPantalla();j+=_Tiles.PLACEHOLDER.getHeigh()){
-                    c.drawBitmap(this.arrL_TilesUsadas.get(
-                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_SPOT)).getspriteBm(),j,i,null);
-                    c.drawBitmap(this.arrL_TilesUsadas.get(
-                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CIRCLE)).getspriteBm(),j,i,null);
-                    c.drawBitmap(this.arrL_TilesUsadas.get(
-                            this.arrL_TilesUsadas.indexOf(_Tiles.MENU_CROSS)).getspriteBm(),j,i,null);
+                    c.drawBitmap(this._TilesArrayList.get(
+                            this._TilesArrayList.indexOf(_Tiles.MENU_SPOT)).getspriteBm(),j,i,null);
+                    c.drawBitmap(this._TilesArrayList.get(
+                            this._TilesArrayList.indexOf(_Tiles.MENU_CIRCLE)).getspriteBm(),j,i,null);
+                    c.drawBitmap(this._TilesArrayList.get(
+                            this._TilesArrayList.indexOf(_Tiles.MENU_CROSS)).getspriteBm(),j,i,null);
                 }
             }
 
@@ -91,9 +88,9 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             super.dibujar(c);                       //Llamamos a super para poner el botón de salir
 
 //            Log.i("TEST","ANCHO PANTALLA "+getAnchoPantalla());
-//            Log.i("TEST","ANCHO PANTALLA DPX "+ _Dimensiones.pXLargo);
+//            Log.i("TEST","ANCHO PANTALLA DPX "+ _DimensionesDispositivo.pXLargo);
 //            Log.i("TEST","ALTO PANTALLA "+getAltoPantalla());
-//            Log.i("TEST","ALTO PANTALLA DPY "+ _Dimensiones.pYAlto);
+//            Log.i("TEST","ALTO PANTALLA DPY "+ _DimensionesDispositivo.pYAlto);
 
 //            c.drawText("Menú", getAnchoPantalla()/2, getAltoPantalla()/5, pTexto);
 //            c.drawText("Menú", getAnchoPantalla()/2+5, getAltoPantalla()/5+10, pTexto2);
@@ -119,7 +116,7 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
             case MotionEvent.ACTION_POINTER_DOWN:           // Segundo y siguientes tocan
                 break;
             case MotionEvent.ACTION_UP:                     // Al levantar el último dedo
-                Log.i("TOUCH","ALTO: "+_Dimensiones.pYAlto+" LARGO: "+_Dimensiones.pXLargo);
+                Log.i("TOUCH","ALTO: "+ _DimensionesDispositivo.pYAlto+" LARGO: "+ _DimensionesDispositivo.pXLargo);
                 for(_Boton b : btnArrayList){
                     if(b.pulsaBoton(event)){
                         return b.getBtnValue();

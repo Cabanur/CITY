@@ -2,12 +2,9 @@ package a20_pc24.city.Escenarios;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.util.Log;
 
 import java.util.ArrayList;
 
-import a20_pc24.city._Dimensiones;
 import a20_pc24.city._Tiles;
 import a20_pc24.city._Utiles;
 import a20_pc24.city.sprites.ST_TileSprite;
@@ -95,8 +92,8 @@ public class eejuego_PantallaMapeada {
     public void dibujaMapa(Canvas c){
         for(int i = 0, posX = 0; i < this.mapaCoord.length; i++, posX+=64){
             for(int j = 0, posY = 0; j < this.mapaCoord[i].length; j++, posY+=64){
-                this.mapaCoord[i][j].setSpritePosY(posY);
-                this.mapaCoord[i][j].setSpritePosX(posX);
+                this.mapaCoord[i][j].setSpritePosY(_Utiles.convertDpToPixel(posY));
+                this.mapaCoord[i][j].setSpritePosX(_Utiles.convertDpToPixel(posX));
                 this.mapaCoord[i][j].spriteDibujar(c);
             }
         }

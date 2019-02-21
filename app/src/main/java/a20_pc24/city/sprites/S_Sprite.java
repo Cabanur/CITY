@@ -1,11 +1,14 @@
 package a20_pc24.city.sprites;
 
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 
-    // Los tiles y sprites son definidos con las clases que heredan de S_SPRITE
+import a20_pc24.city._Utiles;
+
+// Los tiles y sprites son definidos con las clases que heredan de S_SPRITE
     // y construídos en las clases _Tiles y _CharacterMainSprites,
     // menos los correspondientes al personaje principal que están en SpPersonajePrincipal
 
@@ -16,6 +19,19 @@ public abstract class S_Sprite{
     private Bitmap spriteBm;               //Imagen del sprite
     private RectF spriteColisionRect;        //Cuadrado creado a partir del sprite que determina sus límites
     private Paint spritePaint;
+    public enum Direccion{
+        ABAJO(1),ARRIBA(2),DERECHA(3),IZQUIERDA(4);
+
+        private int nDireccion;
+
+        Direccion(int nDireccion){
+            this.nDireccion = nDireccion;
+        }
+        public int getNDireccion(){
+            return this.nDireccion;
+        }
+    }
+    Direccion d;
 
     /**
      * Constructor para instanciar el sprite sin darle más propiedades,
@@ -57,7 +73,7 @@ public abstract class S_Sprite{
      * Cambio de posición en el mapa
      */
     public void spriteMovimiento(){
-
+        this.setSpriteColisionRect(new RectF(this.getSpritePosX(),this.getSpritePosY(),this.getWidth(),this.getHeigh()));
     }
 
     /**
@@ -69,8 +85,13 @@ public abstract class S_Sprite{
     /**
      * Dibuja sprite en coordenadas dadas
      */
-    public void spriteDibujar(){
-
+    public void spriteDibujar(Canvas c){
+        Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
+                ,(int)_Utiles.convertDpToPixel(this.getspriteBm().getHeight()/2)
+                ,(int)_Utiles.convertDpToPixel(this.getspriteBm().getWidth()/2)
+                , false);
+        c.drawBitmap(sprite,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
+//        c.drawBitmap(this.getspriteBm(),this.spritePosX,this.getSpritePosY(),this.getSpritePaint());
     }
     /*****************************************************************/
     /*****************************************************************/
@@ -150,9 +171,12 @@ public abstract class S_Sprite{
         this.spritePosY = spritePosY;
     }
 
-    /**
-     * @return obtiene el rectándulo de colisiones
+    /***********************************************************************
+     * Métodos destinados a definir y devolver el cuadro de coolisiones
+     * Usamos la posición a partir de la que se ha dibujado el sprite,
+     * su altura y su ancho.
      */
+
     public RectF getSpriteColisionRect() {
         return spriteColisionRect;
     }
@@ -165,19 +189,13 @@ public abstract class S_Sprite{
         this.spriteColisionRect = spriteColisionRect;
     }
 
+    /************************************************************************/
+
     /**
-     *
-     * @return
+     * @return el paint de este sprite
      */
     public Paint getSpritePaint() {
         return spritePaint;
     }
 
-    /**
-     *
-     * @param spritePaint
-     */
-    public void setSpritePaint(Paint spritePaint) {
-        this.spritePaint = spritePaint;
-    }
 }

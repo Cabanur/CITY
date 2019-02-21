@@ -124,7 +124,8 @@ public class _Utiles {
         }
     }
 
-
+    // Los siguientes métodos no funcionan correctamente
+    // y por eso hemos prescindido de su uso
 
     /**
      * Fuente https://stackoverflow.com/questions/4605527/converting-pixels-to-dp
@@ -132,9 +133,9 @@ public class _Utiles {
      * @param dp A value in dp (density independent pixels) unit. Which we need to convert into pixels
      * @return A float value to represent px equivalent to dp depending on device density
      */
-    public static float convertDpToPixel(float dp){
-        return dp * (_Dimensiones.screenDpi / DisplayMetrics.DENSITY_DEFAULT);
-    }
+//    public static float convertDpToPixel(float dp){
+//        return dp * (_DimensionesDispositivo.screenDpi / DisplayMetrics.DENSITY_DEFAULT);
+//    }
 
     /**
      * Fuente https://stackoverflow.com/questions/4605527/converting-pixels-to-dp
@@ -142,9 +143,9 @@ public class _Utiles {
      * @param px Valor medido en píxels que queremos convertir a DPs
      * @return Valor float equivalente en DPs al valor de píxels dado
      */
-    public static float convertPixelsToDp(float px){
-        return px / (_Dimensiones.screenDpi / DisplayMetrics.DENSITY_DEFAULT);
-    }
+//    public static float convertPixelsToDp(float px){
+//        return px / (_DimensionesDispositivo.screenDpi / DisplayMetrics.DENSITY_DEFAULT);
+//    }
 
 
 }

@@ -2,14 +2,12 @@ package a20_pc24.city.sprites;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.util.Log;
 import android.view.MotionEvent;
 
-import a20_pc24.city._Dimensiones;
-import a20_pc24.city._Utiles;
+import a20_pc24.city._DimensionesDispositivo;
 
 public class SpPersonajePrincipal extends S_Sprite{
 
@@ -27,12 +25,13 @@ public class SpPersonajePrincipal extends S_Sprite{
             return this.nDireccion;
         }
     }
+    Direccion d;
 
     public SpPersonajePrincipal(Bitmap spriteBm){
         super(spriteBm);
         //el sprite en un principio siempre aparecerá enmedio de la pantalla
-        this.setSpritePosX((_Dimensiones.pXLargo/2)-(this.getspriteBm().getWidth()/2));
-        this.setSpritePosY((_Dimensiones.pYAlto/2)-(this.getspriteBm().getHeight()/2));
+        this.setSpritePosX((_DimensionesDispositivo.pXLargo/2)-(this.getspriteBm().getWidth()/2));
+        this.setSpritePosY((_DimensionesDispositivo.pYAlto/2)-(this.getspriteBm().getHeight()/2));
     }
 
     /**
@@ -49,47 +48,34 @@ public class SpPersonajePrincipal extends S_Sprite{
     /*****************************************************************/
     /*****************************************************************/
 
-    /**
-     * Método destinado a definir el cuadro de coolisiones
-     * Usamos la posición a partir de la que se ha dibujado el sprite,
-     * su altura y su ancho.
-     */
-    public void spriteCuadroColision(){
-        this.spriteColRect = new RectF(this.getSpritePosX(),this.getSpritePosY(),
-                this.getspriteBm().getWidth(),this.getspriteBm().getHeight());
-    }
+
 
     /**
      * Cambio de "posición"
      */
-    public void spriteMovimiento(Direccion direccion){
-
+    @Override
+    public void spriteMovimiento(){
+        super.spriteMovimiento();
     }
 
     /**
      * Sucesión de sprites que conforman la animación
      */
+    @Override
     public void spriteAnimacion(){
 
     }
     /**
      * Dibuja sprite en coordenadas dadas
      */
+    @Override
     public void spriteDibujar(Canvas c){
-
+        super.spriteDibujar(c);
     }
 
     /*****************************************************************/
     /*****************************************************************/
     /*****************************************************************/
-
-    public void dibujaMainChar(Canvas c){
-        c.drawBitmap(this.getspriteBm(),this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
-    }
-
-    public void moverPersonajePrincipal() {
-        this.setSpriteColisionRect(new RectF(this.getSpritePosX(),this.getSpritePosY(),this.getWidth(),this.getHeigh()));
-    }
 
     public int onTouchEvent(MotionEvent event) {
         int pointerIndex = event.getActionIndex();        //Obtenemos el índice de la acción
@@ -112,8 +98,8 @@ public class SpPersonajePrincipal extends S_Sprite{
 
                 float npX, npY;
                 if(pFin.x>pIni.x){  //Movimiento Derecha
-
                     npX =pFin.x;
+
                 }else{              //Movimmiento Izquierda
                     npX =pIni.x;
 
@@ -130,9 +116,9 @@ public class SpPersonajePrincipal extends S_Sprite{
                 //El pj se mueve en la dirección correspondiente al mayor desplazamiento
 
                 if(npX>npY){        //Desplazamiento horizontal
-                    this.moverPersonajePrincipal(   );
+                    this.spriteMovimiento();
                 }else{              //Desplazamiento vertical
-                    this.moverPersonajePrincipal();
+                    this.spriteMovimiento();
                 }
 
                 pIni = new PointF(event.getX(),event.getY());

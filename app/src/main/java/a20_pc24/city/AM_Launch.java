@@ -35,7 +35,7 @@ public class AM_Launch extends AppCompatActivity {
 
     //determinando tamaño pantalla en DP
         Display display = getWindowManager().getDefaultDisplay();
-        _Dimensiones determinarDimensiones=new _Dimensiones(this, display);
+        _DimensionesDispositivo determinarDimensiones=new _DimensionesDispositivo(this, display);
     //
 
         EA_EscenaActual juego = new EA_EscenaActual(this);

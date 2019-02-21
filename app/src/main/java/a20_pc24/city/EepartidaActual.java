@@ -22,9 +22,18 @@ public class EepartidaActual extends EE_EsquemaEscena{
 
     public int escenarioID;
     public int idPartida;
+
+    //Sprite
+    public SpPersonajePrincipal spPersonajePrincipal;
+    public SpPersonajePrincipal[][] spPersonajePrincipalAnda =
+            _CharacterMainSprites.spPersonajePrincipalAnda;
+
+    //Mapa
     public eejuego_PantallaMapeada[] escenariosPosibles =
             new eejuego_PantallaMapeada[]{new eejuegoCallePrincipal(), new eejuegoEdificioPB()};
     public eejuego_PantallaMapeada escenarioActual;
+
+
 
     /**
      * Extiende del esquema general de escenas.
@@ -49,15 +58,24 @@ public class EepartidaActual extends EE_EsquemaEscena{
         this.idPartida = idPartida;
         this.escenarioID = escenarioID;
 
+        //Buscamos en qué escenario nos encontramos
+
         for(int i = 0; i< escenariosPosibles.length; i++){
             if(this.escenariosPosibles[i].getEscenarioID()==this.escenarioID){
                 this.escenarioActual = this.escenariosPosibles[i];
             }
         }
 
+        //Inicializamos el sprite del personaje principal
+        this.spPersonajePrincipal = this.spPersonajePrincipalAnda[0][0];
+
+        //Redefinimos el varlor del botón atrás
+
         this.btnAtras.setBtnValue(96);      //Necesario para volver a la selección de partida.
                                             // En un futuro dará acceso al menú in-Game
-//  TODO      this.cargarPartida(idPartida);
+
+        // TODO Cargar partida
+        // this.cargarPartida(idPartida);
     }
 
     /**
@@ -66,12 +84,12 @@ public class EepartidaActual extends EE_EsquemaEscena{
      */
 
     public void dibujar(Canvas c) {
-        try {
+//        try {
             this.escenarioActual.dibujaMapa(c);
-
-        } catch (Exception e) {
-            Log.i("Error al dibujar", e.getLocalizedMessage());
-        }
+            this.spPersonajePrincipal.spriteDibujar(c);
+//        } catch (Exception e) {
+//            Log.i("Error al dibujar", e.getLocalizedMessage());
+//        }
             this.btnAtras.dibujaBoton(c);
     }
 

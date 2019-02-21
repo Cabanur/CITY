@@ -16,30 +16,26 @@ public class SP_Personajes extends S_Sprite {
     /*****************************************************************/
 
     /**
-     * Método destinado a definir el cuadro de coolisiones
-     */
-    public void spriteCuadroColision(){
-
-    }
-
-    /**
      * Cambio de posición en el mapa
      */
+    @Override
     public void spriteMovimiento(){
-
+        super.spriteMovimiento();
     }
 
     /**
      * Sucesión de sprites que conforman la animación
      */
+    @Override
     public void spriteAnimacion(){
 
     }
     /**
      * Dibuja sprite en coordenadas dadas
      */
+    @Override
     public void spriteDibujar(Canvas c){
-
+        super.spriteDibujar(c);
     }
 
     /*****************************************************************/

@@ -15,49 +15,49 @@ public final class _CharacterMainSprites {
     /*-------------------*/
     //Personaje Principal Frente
 
-    public final SpPersonajePrincipal mainCharaFront =
+    public static SpPersonajePrincipal mainCharaFront =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StaticPanda/front.png"));
-    public final SpPersonajePrincipal mainCharaBack =
+    public static SpPersonajePrincipal mainCharaBack =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StaticPanda/back.png"));
-    public final SpPersonajePrincipal mainCharaSideL =
+    public static SpPersonajePrincipal mainCharaSideL =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StaticPanda/sideL.png"));
-    public final SpPersonajePrincipal mainCharaSideR =
+    public static SpPersonajePrincipal mainCharaSideR =
             new SpPersonajePrincipal(
                     _Utiles.flipBitmapX(_Utiles.getBitmapFromAsset("panda/StaticPanda/front.png")));
     //Personaje Principal Andando Espalda
-    public final SpPersonajePrincipal mainCharaBackStep1 =
+    public static SpPersonajePrincipal mainCharaBackStep1 =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepBack/bs1.png"));
-    public final SpPersonajePrincipal mainCharaBackStep2 =
+    public static SpPersonajePrincipal mainCharaBackStep2 =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepBack/bs2.png"));
     //Personaje Principal Andando Frente
-    public final SpPersonajePrincipal mainCharaFrontStep1 =
+    public static SpPersonajePrincipal mainCharaFrontStep1 =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepFront/sf1.png"));
-    public final SpPersonajePrincipal mainCharaFrontStep2 =
+    public static SpPersonajePrincipal mainCharaFrontStep2 =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepFront/sf2.png"));
     //Personaje Principal Andando Derecha
-    public final SpPersonajePrincipal mainCharaRightStep1 =
+    public static SpPersonajePrincipal mainCharaRightStep1 =
             new SpPersonajePrincipal(
                     _Utiles.flipBitmapX(_Utiles.getBitmapFromAsset("panda/StepLeft/sL1.png")));
-    public final SpPersonajePrincipal mainCharaRightStep2 =
+    public static SpPersonajePrincipal mainCharaRightStep2 =
             new SpPersonajePrincipal(
                     _Utiles.flipBitmapX(_Utiles.getBitmapFromAsset("panda/StepLeft/sL2.png")));
-    public final SpPersonajePrincipal mainCharaRightStep3 =
+    public static SpPersonajePrincipal mainCharaRightStep3 =
             new SpPersonajePrincipal(
                     _Utiles.flipBitmapX(_Utiles.getBitmapFromAsset("panda/StepLeft/sL3.png")));
-    public final SpPersonajePrincipal mainCharaRightStep4 =
+    public static SpPersonajePrincipal mainCharaRightStep4 =
             new SpPersonajePrincipal(
                     _Utiles.flipBitmapX(_Utiles.getBitmapFromAsset("panda/StepLeft/sL4.png")));
     //Personaje Principal Andando Izquierda
-    public final SpPersonajePrincipal mainCharaLeftStep1 =
+    public static SpPersonajePrincipal mainCharaLeftStep1 =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepFront/sf1.png"));
-    public final SpPersonajePrincipal mainCharaLeftStep2 =
+    public static SpPersonajePrincipal mainCharaLeftStep2 =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepLeft/sL2.png"));
-    public final SpPersonajePrincipal mainCharaLeftStep3 =
+    public static SpPersonajePrincipal mainCharaLeftStep3 =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepLeft/sL3.png"));
-    public final SpPersonajePrincipal mainCharaLeftStep4 =
+    public static SpPersonajePrincipal mainCharaLeftStep4 =
             new SpPersonajePrincipal(_Utiles.getBitmapFromAsset("panda/StepLeft/sL4.png"));
 
-    SpPersonajePrincipal[][] spPersonajePrincipalAnda
+    public static SpPersonajePrincipal[][] spPersonajePrincipalAnda
             = new SpPersonajePrincipal[][]{
             {mainCharaFront,mainCharaBack,mainCharaSideL,mainCharaSideR},
             {mainCharaBackStep1,mainCharaBackStep2},                                            //1
