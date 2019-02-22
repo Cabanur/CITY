@@ -12,7 +12,6 @@ public final class eejuegoEdificioPB extends eejuego_PantallaMapeada {
 
     public eejuegoEdificioPB() {
         this.setEscenarioID(1);
-        this.mapaCoordEdificioPB = rellenador();
     }
 
     /*****************************************************************/

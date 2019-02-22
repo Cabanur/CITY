@@ -63,6 +63,8 @@ public class EepartidaActual extends EE_EsquemaEscena{
         for(int i = 0; i< escenariosPosibles.length; i++){
             if(this.escenariosPosibles[i].getEscenarioID()==this.escenarioID){
                 this.escenarioActual = this.escenariosPosibles[i];
+            }else{
+                this.escenarioActual = new eejuegoCallePrincipal();
             }
         }
 
@@ -85,7 +87,9 @@ public class EepartidaActual extends EE_EsquemaEscena{
 
     public void dibujar(Canvas c) {
 //        try {
-            this.escenarioActual.dibujaMapa(c);
+            this.escenarioActual.dibujaMapa(c,                          //Dibujamos el escenario actual a partir de la posición
+                    this.spPersonajePrincipal.getSpritePosX(),          //del personaje principal
+                    this.spPersonajePrincipal.getSpritePosY());
             _Tiles.CALLE_SUELO.spriteDibujar(c);
             this.spPersonajePrincipal.spriteDibujar(c,0.4f);
 //        } catch (Exception e) {
@@ -124,6 +128,7 @@ public class EepartidaActual extends EE_EsquemaEscena{
             case MotionEvent.ACTION_POINTER_UP:  // Al levantar un dedo que no es el último
                 break;
             case MotionEvent.ACTION_MOVE: // Se mueve alguno de los dedos
+
                 break;
             default:
                 Log.i("Otra acción", "Acción no definida: " + accion);

@@ -3,6 +3,8 @@ package a20_pc24.city.Escenarios;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.PointF;
+import android.util.Log;
 import android.view.MotionEvent;
 
 import java.util.ArrayList;
@@ -31,6 +33,8 @@ public class eejuego_PantallaMapeada {
     private ArrayList<S_Sprite> elementosMapa;          //Elementos mapa es el array que contiene todos los tiles que habrá en el mapa
     public Bitmap mapaMontado;                          //El método montar mapa genera este bitmap.
     public static ST_TileSprite[][] mapaCoord;
+
+    PointF posicionInicialPersonajePrincial = new PointF(2, 14);
 
     public eejuego_PantallaMapeada(){
         ST_TileSprite[][] mapaCoord = this.rellenador();
@@ -94,8 +98,7 @@ public class eejuego_PantallaMapeada {
     public void dibujaMapa(Canvas c){
 
         c.drawColor(Color.BLACK);
-        int incremento = _Tiles.PLACEHOLDER.getSpriteDPsY();        //Puedo hacer esto porque
-                                                                    // el tamaño de todos los tiles es 64^2
+        int incremento = _Tiles.PLACEHOLDER.getSpriteDPsY();        //Dibujamos en función de la altura
 
         for(int i = 0, posX = 0; i < this.mapaCoord.length; i++, posX+=incremento){
             for(int j = 0, posY = 0; j < this.mapaCoord[i].length; j++, posY+=incremento){
@@ -103,6 +106,33 @@ public class eejuego_PantallaMapeada {
                 this.mapaCoord[i][j].setSpritePosX(posX);
                 this.mapaCoord[i][j].spriteDibujar(c);
             }
+        }
+    }
+
+    /**
+     * Dibuja el mapa a partir de la posición correspondiente del personaje
+     * @param c
+     * @param coordX
+     * @param coordY
+     */
+
+    public void dibujaMapa(Canvas c, float coordX, float coordY){
+
+        c.drawColor(Color.BLACK);
+
+        float isY = coordY;
+
+        int incremento = _Tiles.PLACEHOLDER.getSpriteDPsY();        //Dibujamos en función de la altura
+
+        for(int i = 0; i < this.mapaCoord.length; i++, coordX+=incremento){
+            for(int j = 0; j < this.mapaCoord[i].length; j++, coordY+=incremento){
+                Log.i("COORDS","COORDX "+coordX+" COORDY "+coordY);
+                Log.i("index","i  "+i+" j "+j);
+                this.mapaCoord[i][j].setSpritePosY(coordY);
+                this.mapaCoord[i][j].setSpritePosX(coordX);
+                this.mapaCoord[i][j].spriteDibujar(c);
+            }
+            coordY = isY;
         }
     }
 

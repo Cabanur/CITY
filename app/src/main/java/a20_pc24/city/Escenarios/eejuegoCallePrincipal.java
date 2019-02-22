@@ -2,6 +2,7 @@ package a20_pc24.city.Escenarios;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.PointF;
 
 import a20_pc24.city._Tiles;
 import a20_pc24.city.sprites.ST_TileSprite;
@@ -9,7 +10,7 @@ import a20_pc24.city.sprites.ST_TileSprite;
 //Escenario 0
 
 public final class eejuegoCallePrincipal extends eejuego_PantallaMapeada {
-
+    PointF posicionInicialPersonajePrincial = new PointF(2, 14);
     public eejuegoCallePrincipal() {
         this.setEscenarioID(0);
     }
