@@ -102,8 +102,8 @@ public abstract class S_Sprite{
      */
     public void spriteDibujar(Canvas c){
         Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
-                , (int)this.getWidth()
-                , (int)this.getHeight()
+                , this.SpriteDPsX
+                , this.SpriteDPsY
                 , false);
         c.drawBitmap(sprite,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
     }
@@ -120,6 +120,21 @@ public abstract class S_Sprite{
                 , _DimensionesDispositivo.getDpAlto(this.getspriteBm().getHeight()*aumento)
                 , false);
         c.drawBitmap(sprite,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
+    }
+
+    /**
+     *
+     * @param c
+     * @param coordX
+     * @param coordY
+     * @param aumento
+     */
+    public void spriteDibujar(Canvas c, float coordX, float coordY, float aumento){
+        Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
+                , _DimensionesDispositivo.getDpAlto(this.getspriteBm().getWidth()*aumento)
+                , _DimensionesDispositivo.getDpAlto(this.getspriteBm().getHeight()*aumento)
+                , false);
+        c.drawBitmap(sprite,coordX,coordY,this.getSpritePaint());
     }
     /*****************************************************************/
     /*****************************************************************/

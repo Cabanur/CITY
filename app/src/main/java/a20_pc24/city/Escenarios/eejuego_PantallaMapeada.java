@@ -2,6 +2,8 @@ package a20_pc24.city.Escenarios;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.view.MotionEvent;
 
 import java.util.ArrayList;
 
@@ -91,7 +93,9 @@ public class eejuego_PantallaMapeada {
 
     public void dibujaMapa(Canvas c){
 
+        c.drawColor(Color.BLACK);
         int incremento = _Tiles.PLACEHOLDER.getSpriteDPsY();        //Puedo hacer esto porque
+                                                                    // el tamaño de todos los tiles es 64^2
 
         for(int i = 0, posX = 0; i < this.mapaCoord.length; i++, posX+=incremento){
             for(int j = 0, posY = 0; j < this.mapaCoord[i].length; j++, posY+=incremento){
@@ -125,4 +129,12 @@ public class eejuego_PantallaMapeada {
         return this.mapaCoord;
     }
 
+    /**
+     *
+     * @param event
+     * @return
+     */
+    public int onTouchEvent(MotionEvent event) {
+        return 0;
+    }
 }

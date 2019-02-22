@@ -61,23 +61,29 @@ public class EeJuego_aSeleccionPartida extends EE_EsquemaEscena {
         this.btnArrayList.add(this.btnAtras);
 
         //Añado todos los tiles que voy a usar en esta escena en un arraylist
-        this._TilesArrayList = new ArrayList<>();
-
-        this._TilesArrayList.add(_Tiles.MENU_SPOT);
-        this._TilesArrayList.add(_Tiles.MENU_CROSS);
-        this._TilesArrayList.add(_Tiles.MENU_CIRCLE);
+//        this._TilesArrayList = new ArrayList<>();
+//
+//        this._TilesArrayList.add(_Tiles.MENU_SPOT);
+//        this._TilesArrayList.add(_Tiles.MENU_CROSS);
+//        this._TilesArrayList.add(_Tiles.MENU_CIRCLE);
     }
 
     public void dibujar(Canvas c) {
         try{
-            for(int i=0;i<getAltoPantalla();i+=_Tiles.PLACEHOLDER.getHeight()){
-                for(int j=0;j<getAnchoPantalla();j+=_Tiles.PLACEHOLDER.getHeight()){
-                    c.drawBitmap(this._TilesArrayList.get(
-                            this._TilesArrayList.indexOf(_Tiles.MENU_SPOT)).getspriteBm(),j,i,null);
-                    c.drawBitmap(this._TilesArrayList.get(
-                            this._TilesArrayList.indexOf(_Tiles.MENU_CIRCLE)).getspriteBm(),j,i,null);
-                    c.drawBitmap(this._TilesArrayList.get(
-                            this._TilesArrayList.indexOf(_Tiles.MENU_CROSS)).getspriteBm(),j,i,null);
+            c.drawColor(Color.WHITE);
+            int incremento = _Tiles.PLACEHOLDER.getSpriteDPsX();
+
+            for(int i=0;i<getAltoPantalla();i+=incremento){
+                for(int j=0;j<getAnchoPantalla();j+=incremento){
+//                    c.drawBitmap(this._TilesArrayList.get(
+//                            this._TilesArrayList.indexOf(_Tiles.MENU_SPOT)).getspriteBm(),j,i,null);
+//                    c.drawBitmap(this._TilesArrayList.get(
+//                            this._TilesArrayList.indexOf(_Tiles.MENU_CIRCLE)).getspriteBm(),j,i,null);
+//                    c.drawBitmap(this._TilesArrayList.get(
+//                            this._TilesArrayList.indexOf(_Tiles.MENU_CROSS)).getspriteBm(),j,i,null);
+                    _Tiles.MENU_SPOT.spriteDibujar(c,j,i,1);
+                    _Tiles.MENU_CIRCLE.spriteDibujar(c,j,i,1);
+                    _Tiles.MENU_CROSS.spriteDibujar(c,j,i,1);
                 }
             }
 
