@@ -47,11 +47,11 @@ public abstract class S_Sprite{
     }
 
     public int getSpriteDPsX(){
-        return _DimensionesDispositivo.getDpAncho(this.getWidth());
+        return _DimensionesDispositivo.getDpAlto(this.getWidth());
     }
 
     public int getSpriteDPsY(){
-        return _DimensionesDispositivo.getDpAlto(this.getHeigh());
+        return _DimensionesDispositivo.getDpAlto(this.getHeight());
     }
 
     /**
@@ -86,7 +86,7 @@ public abstract class S_Sprite{
      * Cambio de posición en el mapa
      */
     public void spriteMovimiento(){
-        this.setSpriteColisionRect(new RectF(this.getSpritePosX(),this.getSpritePosY(),this.getWidth(),this.getHeigh()));
+        this.setSpriteColisionRect(new RectF(this.getSpritePosX(),this.getSpritePosY(),this.getWidth(),this.getHeight()));
     }
 
     /**
@@ -95,16 +95,31 @@ public abstract class S_Sprite{
     public void spriteAnimacion(){
 
     }
+
     /**
-     * Dibuja sprite en coordenadas dadas
+     *
+     * @param c
      */
     public void spriteDibujar(Canvas c){
         Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
-                , this.getSpriteDPsX()
-                , this.getSpriteDPsY()
+                , (int)this.getWidth()
+                , (int)this.getHeight()
                 , false);
         c.drawBitmap(sprite,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
-//        c.drawBitmap(this.getspriteBm(),this.spritePosX,this.getSpritePosY(),this.getSpritePaint());
+    }
+
+    /**
+     *
+     * @param c
+     * @param aumento
+     */
+
+    public void spriteDibujar(Canvas c, float aumento){
+        Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
+                , _DimensionesDispositivo.getDpAlto(this.getspriteBm().getWidth()*aumento)
+                , _DimensionesDispositivo.getDpAlto(this.getspriteBm().getHeight()*aumento)
+                , false);
+        c.drawBitmap(sprite,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
     }
     /*****************************************************************/
     /*****************************************************************/
@@ -135,7 +150,7 @@ public abstract class S_Sprite{
     /**
      * @return el alto del sprite
      */
-    public float getHeigh(){
+    public float getHeight(){
         return this.spriteBm.getHeight();
     }
 

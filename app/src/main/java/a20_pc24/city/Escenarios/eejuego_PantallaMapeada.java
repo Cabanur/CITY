@@ -91,8 +91,7 @@ public class eejuego_PantallaMapeada {
 
     public void dibujaMapa(Canvas c){
 
-        int incremento = _Tiles.PLACEHOLDER.getSpriteDPsX();        //Puedo hacer esto porque
-                                                                    //el tamaño de los tiles es siempre el mismo
+        int incremento = _Tiles.PLACEHOLDER.getSpriteDPsY();        //Puedo hacer esto porque
 
         for(int i = 0, posX = 0; i < this.mapaCoord.length; i++, posX+=incremento){
             for(int j = 0, posY = 0; j < this.mapaCoord[i].length; j++, posY+=incremento){

@@ -86,7 +86,8 @@ public class EepartidaActual extends EE_EsquemaEscena{
     public void dibujar(Canvas c) {
 //        try {
             this.escenarioActual.dibujaMapa(c);
-            this.spPersonajePrincipal.spriteDibujar(c);
+            _Tiles.CALLE_SUELO.spriteDibujar(c);
+            this.spPersonajePrincipal.spriteDibujar(c,0.4f);
 //        } catch (Exception e) {
 //            Log.i("Error al dibujar", e.getLocalizedMessage());
 //        }
