@@ -1,12 +1,16 @@
-package a20_pc24.city.Escenarios;
+package a20_pc24.city.escenarios;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
-public class eejuegoEdificioP2 extends eejuego_PantallaMapeada {
-    public eejuegoEdificioP2() {
+import a20_pc24.city.sprites.ST_TileSprite;
 
+public final class eejuegoEdificioPB extends eejuego_PantallaMapeada {
 
+    public static ST_TileSprite[][] mapaCoordEdificioPB;
+
+    public eejuegoEdificioPB() {
+        this.setEscenarioID(1);
     }
 
     /*****************************************************************/
@@ -23,8 +27,8 @@ public class eejuegoEdificioP2 extends eejuego_PantallaMapeada {
      * ya que es un método genérico para todos los escenarios
      */
     @Override
-    public void dibujaMapa(Canvas c){
-        super.dibujaMapa(c);
+    public void dibujaMapa(Canvas c, float aumento){
+        super.dibujaMapa(c, aumento);
     }
 
     @Override

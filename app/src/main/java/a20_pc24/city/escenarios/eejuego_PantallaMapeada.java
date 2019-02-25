@@ -1,4 +1,4 @@
-package a20_pc24.city.Escenarios;
+package a20_pc24.city.escenarios;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -9,8 +9,8 @@ import android.view.MotionEvent;
 
 import java.util.ArrayList;
 
+import a20_pc24.city._DimensionesDispositivo;
 import a20_pc24.city._Tiles;
-import a20_pc24.city._Utiles;
 import a20_pc24.city.sprites.ST_TileSprite;
 import a20_pc24.city.sprites.S_Sprite;
 
@@ -95,7 +95,7 @@ public class eejuego_PantallaMapeada {
      *      Pintará el bitmap @mapaMontado tomando como referencia la posición
      */
 
-    public void dibujaMapa(Canvas c){
+    public void dibujaMapa(Canvas c, float aumento){
 
         c.drawColor(Color.BLACK);
         int incremento = _Tiles.PLACEHOLDER.getSpriteDPsY();        //Dibujamos en función de la altura
@@ -104,36 +104,39 @@ public class eejuego_PantallaMapeada {
             for(int j = 0, posY = 0; j < this.mapaCoord[i].length; j++, posY+=incremento){
                 this.mapaCoord[i][j].setSpritePosY(posY);
                 this.mapaCoord[i][j].setSpritePosX(posX);
-                this.mapaCoord[i][j].spriteDibujar(c);
+                this.mapaCoord[i][j].spriteDibujar(c, aumento);
             }
         }
     }
 
     /**
-     * Dibuja el mapa a partir de la posición correspondiente del personaje
+     * Tomando como centro [coordX, coordY] dibuja el mapa
      * @param c
      * @param coordX
      * @param coordY
+     * @param aumento
      */
-
-    public void dibujaMapa(Canvas c, float coordX, float coordY){
+    public void dibujaMapa(Canvas c, float coordX, float coordY, float aumento){
 
         c.drawColor(Color.BLACK);
 
         float isY = coordY;
 
-        int incremento = _Tiles.PLACEHOLDER.getSpriteDPsY();        //Dibujamos en función de la altura
+        int incremento = _Tiles.PLACEHOLDER.getSpriteDPsY();        //Todos los tiles tiene las mismas dimensiones
 
-        for(int i = 0; i < this.mapaCoord.length; i++, coordX+=incremento){
-            for(int j = 0; j < this.mapaCoord[i].length; j++, coordY+=incremento){
-                Log.i("COORDS","COORDX "+coordX+" COORDY "+coordY);
-                Log.i("index","i  "+i+" j "+j);
-                this.mapaCoord[i][j].setSpritePosY(coordY);
-                this.mapaCoord[i][j].setSpritePosX(coordX);
-                this.mapaCoord[i][j].spriteDibujar(c);
-            }
-            coordY = isY;
-        }
+        float posicionInicioDibujoDPY = _DimensionesDispositivo.getDpAlto(_DimensionesDispositivo.pYAlto);
+        float posicionInicioDibujoDPX = _DimensionesDispositivo.getDpAlto(_DimensionesDispositivo.pXLargo);
+
+//        for(int i = 0; i < this.mapaCoord.length; i++, coordX+=incremento){
+//            for(int j = 0; j < this.mapaCoord[i].length; j++, coordY+=incremento){
+//                Log.i("COORDS","COORDX "+coordX+" COORDY "+coordY);
+//                Log.i("index","i  "+i+" j "+j);
+//                this.mapaCoord[i][j].setSpritePosY(coordY);
+//                this.mapaCoord[i][j].setSpritePosX(coordX);
+//                this.mapaCoord[i][j].spriteDibujar(c);
+//            }
+//            coordY = isY;
+//        }
     }
 
     public void actualizarMapa(){
@@ -153,7 +156,7 @@ public class eejuego_PantallaMapeada {
         this.mapaCoord = new ST_TileSprite[20][15];
         for(int i = 0; i<this.mapaCoord.length;i++){
             for(int j = 0; j<this.mapaCoord[i].length;j++){
-                this.mapaCoord[i][j]= _Tiles.CALLE_SUELO;
+                this.mapaCoord[i][j]= _Tiles.PLACEHOLDER;
             }
         }
         return this.mapaCoord;

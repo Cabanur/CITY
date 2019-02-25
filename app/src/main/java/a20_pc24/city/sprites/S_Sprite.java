@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
+import android.util.Log;
 
 import a20_pc24.city._DimensionesDispositivo;
 import a20_pc24.city._Utiles;
@@ -116,8 +117,8 @@ public abstract class S_Sprite{
 
     public void spriteDibujar(Canvas c, float aumento){
         Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
-                , _DimensionesDispositivo.getDpAlto(this.getspriteBm().getWidth()*aumento)
-                , _DimensionesDispositivo.getDpAlto(this.getspriteBm().getHeight()*aumento)
+                , (int)_DimensionesDispositivo.getDpAlto(this.getspriteBm().getWidth()*aumento)
+                , (int)_DimensionesDispositivo.getDpAlto(this.getspriteBm().getHeight()*aumento)
                 , false);
         c.drawBitmap(sprite,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
     }
@@ -130,9 +131,17 @@ public abstract class S_Sprite{
      * @param aumento
      */
     public void spriteDibujar(Canvas c, float coordX, float coordY, float aumento){
+
+        int plusH =(_DimensionesDispositivo.getDpAlto(this.getspriteBm().getWidth()));
+        int plusV =(_DimensionesDispositivo.getDpAlto(this.getspriteBm().getHeight()));
+
+//        Log.i("X",plusH+"");
+//        Log.i("Y",plusV+"");
+//        Log.i("Y",aumento+"");
+
         Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
-                , _DimensionesDispositivo.getDpAlto(this.getspriteBm().getWidth()*aumento)
-                , _DimensionesDispositivo.getDpAlto(this.getspriteBm().getHeight()*aumento)
+                , (int)(plusH*aumento)
+                , (int)(plusV*aumento)
                 , false);
         c.drawBitmap(sprite,coordX,coordY,this.getSpritePaint());
     }

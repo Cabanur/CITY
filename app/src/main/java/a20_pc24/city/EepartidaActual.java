@@ -1,18 +1,13 @@
 package a20_pc24.city;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 
-import a20_pc24.city.Escenarios.eejuegoCallePrincipal;
-import a20_pc24.city.Escenarios.eejuegoEdificioPB;
-import a20_pc24.city.Escenarios.eejuego_PantallaMapeada;
+import a20_pc24.city.escenarios.eejuegoCallePrincipal;
+import a20_pc24.city.escenarios.eejuegoEdificioPB;
+import a20_pc24.city.escenarios.eejuego_PantallaMapeada;
 import a20_pc24.city.sprites.SpPersonajePrincipal;
 
 //Clase destinada a cargar la partida guardada
@@ -87,10 +82,8 @@ public class EepartidaActual extends EE_EsquemaEscena{
 
     public void dibujar(Canvas c) {
 //        try {
-            this.escenarioActual.dibujaMapa(c,                          //Dibujamos el escenario actual a partir de la posición
-                    this.spPersonajePrincipal.getSpritePosX(),          //del personaje principal
-                    this.spPersonajePrincipal.getSpritePosY());
-            _Tiles.CALLE_SUELO.spriteDibujar(c);
+            this.escenarioActual.dibujaMapa(c,0.9f);                                 //Dibujamos el escenario actual
+
             this.spPersonajePrincipal.spriteDibujar(c,0.4f);
 //        } catch (Exception e) {
 //            Log.i("Error al dibujar", e.getLocalizedMessage());
