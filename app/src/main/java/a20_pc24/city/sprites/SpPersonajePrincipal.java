@@ -8,11 +8,14 @@ import android.util.Log;
 import android.view.MotionEvent;
 
 import a20_pc24.city._DimensionesDispositivo;
+import a20_pc24.city._Utiles;
+import a20_pc24.city.escenarios.eejuego_PantallaMapeada;
 
 public class SpPersonajePrincipal extends S_Sprite{
+        //el sprite en un principio siempre aparecerá enmedio de la pantalla
 
-    PointF pIni, pFin;
-    RectF spriteColRect;
+    public PointF pIni, pFin;
+    public RectF spriteColRect;
     public enum Direccion{
         ABAJO(1),ARRIBA(2),DERECHA(3),IZQUIERDA(4);
 
@@ -25,13 +28,11 @@ public class SpPersonajePrincipal extends S_Sprite{
             return this.nDireccion;
         }
     }
-    Direccion d;
+    public Direccion d;
+    public eejuego_PantallaMapeada mapa;
 
     public SpPersonajePrincipal(Bitmap spriteBm){
         super(spriteBm);
-        //el sprite en un principio siempre aparecerá enmedio de la pantalla
-        this.setSpritePosX((_DimensionesDispositivo.pXLargo/2)-(this.getspriteBm().getWidth()/2));
-        this.setSpritePosY((_DimensionesDispositivo.pYAlto/2)-(this.getspriteBm().getHeight()/2));
     }
 
     /**
@@ -73,6 +74,25 @@ public class SpPersonajePrincipal extends S_Sprite{
         super.spriteDibujar(c);
     }
 
+    /**
+     * Dibuja sprite en coordenadas dadas
+     */
+    @Override
+    public void spriteDibujar(Canvas c, float escala){
+        this.setSpritePosX(_Utiles.posicionaSpriteMedioX(this, escala));
+        this.setSpritePosY(_Utiles.posicionaSpriteMedioY(this, escala));
+        super.spriteDibujar(c, escala);
+    }
+
+    /**
+     * Dibuja sprite en coordenadas dadas
+     */
+    @Override
+    public void spriteDibujar(Canvas c, float coordX, float coordY, float escala){
+        this.setSpritePosX(coordX);
+        this.setSpritePosY(coordY);
+        super.spriteDibujar(c, escala);
+    }
     /*****************************************************************/
     /*****************************************************************/
     /*****************************************************************/

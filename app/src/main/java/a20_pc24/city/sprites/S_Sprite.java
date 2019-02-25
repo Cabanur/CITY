@@ -16,10 +16,11 @@ import a20_pc24.city._Utiles;
 
 public abstract class S_Sprite{
 
-    private PointF spritePos;                //Posición en que se coloca el sprite
+    private PointF spritePos;                       //Posición en que se coloca el sprite
     private float spritePosX, spritePosY;           //Coordenadas que componen spritePos
-    private Bitmap spriteBm;               //Imagen del sprite
-    private RectF spriteColisionRect;        //Cuadrado creado a partir del sprite que determina sus límites
+
+    private Bitmap spriteBm;                    //Imagen del sprite
+    private RectF spriteColisionRect;           //Cuadrado creado a partir del sprite que determina sus límites
     private Paint spritePaint;
     public enum Direccion{
         ABAJO(1),ARRIBA(2),DERECHA(3),IZQUIERDA(4);
@@ -34,7 +35,7 @@ public abstract class S_Sprite{
         }
     }
     Direccion d;
-    private int SpriteDPsX, SpriteDPsY;
+    private int spriteDPsX, spriteDPsY;
 
     /**
      * Constructor para instanciar el sprite sin darle más propiedades,
@@ -43,8 +44,8 @@ public abstract class S_Sprite{
      */
     public S_Sprite(Bitmap spriteBm){
         this.spriteBm = spriteBm;
-        this.SpriteDPsX = getSpriteDPsX();
-        this.SpriteDPsY = getSpriteDPsY();
+        this.spriteDPsX = getSpriteDPsX();
+        this.spriteDPsY = getSpriteDPsY();
     }
 
     public int getSpriteDPsX(){
@@ -103,8 +104,8 @@ public abstract class S_Sprite{
      */
     public void spriteDibujar(Canvas c){
         Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
-                , this.SpriteDPsX
-                , this.SpriteDPsY
+                , this.spriteDPsX
+                , this.spriteDPsY
                 , false);
         c.drawBitmap(sprite,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
     }
@@ -116,9 +117,11 @@ public abstract class S_Sprite{
      */
 
     public void spriteDibujar(Canvas c, float aumento){
+        this.spriteDPsX*=aumento;
+        this.spriteDPsY*=aumento;
         Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
-                , (int)_DimensionesDispositivo.getDpAlto(this.getspriteBm().getWidth()*aumento)
-                , (int)_DimensionesDispositivo.getDpAlto(this.getspriteBm().getHeight()*aumento)
+                , (int)(this.getSpriteDPsX()*aumento)
+                , (int)(this.getSpriteDPsY()*aumento)
                 , false);
         c.drawBitmap(sprite,this.getSpritePosX(),this.getSpritePosY(),this.getSpritePaint());
     }
@@ -132,16 +135,10 @@ public abstract class S_Sprite{
      */
     public void spriteDibujar(Canvas c, float coordX, float coordY, float aumento){
 
-        int plusH =(_DimensionesDispositivo.getDpAlto(this.getspriteBm().getWidth()));
-        int plusV =(_DimensionesDispositivo.getDpAlto(this.getspriteBm().getHeight()));
-
-//        Log.i("X",plusH+"");
-//        Log.i("Y",plusV+"");
-//        Log.i("Y",aumento+"");
-
-        Bitmap sprite = Bitmap.createScaledBitmap(this.getspriteBm()
-                , (int)(plusH*aumento)
-                , (int)(plusV*aumento)
+        Bitmap sprite = Bitmap.createScaledBitmap(
+                this.getspriteBm()
+                , (int)(this.getSpriteDPsX()*aumento)
+                , (int)(this.getSpriteDPsY()*aumento)
                 , false);
         c.drawBitmap(sprite,coordX,coordY,this.getSpritePaint());
     }

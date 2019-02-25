@@ -16,6 +16,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 import a20_pc24.city.sprites.ST_TileSprite;
+import a20_pc24.city.sprites.S_Sprite;
 
 public class _Utiles {
 
@@ -124,28 +125,22 @@ public class _Utiles {
         }
     }
 
-    // Los siguientes métodos no funcionan correctamente
-    // y por eso hemos prescindido de su uso
+    /**
+     *
+     * @param sprite
+     * @return
+     */
+    public static float posicionaSpriteMedioX(S_Sprite sprite, float escala){
+        return _DimensionesDispositivo.screenMiddleDPsX-((sprite.getSpriteDPsX()*escala)/2);
+    }
 
     /**
-     * Fuente https://stackoverflow.com/questions/4605527/converting-pixels-to-dp
      *
-     * @param dp A value in dp (density independent pixels) unit. Which we need to convert into pixels
-     * @return A float value to represent px equivalent to dp depending on device density
+     * @param sprite
+     * @return
      */
-//    public static float convertDpToPixel(float dp){
-//        return dp * (_DimensionesDispositivo.screenDpi / DisplayMetrics.DENSITY_DEFAULT);
-//    }
-
-    /**
-     * Fuente https://stackoverflow.com/questions/4605527/converting-pixels-to-dp
-     *
-     * @param px Valor medido en píxels que queremos convertir a DPs
-     * @return Valor float equivalente en DPs al valor de píxels dado
-     */
-//    public static float convertPixelsToDp(float px){
-//        return px / (_DimensionesDispositivo.screenDpi / DisplayMetrics.DENSITY_DEFAULT);
-//    }
-
+    public static float posicionaSpriteMedioY(S_Sprite sprite, float escala){
+        return _DimensionesDispositivo.screenMiddleDPsY-((sprite.getSpriteDPsY()*escala)/2);
+    }
 
 }

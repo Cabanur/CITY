@@ -2,6 +2,7 @@ package a20_pc24.city;
 
 import android.content.Context;
 import android.graphics.Point;
+import android.graphics.PointF;
 import android.util.DisplayMetrics;
 import android.view.Display;
 
@@ -19,8 +20,8 @@ public class _DimensionesDispositivo {
     public static float pXLargo;
     public static float pYAlto;
 
-    public static float _TileProporcion = pYAlto/11;
-
+    public static float screenMiddleDPsX;
+    public static float screenMiddleDPsY;
 
     /**
      * Una vez se crea "_DimensionesDispositivo" lanza los métodos que dan valor a las medidas
@@ -39,6 +40,11 @@ public class _DimensionesDispositivo {
         this.setPxSizeY(p.y);
         this.setPxSizeX(p.x);
 
+        this.screenDPsX = _DimensionesDispositivo.getDpAltoF(pXLargo);
+        this.screenDPsY = _DimensionesDispositivo.getDpAltoF(pYAlto);
+
+        this.screenMiddleDPsX = screenDPsX/2;
+        this.screenMiddleDPsY = screenDPsY/2;
 //        this.setDPsX();
 //        this.setDPsY();
     }
@@ -121,45 +127,8 @@ public class _DimensionesDispositivo {
     /******************************************************************************/
     /******************************************************************************/
     /**MÉTODOS DE JAVI PARA LA GESTIÓN DE DPs**************************************/
+    /******************************************ALTO EDITION************************/
     /******************************************************************************/
-    /******************************************************************************/
-
-    /**
-     * Calculo de las coordenada x en relacion al una pantalla de 1208x775
-     * @param pixels INT coordenada en pixses en realcion a una pantalla de 1208x775
-     * @return INT coordenada adaptada a la resolucion del dispositivo
-     */
-    public static int getDpAncho(int pixels){
-        return (int)((pixels/12.08)*_DimensionesDispositivo.pXLargo)/100;
-    }
-
-    /**
-     * Calculo de las coordenada x en relacion al una pantalla de 1208x775
-     * @param pixels FLOAT coordenada en pixses en realcion a una pantalla de 1208x775
-     * @return INT coordenada adaptada a la resolucion del dispositivo
-     */
-    public static int getDpAncho(float pixels){
-        return (int)((pixels/12.08)*_DimensionesDispositivo.pXLargo)/100;
-    }
-    /**
-     * Calculo de las coordenada x en relacion al una pantalla de 1208x775
-     * @param pixels INT coordenada en pixses en realcion a una pantalla de 1208x775
-     * @return FLOAT coordenada adaptada a la resolucion del dispositivo
-     */
-
-    public static float getDpAnchoF(int pixels){
-        return (float)((pixels/12.08)*_DimensionesDispositivo.pXLargo)/100;
-    }
-
-    /**
-     * Calculo de las coordenada x en relacion al una pantalla de 1208x775
-     * @param pixels FLOAT coordenada en pixses en realcion a una pantalla de 1208x775
-     * @return FLOAT coordenada adaptada a la resolucion del dispositivo
-     */
-
-    public static float getDpAnchoF(float pixels){
-        return (float)((pixels/12.08)*_DimensionesDispositivo.pXLargo)/100;
-    }
 
     /**
      * Calculo de las coordenada y en relacion al una pantalla de 1208x775

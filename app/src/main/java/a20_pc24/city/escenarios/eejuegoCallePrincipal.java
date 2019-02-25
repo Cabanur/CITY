@@ -7,7 +7,10 @@ import android.graphics.PointF;
 //Escenario 0
 
 public final class eejuegoCallePrincipal extends eejuego_PantallaMapeada {
-    PointF posicionInicialPersonajePrincial = new PointF(2, 14);
+
+    public PointF posicionInicialPersonajePrincial = new PointF(2, 14);
+    public float escalaEscenarioPersonajePrincipal = 0.4f;
+
     public eejuegoCallePrincipal() {
         this.setEscenarioID(0);
     }

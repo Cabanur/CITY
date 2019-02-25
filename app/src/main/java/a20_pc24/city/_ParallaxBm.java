@@ -14,7 +14,7 @@ public class _ParallaxBm {
 
     public _ParallaxBm(Bitmap imgParallax, float imgParallaxVelocidad, float imgParallaxPosX, float imgParallaxPosY, boolean movimientoVerticalUHorizontal) {
         this.imgParallax = Bitmap.createScaledBitmap(imgParallax, (int) _DimensionesDispositivo.pXLargo, (int) _DimensionesDispositivo.pYAlto, false);
-        this.imgParallaxVelocidad = _DimensionesDispositivo.getDpAnchoF(imgParallaxVelocidad);
+        this.imgParallaxVelocidad = _DimensionesDispositivo.getDpAltoF(imgParallaxVelocidad);
         this.imgParallaxPosX = imgParallaxPosX;
         this.imgParallaxPosY = imgParallaxPosY;
 

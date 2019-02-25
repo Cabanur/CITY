@@ -12,4 +12,8 @@ public final class _TamanyosEstandar {
 
     //Botones
     public static float _TamanyoBordeBotonFino = _DimensionesDispositivo.getDpAlto(1);
+
+    //Escalado
+    public static float _EscalaCalleSpritePrincipal = 0.4f;
+    public static float _Escala1_1 = 1f;
 }
