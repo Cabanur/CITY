@@ -23,12 +23,12 @@ public class eejuego_PantallaMapeada {
 
     private int escenarioID;                            //Cada clase tiene un ID
     private ArrayList<S_Sprite> elementosMapa;          //Elementos mapa es el array que contiene todos los tiles que habrá en el mapa
-    public static ST_TileSprite[][] mapaCoord;
+    public ST_TileSprite[][] mapaCoord;
+    public ST_TileSprite[][] tilesVisibles;
     public Bitmap mapaMontado;                          //El método montar mapa genera este bitmap.
-    private Point posicionInicialPersonajePrincial = new Point(2, 14);
+    private Point posicionInicialPersonajePrincial = new Point( 10, 10);
     public float escalaEscenarioPersonajePrincipal = _TamanyosEstandar._EscalaCalleSpritePrincipal;
     public float escalaEscenarioDefecto = _TamanyosEstandar._Escala1_1;
-
     public float tileCentralPosXOrigen;
     public float tileCentralPosXFin;
     public float tileCentralPosYOrigen;
@@ -129,73 +129,172 @@ public class eejuego_PantallaMapeada {
      */
     public void dibujaMapa(Canvas c){
 
-        ST_TileSprite tileCentral = this.mapaCoord[this.getPosicionInicialPersonajePrincial().x]
-                [this.getPosicionInicialPersonajePrincial().y];
-
         c.drawColor(Color.BLACK);
 
-
+        /*******************************************************/
+        // Usamos las coordenadas del personaje principal
+        // para determinar la posición del tile central en el array
+        ST_TileSprite tileCentral = this.mapaCoord
+                    [this.getPosicionInicialPersonajePrincial().x]          //Corresponde a mapaCoordenadas[x][]
+                    [this.getPosicionInicialPersonajePrincial().y];         //Corresponde a mapaCoordenadas[][y]
         /*******************************************************/
         //Determina los 4 puntos de tileCentral
 
         //x
-        this.tileCentralPosXOrigen =
-                _Utiles.posicionaSpriteMedioX(tileCentral, this.escalaEscenarioDefecto);
-        this.tileCentralPosXFin =
+        tileCentral.setSpritePosX(_Utiles.posicionaSpriteMedioX(tileCentral, this.escalaEscenarioDefecto));
+        this.tileCentralPosXOrigen =                                        //left
+                tileCentral.getSpritePosX();
+        this.tileCentralPosXFin =                                           //right
                 tileCentralPosXOrigen+tileCentral.getSpriteDPsX();
 
         //y
-        this.tileCentralPosYOrigen =
-                _Utiles.posicionaSpriteMedioY(tileCentral, this.escalaEscenarioDefecto);
-        this.tileCentralPosYFin =
+        tileCentral.setSpritePosY(_Utiles.posicionaSpriteMedioY(tileCentral, this.escalaEscenarioDefecto));
+        this.tileCentralPosYOrigen =                                        //top
+                tileCentral.getSpritePosY();
+        this.tileCentralPosYFin =                                           //bottom
                 tileCentralPosYOrigen+tileCentral.getSpriteDPsY();
+        Log.i("tileCentralPosXOrigen ","XIni "+tileCentralPosXOrigen);
+        Log.i("tileCentralPosXFin ","XFin "+tileCentralPosXFin);
+        Log.i("tileCentralPosYOrigen ","YIni "+tileCentralPosYOrigen);
+        Log.i("tileCentralPosYFin ","YFin "+tileCentralPosYFin);
 
+        tileCentral.spriteDibujar(c);
         /*******************************************************/
         //Determina cuántos tiles caben en el eje vertical y horizontal
 
-        float numTilesHorizontal =
-                _DimensionesDispositivo.getDpAltoF(
-                        _DimensionesDispositivo.screenDPsX)/tileCentral.getSpriteDPsX();
-        float numTilesVertical =
-                _DimensionesDispositivo.getDpAltoF(
-                        _DimensionesDispositivo.screenDPsY)/tileCentral.getSpriteDPsY();
-        /*******************************************************/
-        //Determina en qué coordenada empieza a dibujar
-        // para poder cargar sólo los tiles visibles
 
-        float numTilesMitadHorizontal = numTilesHorizontal/2;
-        if(numTilesMitadHorizontal%2==0){
+        float numTilesHorizontal =
+                        _DimensionesDispositivo.screenDPsX/tileCentral.getSpriteDPsX();
+        float numTilesVertical =
+                        _DimensionesDispositivo.screenDPsY/tileCentral.getSpriteDPsY();
+
+        Log.i("Num total horizontal ","CEIL: "+Math.ceil(numTilesHorizontal)+" PLAIN: "+numTilesHorizontal);  //21
+        Log.i("Num total vertical ","CEIL: "+Math.ceil(numTilesVertical)+" PLAIN: "+numTilesVertical);        //12
+
+        /*******************************************************/
+        //Determina cuántos tiles se verán
+
+        numTilesHorizontal = (float)Math.ceil(numTilesHorizontal);
+        if(Math.ceil(numTilesHorizontal)%2==0){
             numTilesHorizontal++;
         }
+        int mitadExclX = (int)(numTilesHorizontal-1)/2;
 
-        float numTilesMitadVertical = numTilesVertical/2;
-        if(numTilesMitadVertical%2==0){
+        numTilesVertical = (float)Math.ceil(numTilesVertical);
+        if(Math.ceil(numTilesVertical)%2==0){
             numTilesVertical++;
         }
+        int mitadExclY = (int)(numTilesVertical-1)/2;
 
-        Log.i("Num tiles horizontal","");
-        Log.i("Num tiles vertical","");
+//        Log.i("Num total horizontal ","CEIL: "+Math.ceil(numTilesHorizontal)+" PLAIN: "+numTilesHorizontal);  //21
+//        Log.i("Num total vertical ","CEIL: "+Math.ceil(numTilesVertical)+" PLAIN: "+numTilesVertical);        //13
 
-        int posicionInicioVertical =
-                (int)(_DimensionesDispositivo.screenDPsX - (tileCentral.getSpriteDPsX()*numTilesHorizontal));
-        int posicionInicioHorizontal =
-                (int)(_DimensionesDispositivo.screenDPsY - (tileCentral.getSpriteDPsY()*numTilesVertical));
+//        Log.i("DEBUG ","Num exclusivo mitad tiles horizontal "+mitadExclX);
+//        Log.i("DEBUG ","Num exclusivo mitad tiles vertical "+mitadExclY);
+            //   6
+            //10 1 10
+            //   6
+        int idxPrimerTileVisibleX =
+                (int)tileCentral.getSpritePosX()-mitadExclX;
+        int idxPrimerTileVisibleY =
+                (int)tileCentral.getSpritePosY()-mitadExclY;
+
+        Log.i("idxPrimerTileVisibleX ","X "+idxPrimerTileVisibleX);
+        Log.i("idxPrimerTileVisibleY ","Y "+idxPrimerTileVisibleY);
+
         /*******************************************************/
-        //Dibujo el mapa que cabe en la pantalla
+        //Construye array de visibilidad
+        Log.i("DEBUG ","Primer tile visible X "+(int)numTilesVertical);
+        Log.i("DEBUG ","Primer tile visible Y "+(int)numTilesHorizontal);
 
-        int incremento = tileCentral.getSpriteDPsY();       //Medida del lado del Tile
+        this.tilesVisibles = new ST_TileSprite
+                                    [(int)numTilesVertical]              //13
+                                    [(int)numTilesHorizontal];           //21
 
-        for(int i = 0, posX = posicionInicioHorizontal; i<numTilesHorizontal; i++, posX+=incremento){
-            for(int j = 0, posY = posicionInicioVertical; j<numTilesVertical;j++, posY+=incremento){
-
+        for(int i = 0; i<this.tilesVisibles.length;i++){
+            for(int j = 0; j<this.tilesVisibles[i].length;j++) {
+                try {
+                    this.tilesVisibles[i][j] = this.mapaCoord
+                                                    [idxPrimerTileVisibleX + i]
+                                                    [idxPrimerTileVisibleY + j];
+                    Log.i("POSITION ",
+                            "NEW ARRAY x:"+i+" y:"+j
+                               + "\n OLDY ARRAY x:"+(idxPrimerTileVisibleX + i)
+                                             +" y:"+(idxPrimerTileVisibleY + j)+" TILE");
+                }catch(IndexOutOfBoundsException iobe){
+                    this.tilesVisibles[i][j] = _Tiles.PLACEHOLDER;
+//                    Log.i("POSITION ",
+//                            "NEW ARRAY x:"+i+" y:"+j
+//                                    + "\n OLDY ARRAY x:"+(primerTileVisibleX + i)+" y:"+(primerTileVisibleY + j)+" PLACEHOLDER");
+                }
             }
         }
-        _Tiles.PLACEHOLDER.spriteDibujar(
-                c,
-                this.tileCentralPosXOrigen,
-                this.tileCentralPosYOrigen,
-                this.escalaEscenarioDefecto
-        );
+        /*******************************************************/
+        // Calcula la posición X - Y para empezar a dibujar
+        // en relación al tile central
+
+        Log.i("IMPORTANTE",""+_DimensionesDispositivo.screenDPsX);
+
+        float posIniDibX;
+        if((Math.ceil(tileCentralPosXOrigen/tileCentral.getSpriteDPsX()))%2==0){
+            posIniDibX = (float)((_DimensionesDispositivo.screenDPsX/2) -
+                              ((Math.ceil(tileCentralPosXOrigen/tileCentral.getSpriteDPsX())+1)
+                              *tileCentral.getSpriteDPsX()));
+        }else{
+            posIniDibX = (float)((_DimensionesDispositivo.screenDPsX/2) -
+                                ((Math.ceil(tileCentralPosXOrigen/tileCentral.getSpriteDPsX()))
+                                *tileCentral.getSpriteDPsX()));
+        }
+        float posIniDibY;
+        if((Math.ceil(tileCentralPosYOrigen/tileCentral.getSpriteDPsY()))%2==0){
+            posIniDibY = (float)((_DimensionesDispositivo.screenDPsY/2) -
+                                ((Math.ceil(tileCentralPosYOrigen/tileCentral.getSpriteDPsY())+1)
+                                *tileCentral.getSpriteDPsY()));
+        }else{
+            posIniDibY = (float)((_DimensionesDispositivo.screenDPsY/2) -
+                                (Math.ceil(tileCentralPosYOrigen/tileCentral.getSpriteDPsY())
+                                *tileCentral.getSpriteDPsY()));
+        }
+
+        Log.i("posIniDibX ",""+posIniDibX);
+        Log.i("posIniDibY ",""+posIniDibY);
+
+        /*******************************************************/
+        //Dibujo el mapa que cabe en la pantalla
+        int incremento = tileCentral.getSpriteDPsY();       //Medida del lado del Tile
+        float isY = posIniDibY;
+
+        Log.i("tilesVisibles.length",""+this.tilesVisibles.length);
+        Log.i("tilesVisibles[0].length",""+this.tilesVisibles[0].length);
+
+
+//        this.tilesVisibles[0][0].setSpritePosY(posIniDibY);
+//        this.tilesVisibles[0][0].setSpritePosX(posIniDibX);
+//        this.tilesVisibles[0][0].spriteDibujar(c);
+        for(float i = 0, posY = posIniDibY;i<this.tilesVisibles.length;i++, posY+=incremento){
+            for(float j = 0, posX = posIniDibX;j<this.tilesVisibles[(int)i].length;j++, posX+=incremento) {
+                Log.i("posY ",""+posY);
+                Log.i("posX ",""+posX);
+                Log.i("i ",""+i);
+                Log.i("j ",""+j);
+                if(i==tileCentral.getSpritePosX()){
+                    tileCentral.spriteDibujar(c);
+                }
+                else{
+                    this.tilesVisibles[(int)i][(int)j].setSpritePosY(posY);
+                    this.tilesVisibles[(int)i][(int)j].setSpritePosX(posX);
+                    this.tilesVisibles[(int)i][(int)j].spriteDibujar(c);
+                }
+            }
+        }
+
+//        tileCentral.spriteDibujar(
+//                c);
+//        ,
+//                this.tileCentralPosXOrigen,
+//                this.tileCentralPosYOrigen,
+//                this.escalaEscenarioDefecto
+//        );
     }
 
     /**
@@ -256,10 +355,10 @@ public class eejuego_PantallaMapeada {
      */
 
     public ST_TileSprite[][] rellenador(){
-        this.mapaCoord = new ST_TileSprite[20][15];
+        this.mapaCoord = new ST_TileSprite[20][20];
         for(int i = 0; i<this.mapaCoord.length;i++){
             for(int j = 0; j<this.mapaCoord[i].length;j++){
-                this.mapaCoord[i][j]= _Tiles.PLACEHOLDER;
+                this.mapaCoord[i][j]= _Tiles.EDIFICIO_SUELO;
             }
         }
         return this.mapaCoord;
